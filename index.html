@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMQOH</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/pag1.css">
+</head>
+<body>
+
+    <form action="#" class="root">
+
+        <section class="letter pg1">
+
+            <header class="form_secction header_secction">
+
+                <div class="header_logo">
+                    <img src="logo/IMGRAD-icon.png" alt="LOGO IMGRAD">
+                </div>
+                
+                <div class="header_title">
+                    <h1>COORDINACION DE MONITOREO DE QUEBRADAS Y OBRAS HIDRAULICAS</h1>
+                    <H2 class="sub_title">FICHA DE EVALUCACION DE HOBRAS HIDRAULICAS</H2>
+                </div>
+                
+                <div class="header_fecha">
+                    <div>
+                        <label for="header_fecha-fecha">FECHA</label>
+                        <input type="text"  name="header_fecha-fecha" id="header_fecha-fecha"> 
+                    </div>
+                    <div>
+                        <label for="tiem_ins">TIEMPO DE INSPECCION</label>
+                        <input type="text" name="tiem_ins" id="tiem_ins" >
+                    </div>
+                    <div>
+                        <span>COORDENADAS UTM</span>
+                        <div>
+                            <label for="coor_utm-e">E:</label>
+                            <input type="text" name="coor_utm-e" id="coor_utm-e">
+                            <label for="coor_utm-n">N:</label>
+                            <input type="text" name="coor_utm-n" id="coor_utm-n" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header_codigo">
+                    <label for="ficha_n" class="header_codigo-ficha_n">FICHA Nº:</label>
+                    <input type="text" name="ficha_n" id="ficha_n">
+
+                    <label for="cod_n" class="header_codigo-cod_n">CODIGO Nº:</label>
+                    <input type="text" name="cod_n" id="cod_n">
+
+                    <div>
+                        <label for="header_codigo-huso">HUSO:</label>
+                        <input type="text" name="header_codigo-huso" id="header_codigo-huso">
+                        <span>N</span>
+
+                        <label for="header_codigo-altura">ALTURA:</label>
+                        <input type="text" name="header_codigo-altura" id="header_codigo-altura">
+                        <span>M.S.N.M</span>
+                    </div>
+                </div>
+
+            </header>
+
+            <article class="form_secction id_tec">
+                <h2 class="sub_title"> IDENTIFICACION DE LOS TECNICOS</h2>
+                <div>
+                    <label for="id_tec-nom_ape_1">NOMBRE Y APELLIDO:</label>
+                    <input type="text" name="id_tec-nom_ape_1" id="id_tec-nom_ape_1">
+                    <label for="id_tec-tlf_1">TLF:</label>
+                    <input type="text" name="id_tec-tlf_1" id="id_tec-tlf_1">
+                </div>
+                <div>
+                    <label for="id_tec-nom_ape_2">NOMBRE Y APELLIDO:</label>
+                    <input type="text" name="id_tec-nom_ape_2" id="id_tec-nom_ape_2">
+                    <label for="id_tec-tlf_2">TLF:</label>
+                    <input type="text" name="id_tec-tlf_2" id="id_tec-tlf_2">
+                </div>
+            </article>
+
+            <article class="form_secction datos_cuenta">
+
+                <h2 class="sub_title">DATOS DE LA CUENTA</h2>
+
+                <div>
+                    <label for="datos_cuenta-nombre">NOMBRE:</label>
+                    <input type="text" name="datos_cuenta-nombre" id="datos_cuenta-nombre" class="first_input">
+                    
+                    <label for="datos_cuenta-estado">ESTADO:</label>
+                    <input type="text" name="datos_cuenta-estado" id="datos_cuenta-estado">
+                    
+                    <label for="datos_cuenta-municipio">MUNICIPIO:</label>
+                    <input type="text" name="datos_cuenta-municipio" id="datos_cuenta-municipio">
+                    
+                    <label for="datos_cuenta-parroquia">PARROQUIA:</label>
+                    <input type="text" name="datos_cuenta-parroquia" id="datos_cuenta-parroquia">
+                    
+                    <label for="datos_cuenta-cent_pobl">CENTRO POBLADO:</label>
+                    <input type="text" name="datos_cuenta-cent_pobl" id="datos_cuenta-cent_pobl" class="last_input">
+                </div>
+
+            </article>
+
+            <!--  ========================================== ENT_FISI ==================================  -->
+
+            <article class="form_secction ent_fisi">
+
+                <h2 class="sub_title">ENTORNO FISICO</h2>
+
+                <div>
+                    <div class="form_sub_secction form_sub_secction_2col">
+
+                        <h2 class="sub_title">COBERTURA VEGETAL</h2>
+
+                        <div>
+                            <label for="ent_fisi-arboreo">ARBOREO</label>
+                            <input type="checkbox" name="ent_fisi-arboreo" id="ent_fisi-arboreo">
+                        </div>
+
+                        <div>
+                            <label for="ent_fisi-arbustivos">ARBUSTIVOS</label>
+                            <input type="checkbox" name="ent_fisi-arbustivos" id="ent_fisi-arbustivos">
+                        </div>
+                        
+                        <div>
+                            <label for="ent_fisi-herbaceos">HERBACEOS</label>
+                            <input type="checkbox" name="ent_fisi-herbaceos" id="ent_fisi-herbaceos">
+                        </div>
+
+                        <div>
+                            <label for="ent_fisi-area_cult">AREA DE CULTIVO</label>
+                            <input type="checkbox" name="ent_fisi-area_cult" id="ent_fisi-area_cult">
+                        </div>
+
+                        <div>
+                            <label for="ent_fisi-sue_des">SUELOS DESNUDOS</label>
+                            <input type="checkbox" name="ent_fisi-sue_des" id="ent_fisi-sue_des">
+                        </div>
+
+                        <div>
+                            <label for="ent_fisi-area_ocu">AREA OCUPADA</label>
+                            <input type="checkbox" name="ent_fisi-area_ocu" id="ent_fisi-area_ocu">
+                        </div>
+
+                        <div>
+                            <label for="ent_fisi-alt_pro">ALTURA PROMEDIO</label>
+                            <input type="text" name="ent_fisi-alt_pro" id="ent_fisi-alt_pro" class="ent_fisi-altura_promedio">
+                            <span>M</span>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="form_sub_secction"></div>
+                    <div class="form_sub_secction"></div>
+                    <div class="form_sub_secction"></div>
+                </div>
+
+            </article>
+            
+        </section>
+
+
+        
+        <section class="letter pg2">
+            
+        </section>
+        
+    </form>
+    
+    
+</body>
+
+</html>
