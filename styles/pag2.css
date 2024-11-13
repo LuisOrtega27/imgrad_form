@@ -1,0 +1,67 @@
+.carac_obra{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,auto);
+    gap: 10px;
+    align-items: stretch;
+
+    &>.sub_title{
+        grid-column: 1/6;
+    }
+
+    &>.carac_obra-observaciones{
+        grid-column: 4/6;
+        grid-row: 2/4;
+
+        &>textarea{
+            width: 100%;
+            height: 80%;
+            border: none;
+            resize: none;
+        }
+    }
+
+    &>.carac_obra-vertederos{
+        grid-column: 2/4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        &>.sub_title{
+            width: 100%;
+        }
+    }
+
+
+    &>.carac_obra-estruc_aux{
+        grid-row: 4/6;
+
+        &>div>input{
+            width: 40px;
+        }
+    }
+
+    &>.carac_obra-disenos{
+        grid-column: 2/4;
+        &>img{
+            width: 100%;
+        }
+    }
+    
+    &>.carac_obra-medidas{
+        grid-column: 4/6;
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        &>.sub_title{
+            grid-column: 1/3;
+        }
+
+        &>input{
+            border: none;
+            border-bottom: solid 2px #000;
+        }
+    }
+}
+

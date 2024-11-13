@@ -6,6 +6,7 @@
     <title>CMQOH</title>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/pag1.css">
+    <link rel="stylesheet" href="styles/pag2.css">
 </head>
 <body>
 
@@ -13,6 +14,8 @@
 
         <section class="letter pg1">
 
+            <!--  ========================================== HEADER ==================================  -->
+            
             <header class="form_secction header_secction">
 
                 <div class="header_logo">
@@ -64,6 +67,8 @@
 
             </header>
 
+            <!--  ========================================== ID_TEC ==================================  -->
+
             <article class="form_secction id_tec">
                 <h2 class="sub_title"> IDENTIFICACION DE LOS TECNICOS</h2>
                 <div>
@@ -79,6 +84,8 @@
                     <input type="text" name="id_tec-tlf_2" id="id_tec-tlf_2">
                 </div>
             </article>
+
+            <!--  ========================================== DATOS_CUENTA ==================================  -->
 
             <article class="form_secction datos_cuenta">
 
@@ -497,6 +504,211 @@
 
         
         <section class="letter pg2">
+
+            <!--  ========================================== CARAC_OBRA ==================================  -->
+
+            <article class="form_secction carac_obra">
+
+                <h2 class="sub_title">CARACTERISTICAS DE LA OBRA</h2>
+
+                <div class="form_sub_secction div_2col">
+
+                    <h2 class="sub_title">DISEÑO DE DIQUE</h2>
+                    
+                    <div>
+                        <label for="carac_obra-gravedad">GRAVEDAD</label>
+                        <input type="checkbox" name="carac_obra-gravedad" id="carac_obra-gravedad">
+                    </div> 
+                    
+                    <div>
+                        <label for="carac_obra-arco">ARCO</label>
+                        <input type="checkbox" name="carac_obra-arco" id="carac_obra-arco">
+                    </div> 
+
+                    <div>
+                        <label for="carac_obra-contrafu">CONTRAFUERTE</label>
+                        <input type="checkbox" name="carac_obra-contrafu" id="carac_obra-contrafu">
+                    </div> 
+                    
+                    <div>
+                        <label for="carac_obra-mate_suel">MATERIALES SUELTOS</label>
+                        <input type="checkbox" name="carac_obra-mate_suel" id="carac_obra-mate_suel">
+                    </div> 
+                    
+                </div>
+
+                <div class="form_sub_secction div_2col">
+                    <h2 class="sub_title">TIPO DE DIQUE</h2>
+
+                    <div>
+                        <label for="carac_obra-vent">VENTANA</label>
+                        <input type="checkbox" name="carac_obra-vent" id="carac_obra-vent">
+                    </div> 
+
+                    <div>
+                        <label for="carac_obra-ranu">RANURA</label>
+                        <input type="checkbox" name="carac_obra-ranu" id="carac_obra-ranu">
+                    </div> 
+
+                    <div>
+                        <label for="carac_obra-enrej">ENREJADO</label>
+                        <input type="checkbox" name="carac_obra-enrej" id="carac_obra-enrej">
+                    </div> 
+
+                    <div>
+                        <label for="carac_obra-rastri">RASTRILLO</label>
+                        <input type="checkbox" name="carac_obra-rastri" id="carac_obra-rastri">
+                    </div> 
+                    
+                </div>
+                
+                <div class="form_sub_secction div_2col">
+                    <h2 class="sub_title">TIPO DE MURO</h2>
+
+                    <div>
+                        <label for="carac_obra-hinca">HINCADO</label>
+                        <input type="checkbox" name="carac_obra-hinca" id="carac_obra-hinca">
+                    </div> 
+
+                    <div>
+                        <label for="carac_obra-anclado">ANCLADO</label>
+                        <input type="checkbox" name="carac_obra-anclado" id="carac_obra-anclado">
+                    </div> 
+                    
+                    <div>
+                        <label for="carac_obra-cont_fuer">CONTRA FUERTE</label>
+                        <input type="checkbox" name="carac_obra-cont_fuer" id="carac_obra-cont_fuer">
+                    </div> 
+                    
+                    <div>
+                        <label for="carac_obra-grave_arma">GRAVEDAD ARMADO</label>
+                        <input type="checkbox" name="carac_obra-grave_arma" id="carac_obra-grave_arma">
+                    </div> 
+                    
+                    <div>
+                        <label for="carac_obra-gravedad">GRAVEDAD</label>
+                        <input type="checkbox" name="carac_obra-gravedad" id="carac_obra-gravedad">
+                    </div> 
+                    
+                </div>
+                
+                <div class="form_sub_secction carac_obra-observaciones">
+                    <h2 class="sub_title">OBSERVACIONES</h2>
+                    <textarea name="carac_obra-observaciones" id="carac_obra-observaciones"></textarea>
+                </div>
+
+                <div class="form_sub_secction div_2col">
+                    <h2 class="sub_title">TIPO DE DESCANSO</h2>    
+
+                    <div>
+                        <label for="carac_obra-pie">PIE</label>
+                        <input type="checkbox" name="carac_obra-pie" id="carac_obra-pie">
+                    </div>
+                    
+                    <div>
+                        <label for="carac_obra-corte_relle">CORTE Y RELLENO</label>
+                        <input type="checkbox" name="carac_obra-corte_relle" id="carac_obra-corte_relle">
+                    </div>
+                    
+                    <div>
+                        <label for="carac_obra-corte_vanq">CORTE BANQUETA</label>
+                        <input type="checkbox" name="carac_obra-corte_vanq" id="carac_obra-corte_vanq">
+                    </div>
+                    
+                </div>
+                
+                <div class="form_sub_secction div_2col carac_obra-vertederos">
+                    <h2 class="sub_title">VERTEDEROS</h2>
+
+                    <label for="carac_obra-simple">SIMPLE</label>
+                    <input type="checkbox" name="carac_obra-simple" id="carac_obra-simple">
+
+                    <label for="carac_obra-multi">MULTIPLE</label>
+                    <input type="checkbox" name="carac_obra-multi" id="carac_obra-multi">
+
+                    <label for="carac_obra-canti">CANTIDAD</label>
+                    <input type="checkbox" name="carac_obra-canti" id="carac_obra-canti">
+                </div>
+
+
+                <div class="form_sub_secction div_2col carac_obra-estruc_aux">
+                    <h2 class="sub_title">ESTRUCTURAS AUXILIARES</h2>
+
+                    <div>
+                        <label for="carac_obra-mechi">MECHINALES</label>
+                        <input type="text" name="carac_obra-mechi" id="carac_obra-mechi">
+                    </div>
+
+                    <div>
+                        <label for="carac_obra-disp_ener">DISPARADOR DE ENERGIA</label>
+                        <input type="text" name="carac_obra-disp_ener" id="carac_obra-disp_ener">
+                    </div>
+                    
+                    <div>
+                        <label for="carac_obra-malla_cont">MALLA DE CONTENCION</label>
+                        <input type="text" name="carac_obra-malla_cont" id="carac_obra-malla_cont">
+                    </div>
+                    
+                    <div>
+                        <label for="carac_obra-alivi">ALIVIADEROS</label>
+                        <input type="text" name="carac_obra-alivi" id="carac_obra-alivi">
+                    </div>
+                    
+                    <div>
+                        <label for="carac_obra-peine_debas">PEINE DE DESBASTE</label>
+                        <input type="text" name="carac_obra-peine_debas" id="carac_obra-peine_debas">
+                    </div>
+                    
+                    <div>
+                        <label for="carac_obra-contradic">CONTRADIQUE</label>
+                        <input type="text" name="carac_obra-contradic" id="carac_obra-contradic">
+                    </div>
+                    
+                    <div>
+                        <label for="carac_obra-espigo">ESPIGONES</label>
+                        <input type="text" name="carac_obra-espigo" id="carac_obra-espigo">
+                    </div>
+                    
+                    <div>
+                        <label for="carac_obra-enroca">ENROCADO</label>
+                        <input type="text" name="carac_obra-enroca" id="carac_obra-enroca">
+                    </div>
+                    
+                </div> 
+
+                <div class="carac_obra-disenos">
+                    <img src="logo/diseñosCanales.png" alt="diseños de canales">
+                </div> 
+
+                <div class="form_sub_secction carac_obra-medidas">
+                    <h2 class="sub_title">MEDIDAS</h2>
+                    
+                    
+                        <label for="carac_obra-altura">ALTURA:</label>
+                        <input type="text" name="carac_obra-altura" id="carac_obra-altura">
+                    
+                        <label for="carac_obra-base">BASE:</label>
+                        <input type="text" name="carac_obra-base" id="carac_obra-base">
+                    
+                        <label for="carac_obra-ancho">ANCHO:</label>
+                        <input type="text" name="carac_obra-ancho" id="carac_obra-ancho">
+                    
+                        <label for="carac_obra-longitud">LONGITUD:</label>
+                        <input type="text" name="carac_obra-longitud" id="carac_obra-longitud">
+                    
+                        <label for="carac_obra-diametro">DIAMETRO:</label>
+                        <input type="text" name="carac_obra-diametro" id="carac_obra-diametro">
+                    
+                        <label for="carac_obra-area">AREA:</label>
+                        <input type="text" name="carac_obra-area" id="carac_obra-area">
+                    
+                        <label for="carac_obra-volumen">VOLUMEN:</label>
+                        <input type="text" name="carac_obra-volumen" id="carac_obra-volumen">
+                    
+                </div> 
+
+            </article>
+            
             
         </section>
         
