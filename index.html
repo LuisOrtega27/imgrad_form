@@ -12,6 +12,8 @@
 
     <form action="#" class="root">
 
+        <!--  ++++++++++++++++++++++++++++++++++++++++ PAGINA 1 ++++++++++++++++++++++++++++++++++++++++  -->
+
         <section class="letter pg1">
 
             <!--  ========================================== HEADER ==================================  -->
@@ -19,7 +21,7 @@
             <header class="form_secction header_secction">
 
                 <div class="header_logo">
-                    <img src="logo/IMGRAD-icon.png" alt="LOGO IMGRAD">
+                    <img src="imgs/IMGRAD-icon.png" alt="LOGO IMGRAD">
                 </div>
                 
                 <div class="header_title">
@@ -307,7 +309,7 @@
                     <div class="form_sub_secction div_2col ent_fisi-obsevaciones" >
                         <h2 class="sub_title">OBSERVACIONES</h2>
 
-                        <textarea name="ent_fisi-obsevaciones" id="ent_fisi-obsevaciones"></textarea>
+                        <textarea class="textarea_observaciones" name="ent_fisi-obsevaciones" id="ent_fisi-obsevaciones"></textarea>
                     </div>
 
                 </div>
@@ -493,7 +495,7 @@
                 <div class="form_sub_secction tipo_obra-observaciones">
                     <h2 class="sub_title">OBSERVACIONES</h2>
 
-                    <textarea  name="tipo_obra-observaciones" id="tipo_obra-observaciones"></textarea>
+                    <textarea class="textarea_observaciones" name="tipo_obra-observaciones" id="tipo_obra-observaciones"></textarea>
                     
                 </div>
                 
@@ -501,7 +503,7 @@
             
         </section>
 
-
+        <!--  ++++++++++++++++++++++++++++++++++++++++ PAGINA 2 ++++++++++++++++++++++++++++++++++++++++  -->
         
         <section class="letter pg2">
 
@@ -516,8 +518,8 @@
                     <h2 class="sub_title">DISEÑO DE DIQUE</h2>
                     
                     <div>
-                        <label for="carac_obra-gravedad">GRAVEDAD</label>
-                        <input type="checkbox" name="carac_obra-gravedad" id="carac_obra-gravedad">
+                        <label for="carac_obra-gravedad1">GRAVEDAD</label>
+                        <input type="checkbox" name="carac_obra-gravedad1" id="carac_obra-gravedad1">
                     </div> 
                     
                     <div>
@@ -586,15 +588,15 @@
                     </div> 
                     
                     <div>
-                        <label for="carac_obra-gravedad">GRAVEDAD</label>
-                        <input type="checkbox" name="carac_obra-gravedad" id="carac_obra-gravedad">
+                        <label for="carac_obra-gravedad2">GRAVEDAD</label>
+                        <input type="checkbox" name="carac_obra-gravedad2" id="carac_obra-gravedad2">
                     </div> 
                     
                 </div>
                 
                 <div class="form_sub_secction carac_obra-observaciones">
                     <h2 class="sub_title">OBSERVACIONES</h2>
-                    <textarea name="carac_obra-observaciones" id="carac_obra-observaciones"></textarea>
+                    <textarea class="textarea_observaciones" name="carac_obra-observaciones" id="carac_obra-observaciones"></textarea>
                 </div>
 
                 <div class="form_sub_secction div_2col">
@@ -629,7 +631,6 @@
                     <label for="carac_obra-canti">CANTIDAD</label>
                     <input type="checkbox" name="carac_obra-canti" id="carac_obra-canti">
                 </div>
-
 
                 <div class="form_sub_secction div_2col carac_obra-estruc_aux">
                     <h2 class="sub_title">ESTRUCTURAS AUXILIARES</h2>
@@ -677,12 +678,11 @@
                 </div> 
 
                 <div class="carac_obra-disenos">
-                    <img src="logo/diseñosCanales.png" alt="diseños de canales">
+                    <img src="imgs/diseñosCanales.png" alt="diseños de canales">
                 </div> 
 
                 <div class="form_sub_secction carac_obra-medidas">
                     <h2 class="sub_title">MEDIDAS</h2>
-                    
                     
                         <label for="carac_obra-altura">ALTURA:</label>
                         <input type="text" name="carac_obra-altura" id="carac_obra-altura">
@@ -709,7 +709,315 @@
 
             </article>
             
-            
+            <!--  ========================================== DAÑOS_ESTRUCTURALES ==================================  -->
+
+            <article class="form_secction danos_estruc div_3col">
+                <h2 class="sub_title">DAÑOS ESTRUCTURALES</h2>
+
+                <div class="div_2col">
+                    
+                    <div>
+                        <label for="danos_estruc-ex_ace_su">EXPOSICION DEL ACERO SUPERFICIAL</label>
+                        <input type="checkbox" name="danos_estruc-ex_ace_su" id="danos_estruc-ex_ace_su">
+                    </div>
+
+                    <div>
+                        <label for="danos_estruc-ero_estruc_inter">EROSION DE ESTRUCTURA INTERNA</label>
+                        <input type="checkbox" name="danos_estruc-ero_estruc_inter" id="danos_estruc-ero_estruc_inter">
+                    </div>
+
+                    <div>
+                        <label for="danos_estruc-ero_cober_inter">EROSION DE COBERTURA INTERNO</label>
+                        <input type="checkbox" name="danos_estruc-ero_cober_inter" id="danos_estruc-ero_cober_inter">
+                    </div>
+
+                    <div>
+                        <label for="danos_estruc-def_exce_alza">DEFORMACION EXCESIVA DEL ALZADO</label>
+                        <input type="checkbox" name="danos_estruc-def_exce_alza" id="danos_estruc-def_exce_alza">
+                    </div>
+                    
+                </div>
+
+                <div class="div_2col">
+                                        
+                    <div>
+                        <label for="danos_estruc-efec_sismi">EFECTO SISMICO</label>
+                        <input type="checkbox" name="danos_estruc-efec_sismi" id="danos_estruc-efec_sismi">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_estruc-desli_exter">DESLIZAMIENTO EXTERNO</label>
+                        <input type="checkbox" name="danos_estruc-desli_exter" id="danos_estruc-desli_exter">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_estruc-ruptu_fricc">RUPTURA POR FRICCION</label>
+                        <input type="checkbox" name="danos_estruc-ruptu_fricc" id="danos_estruc-ruptu_fricc">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_estruc-despla_profu">DESPLAZAMIENTO PROFUNDO</label>
+                        <input type="checkbox" name="danos_estruc-despla_profu" id="danos_estruc-despla_profu">
+                    </div>
+
+                    
+                </div>
+                
+                <div class="div_2col">
+
+                    <div>
+                        <label for="danos_estruc-desliza">DESLIZAMIENTO</label>
+                        <input type="checkbox" name="danos_estruc-desliza" id="danos_estruc-desliza">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_estruc-desplaza">DESPLAZAMIENTO</label>
+                        <input type="checkbox" name="danos_estruc-desplaza" id="danos_estruc-desplaza">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_estruc-sobre_paso">SOBRE PASO</label>
+                        <input type="checkbox" name="danos_estruc-sobre_paso" id="danos_estruc-sobre_paso">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_estruc-vuelco">VUELCO</label>
+                        <input type="checkbox" name="danos_estruc-vuelco" id="danos_estruc-vuelco">
+                    </div>
+                    
+
+                </div>
+                
+            </article>
+
+            <!--  ========================================== DAÑOS_VISIBLES ==================================  -->
+
+            <article class="form_secction div_3col danos_visivles">
+                <h2 class="sub_title">DAÑOS VISIBLES</h2>
+
+                <div class="div_2col">
+
+                    <div>
+                        <label for="danos_visivles-rup_es_cort">RUPTURA POR ESFUERZO CORTANTE</label>
+                        <input type="checkbox" name="danos_visivles-rup_es_cort" id="danos_visivles-rup_es_cort">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-rup_falla_cort">RUPTURA POR FALLA DE SOLAPE</label>
+                        <input type="checkbox" name="danos_visivles-rup_falla_cort" id="danos_visivles-rup_falla_cort">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-rup_esfu_raspan">RUPTURA POR ESFUERZO RASPANTE</label>
+                        <input type="checkbox" name="danos_visivles-rup_esfu_raspan" id="danos_visivles-rup_esfu_raspan">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-fisu_capa_concre">FISURA EN LA CAPA DE CONCRETO</label>
+                        <input type="checkbox" name="danos_visivles-fisu_capa_concre" id="danos_visivles-fisu_capa_concre">
+                    </div>
+
+                </div>
+
+                <div class="div_2col">
+
+                    <div>
+                        <label for="danos_visivles-super_giro_exce">SUPERFICIAL GIRO EXCESIVO</label>
+                        <input type="checkbox" name="danos_visivles-super_giro_exce" id="danos_visivles-super_giro_exce">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-eroci_superfi">EROCION DE SUPERFICIE</label>
+                        <input type="checkbox" name="danos_visivles-eroci_superfi" id="danos_visivles-eroci_superfi">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-socava_base">SOCAVACION DE LA BASE</label>
+                        <input type="checkbox" name="danos_visivles-socava_base" id="danos_visivles-socava_base">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-discon_concre">DISCONTINUIDAD DEL CONCRETO</label>
+                        <input type="checkbox" name="danos_visivles-discon_concre" id="danos_visivles-discon_concre">
+                    </div>
+                    
+                </div>
+
+                <div class="div_2col">
+
+                    <div>
+                        <label for="danos_visivles-figu_exce">FIGURACION EXCESIVA</label>
+                        <input type="checkbox" name="danos_visivles-figu_exce" id="danos_visivles-figu_exce">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-colma">COLMATADA</label>
+                        <input type="checkbox" name="danos_visivles-colma" id="danos_visivles-colma">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-carca">CARCAVAS</label>
+                        <input type="checkbox" name="danos_visivles-carca" id="danos_visivles-carca">
+                    </div>
+                    
+                    <div>
+                        <label for="danos_visivles-asenta">ASENTAMIENTO</label>
+                        <input type="checkbox" name="danos_visivles-asenta" id="danos_visivles-asenta">
+                    </div>
+                    
+                </div>
+                
+            </article>
+
+            <!--  ========================================== DAÑOS_FUNCIONALES ==================================  -->
+
+            <article class="form_secction div_3col danos_funci">
+                <h2 class="sub_title">DAÑOS FUNCIONALES</h2>
+
+                <div class="div_2col">
+
+                    <div>
+                        <label for="danos_funci-gene_duct">GENERACION DE DUCTOS</label>
+                        <input type="checkbox" name="danos_funci-gene_duct" id="danos_funci-gene_duct">
+                    </div>
+
+                    <div>
+                        <label for="danos_funci-frac_comp">FRACTURAS DE COMPUERTAS</label>
+                        <input type="checkbox" name="danos_funci-frac_comp" id="danos_funci-frac_comp">
+                    </div>
+                    
+                </div>
+
+                <div class="div_2col">
+
+                    <div>
+                        <label for="danos_funci-obst_alivi">OBSTRUCCION DE ALIVIADEROS</label>
+                        <input type="checkbox" name="danos_funci-obst_alivi" id="danos_funci-obst_alivi">
+                    </div>
+
+                    <div>
+                        <label for="danos_funci-perme_cober_inter">PERMEABILIDAD DE COBERTURA INTERNA</label>
+                        <input type="checkbox" name="danos_funci-perme_cober_inter" id="danos_funci-perme_cober_inter">
+                    </div>
+                    
+                </div>
+                
+                <div class="div_2col">
+
+                    <div>
+                        <label for="danos_funci-sedi_alt_max_obra">SEDIMIENTO A LA ALTURA MAXIMA DE LA OBRA</label>
+                        <input type="checkbox" name="danos_funci-sedi_alt_max_obra" id="danos_funci-sedi_alt_max_obra">
+                    </div>
+
+                    <div>
+                        <label for="danos_funci-infil">INFILTRACION</label>
+                        <input type="checkbox" name="danos_funci-infil" id="danos_funci-infil">
+                    </div>
+                    
+                </div>
+
+            </article>
+
+            <!--  ========================================== METODOLOGIA_APLICADA ==================================  -->
+
+            <div class="container_meto_apli">
+
+                <article class="form_secction div_3col meto_apli">
+                    <h2 class="sub_title">METODOLOGIAS APLICADAS</h2>
+
+                    <h3 class="sub_title-boceto">BOCETO DE LA OBRA Y NIVELES DE COLMATACION</h3>
+
+                    <h3>PRUEBA DEL MORTERO</h3>
+
+                    <div class="form_sub_secction meto_apli-imgContainer">
+                        <h3>FRONTAL</h3>
+
+                        <div class="img_guidelines">A</div>
+                        <div class="img_guidelines img_guidelines_m">M</div>
+                        <div class="img_guidelines">B</div>
+                        
+                    </div>
+
+                    <div class="form_sub_secction meto_apli-imgContainer">
+                        <h3>CORTE</h3>    
+
+                        <div class="img_guidelines">A</div>
+                        <div class="img_guidelines img_guidelines_m">M</div>
+                        <div class="img_guidelines">B</div>
+
+                    </div>
+
+                    <div class="form_sub_secction meto_apli-mortero">
+                        
+                        <label for="meto_apli-mortero-grandes">
+                            <img src="imgs/morteros/mortero-grandes.png" alt="Mortero Grande">
+                        </label>
+                        <input type="checkbox" name="meto_apli-mortero-grandes" id="meto_apli-mortero-grandes">
+                        
+                        <label for="meto_apli-mortero-medianos">
+                            <img src="imgs/morteros/mortero-medianos.png" alt="Mortero Mediano">
+                        </label>
+                        <input type="checkbox" name="meto_apli-mortero-medianos" id="meto_apli-mortero-medianos">
+
+                        
+                        <label for="meto_apli-mortero-borilla">
+                            <img src="imgs/morteros/mortero-boronilla.png" alt="Mortero Borilla (viruta)">
+                        </label>
+                        <input type="checkbox" name="meto_apli-mortero-borilla" id="meto_apli-mortero-borilla">
+
+                        
+                        <label for="meto_apli-mortero-polvo">
+                            <img src="imgs/morteros/mortero-polvo.png" alt="Mortero Polvo">
+                        </label>
+                        <input type="checkbox" name="meto_apli-mortero-polvo" id="meto_apli-mortero-polvo">
+
+                    </div>
+                        
+                    
+                </article>
+
+                <article class="form_secction  meto_apli-observaciones">
+                    <h2 class="sub_title">OBSERVACIONES</h2>
+
+                    <textarea class="textarea_observaciones" name="meto_apli-observaciones" id="meto_apli-observaciones"></textarea>
+                    
+                </article>
+                
+            </div>
+
+            <footer class="pg2_footer">
+
+                <div class="form_sub_secction pg2_footer-leyenda">
+                    <h3>NIVELES DE <br> CONTAMINACION</h3>
+                    <p>A: ALTO</p>
+                    <p>M: MEDIO</p>
+                    <p>B: BAJO</p>
+                </div>
+
+                <div class="form_sub_secction org_parti">
+
+                    <h2 class="sub_title">ORGANIZACIONES <br> PARTICIPANTES</h2>
+
+                    <h3>NOMBRE Y APELLIDO:</h3>
+                    <h3>INSTITUCION:</h3>
+                    <h3>TELEFONO:</h3>
+
+                    <input type="text" name="org_parti-nom_ape_1" id="org_parti-nom_ape_1">
+                    <input type="text" name="org_parti-insti_1" id="org_parti-insti_1">
+                    <input type="text" name="org_parti-tlf_1" id="org_parti-tlf_1">
+
+                    <input type="text" name="org_parti-nom_ape_2" id="org_parti-nom_ape_2">
+                    <input type="text" name="org_parti-insti_2" id="org_parti-insti_2">
+                    <input type="text" name="org_parti-tlf_2" id="org_parti-tlf_2">
+
+                    <input type="text" name="org_parti-nom_ape_3" id="org_parti-nom_ape_3">
+                    <input type="text" name="org_parti-insti_3" id="org_parti-insti_3">
+                    <input type="text" name="org_parti-tlf_3" id="org_parti-tlf_3">
+                    
+                </div>
+                
+            </footer>
+
         </section>
         
     </form>
