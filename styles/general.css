@@ -94,3 +94,11 @@
     border: none;
     resize: none;
 }
+input:invalid{
+    border-color: #e225;
+    background-color: #e225;
+}
+input, textarea{
+    /* border-radius: 4px; */
+    padding-left: 10px;
+}

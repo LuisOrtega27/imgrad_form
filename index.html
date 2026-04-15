@@ -32,19 +32,19 @@
                 <div class="header_fecha">
                     <div>
                         <label for="header_fecha-fecha">FECHA</label>
-                        <input type="text"  name="header_fecha-fecha" id="header_fecha-fecha"> 
+                        <input type="date"  name="header_fecha-fecha" id="header_fecha-fecha" required> 
                     </div>
                     <div>
                         <label for="tiem_ins">TIEMPO DE INSPECCION</label>
-                        <input type="text" name="tiem_ins" id="tiem_ins" >
+                        <input type="text" name="tiem_ins" id="tiem_ins" placeholder="00:00" pattern="^\d{2}:\d{2}$" required title="el patron es: 00:00">
                     </div>
                     <div>
                         <span>COORDENADAS UTM</span>
                         <div>
                             <label for="coor_utm-e">E:</label>
-                            <input type="text" name="coor_utm-e" id="coor_utm-e">
+                            <input type="number" name="coor_utm-e" id="coor_utm-e">
                             <label for="coor_utm-n">N:</label>
-                            <input type="text" name="coor_utm-n" id="coor_utm-n" >
+                            <input type="number" name="coor_utm-n" id="coor_utm-n" >
                         </div>
                     </div>
                 </div>
@@ -77,13 +77,13 @@
                     <label for="id_tec-nom_ape_1">NOMBRE Y APELLIDO:</label>
                     <input type="text" name="id_tec-nom_ape_1" id="id_tec-nom_ape_1">
                     <label for="id_tec-tlf_1">TLF:</label>
-                    <input type="text" name="id_tec-tlf_1" id="id_tec-tlf_1">
+                    <input type="tel" name="id_tec-tlf_1" id="id_tec-tlf_1" placeholder="0000-000-0000" pattern="^\d{4}-\d{7}$" required title="el patron es: 0000-000-0000">
                 </div>
                 <div>
                     <label for="id_tec-nom_ape_2">NOMBRE Y APELLIDO:</label>
                     <input type="text" name="id_tec-nom_ape_2" id="id_tec-nom_ape_2">
                     <label for="id_tec-tlf_2">TLF:</label>
-                    <input type="text" name="id_tec-tlf_2" id="id_tec-tlf_2">
+                    <input type="tel" name="id_tec-tlf_2" id="id_tec-tlf_2" placeholder="0000-000-0000">
                 </div>
             </article>
 
@@ -98,13 +98,37 @@
                     <input type="text" name="datos_cuenta-nombre" id="datos_cuenta-nombre" class="first_input">
                     
                     <label for="datos_cuenta-estado">ESTADO:</label>
-                    <input type="text" name="datos_cuenta-estado" id="datos_cuenta-estado">
+                    <input type="text" name="datos_cuenta-estado" id="datos_cuenta-estado" value="Distrito Capital" disabled>
                     
                     <label for="datos_cuenta-municipio">MUNICIPIO:</label>
-                    <input type="text" name="datos_cuenta-municipio" id="datos_cuenta-municipio">
+                    <input type="text" name="datos_cuenta-municipio" id="datos_cuenta-municipio" value="Libertador" disabled>
                     
                     <label for="datos_cuenta-parroquia">PARROQUIA:</label>
-                    <input type="text" name="datos_cuenta-parroquia" id="datos_cuenta-parroquia">
+                    <input type="text" name="datos_cuenta-parroquia" id="datos_cuenta-parroquia" list="parroquias">
+                    <datalist id="parroquias">
+                        <option value="Altagracia">
+                        <option value="Antímano">
+                        <option value="Caricuao">
+                        <option value="Catedral">
+                        <option value="Coche">
+                        <option value="El_Junquito">
+                        <option value="El_Paraíso">
+                        <option value="El_Recreo">
+                        <option value="El_Valle">
+                        <option value="La_Candelaria">
+                        <option value="La_Pastora">
+                        <option value="La_Vega">
+                        <option value="Macarao">
+                        <option value="San_Agustín">
+                        <option value="San_Bernardino">
+                        <option value="San_José">
+                        <option value="San_Juan">
+                        <option value="San_Pedro">
+                        <option value="Santa_Rosalía">
+                        <option value="Santa_Teresa">
+                        <option value="Sucre_(Catia) ">
+                        <option value="23_de_Enero">
+                    </datalist>
                     
                     <label for="datos_cuenta-cent_pobl">CENTRO POBLADO:</label>
                     <input type="text" name="datos_cuenta-cent_pobl" id="datos_cuenta-cent_pobl" class="last_input">
@@ -155,7 +179,7 @@
 
                         <div>
                             <label for="ent_fisi-alt_pro">ALTURA PROMEDIO</label>
-                            <input type="text" name="ent_fisi-alt_pro" id="ent_fisi-alt_pro" class="ent_fisi-altura_promedio">
+                            <input type="number" name="ent_fisi-alt_pro" id="ent_fisi-alt_pro" class="ent_fisi-altura_promedio">
                             <span>M</span>
                         </div>
                     </div>
@@ -223,17 +247,17 @@
 
                         <div>
                             <label for="ent_fisi-r_perma">R. PERMANENTE</label>    
-                            <input type="checkbox" name="ent_fisi-r_perma" id="ent_fisi-r_perma">
+                            <input type="radio" name="ent_fisi-variacion" value="permanente" id="ent_fisi-r_perma">
                         </div>
 
                         <div>
                             <label for="ent_fisi-r_inter">R. INTERMITENTE</label>    
-                            <input type="checkbox" name="ent_fisi-r_inter" id="ent_fisi-r_inter">
+                            <input type="radio" name="ent_fisi-variacion" value="intermitente" id="ent_fisi-r_inter">
                         </div>
                         
                         <div>
                             <label for="ent_fisi-r_efi">R. EFIMERO</label>    
-                            <input type="checkbox" name="ent_fisi-r_efi" id="ent_fisi-r_efi">
+                            <input type="radio" name="ent_fisi-variacion" value="efimero" id="ent_fisi-r_efi">
                         </div>
                         
                     </div>
@@ -243,22 +267,22 @@
 
                         <div>
                             <label for="ent_fisi-a_prote_ocu">A. PROTECCION OCUPADA</label>
-                            <input type="checkbox" name="ent_fisi-a_prote_ocu" id="ent_fisi-a_prote_ocu">
+                            <input type="radio" name="ent_fisi-retiro_cuerpo_agua" value="proteccion_ocupada" id="ent_fisi-a_prote_ocu">
                         </div>
 
                         <div>
                             <label for="ent_fisi-a_prote_15">A. PROTECCION 15 M</label>
-                            <input type="checkbox" name="ent_fisi-a_prote_15" id="ent_fisi-a_prote_15">
+                            <input type="radio" name="ent_fisi-retiro_cuerpo_agua" value="proteccion_15M" id="ent_fisi-a_prote_15">
                         </div>
 
                         <div>
                             <label for="ent_fisi-a_prote_80">A. PROTECCION 80 M</label>
-                            <input type="checkbox" name="ent_fisi-a_prote_80" id="ent_fisi-a_prote_80">
+                            <input type="radio" name="ent_fisi-retiro_cuerpo_agua" value="proteccion_80M" id="ent_fisi-a_prote_80">
                         </div>
 
                         <div>
                             <label for="ent_fisi-a_prote_100">A. PROTECCION 100 M</label>
-                            <input type="checkbox" name="ent_fisi-a_prote_100" id="ent_fisi-a_prote_100">
+                            <input type="radio" name="ent_fisi-retiro_cuerpo_agua" value="proteccion_100M" id="ent_fisi-a_prote_100">
                         </div>
 
                     </div>
@@ -519,22 +543,22 @@
                     
                     <div>
                         <label for="carac_obra-gravedad1">GRAVEDAD</label>
-                        <input type="checkbox" name="carac_obra-gravedad1" id="carac_obra-gravedad1">
+                        <input type="radio" name="carac_obra-diseno_obra" value="gravedad" id="carac_obra-gravedad1">
                     </div> 
                     
                     <div>
                         <label for="carac_obra-arco">ARCO</label>
-                        <input type="checkbox" name="carac_obra-arco" id="carac_obra-arco">
+                        <input type="radio" name="carac_obra-diseno_obra" value="arco" id="carac_obra-arco">
                     </div> 
 
                     <div>
                         <label for="carac_obra-contrafu">CONTRAFUERTE</label>
-                        <input type="checkbox" name="carac_obra-contrafu" id="carac_obra-contrafu">
+                        <input type="radio" name="carac_obra-diseno_obra" value="contrafuente" id="carac_obra-contrafu">
                     </div> 
                     
                     <div>
                         <label for="carac_obra-mate_suel">MATERIALES SUELTOS</label>
-                        <input type="checkbox" name="carac_obra-mate_suel" id="carac_obra-mate_suel">
+                        <input type="radio" name="carac_obra-diseno_obra" value="materiales_sueltos" id="carac_obra-mate_suel">
                     </div> 
                     
                 </div>
@@ -544,22 +568,22 @@
 
                     <div>
                         <label for="carac_obra-vent">VENTANA</label>
-                        <input type="checkbox" name="carac_obra-vent" id="carac_obra-vent">
+                        <input type="radio" name="carac_obra-tipo_dique" value="ventana" id="carac_obra-vent">
                     </div> 
 
                     <div>
                         <label for="carac_obra-ranu">RANURA</label>
-                        <input type="checkbox" name="carac_obra-ranu" id="carac_obra-ranu">
+                        <input type="radio" name="carac_obra-tipo_dique" value="ranura" id="carac_obra-ranu">
                     </div> 
 
                     <div>
                         <label for="carac_obra-enrej">ENREJADO</label>
-                        <input type="checkbox" name="carac_obra-enrej" id="carac_obra-enrej">
+                        <input type="radio" name="carac_obra-tipo_dique" value="enrejado" id="carac_obra-enrej">
                     </div> 
 
                     <div>
                         <label for="carac_obra-rastri">RASTRILLO</label>
-                        <input type="checkbox" name="carac_obra-rastri" id="carac_obra-rastri">
+                        <input type="radio" name="carac_obra-tipo_dique" value="rastrillo" id="carac_obra-rastri">
                     </div> 
                     
                 </div>
@@ -569,27 +593,27 @@
 
                     <div>
                         <label for="carac_obra-hinca">HINCADO</label>
-                        <input type="checkbox" name="carac_obra-hinca" id="carac_obra-hinca">
+                        <input type="radio" name="carac_obra-tipo_muro" value="hincado" id="carac_obra-hinca">
                     </div> 
 
                     <div>
                         <label for="carac_obra-anclado">ANCLADO</label>
-                        <input type="checkbox" name="carac_obra-anclado" id="carac_obra-anclado">
+                        <input type="radio" name="carac_obra-tipo_muro" value="anclado" id="carac_obra-anclado">
                     </div> 
                     
                     <div>
                         <label for="carac_obra-cont_fuer">CONTRA FUERTE</label>
-                        <input type="checkbox" name="carac_obra-cont_fuer" id="carac_obra-cont_fuer">
+                        <input type="radio" name="carac_obra-tipo_muro" value="contra_fuerte" id="carac_obra-cont_fuer">
                     </div> 
                     
                     <div>
                         <label for="carac_obra-grave_arma">GRAVEDAD ARMADO</label>
-                        <input type="checkbox" name="carac_obra-grave_arma" id="carac_obra-grave_arma">
+                        <input type="radio" name="carac_obra-tipo_muro" value="gravedad_armado" id="carac_obra-grave_arma">
                     </div> 
                     
                     <div>
                         <label for="carac_obra-gravedad2">GRAVEDAD</label>
-                        <input type="checkbox" name="carac_obra-gravedad2" id="carac_obra-gravedad2">
+                        <input type="radio" name="carac_obra-tipo_muro" value="gravedad" id="carac_obra-gravedad2">
                     </div> 
                     
                 </div>
@@ -604,17 +628,17 @@
 
                     <div>
                         <label for="carac_obra-pie">PIE</label>
-                        <input type="checkbox" name="carac_obra-pie" id="carac_obra-pie">
+                        <input type="radio" name="carac_obra-tipo_descanso" value="pie" id="carac_obra-pie">
                     </div>
                     
                     <div>
                         <label for="carac_obra-corte_relle">CORTE Y RELLENO</label>
-                        <input type="checkbox" name="carac_obra-corte_relle" id="carac_obra-corte_relle">
+                        <input type="radio" name="carac_obra-tipo_descanso" value="corte_relleno" id="carac_obra-corte_relle">
                     </div>
                     
                     <div>
                         <label for="carac_obra-corte_vanq">CORTE BANQUETA</label>
-                        <input type="checkbox" name="carac_obra-corte_vanq" id="carac_obra-corte_vanq">
+                        <input type="radio" name="carac_obra-tipo_descanso" value="corte_vanqueta" id="carac_obra-corte_vanq">
                     </div>
                     
                 </div>
@@ -623,13 +647,13 @@
                     <h2 class="sub_title">VERTEDEROS</h2>
 
                     <label for="carac_obra-simple">SIMPLE</label>
-                    <input type="checkbox" name="carac_obra-simple" id="carac_obra-simple">
+                    <input type="radio" name="carac_obra-vertederos" value="simple" id="carac_obra-simple">
 
                     <label for="carac_obra-multi">MULTIPLE</label>
-                    <input type="checkbox" name="carac_obra-multi" id="carac_obra-multi">
+                    <input type="radio" name="carac_obra-vertederos" value="multiple" id="carac_obra-multi">
 
                     <label for="carac_obra-canti">CANTIDAD</label>
-                    <input type="checkbox" name="carac_obra-canti" id="carac_obra-canti">
+                    <input type="radio" name="carac_obra-vertederos" value="cantidad" id="carac_obra-canti">
                 </div>
 
                 <div class="form_sub_secction div_2col carac_obra-estruc_aux">
@@ -952,24 +976,24 @@
                         <label for="meto_apli-mortero-grandes">
                             <img src="imgs/morteros/mortero-grandes.png" alt="Mortero Grande">
                         </label>
-                        <input type="checkbox" name="meto_apli-mortero-grandes" id="meto_apli-mortero-grandes">
+                        <input type="radio" name="meto_apli-prueba_mortero" value="mortero_grandes" id="meto_apli-mortero-grandes">
                         
                         <label for="meto_apli-mortero-medianos">
                             <img src="imgs/morteros/mortero-medianos.png" alt="Mortero Mediano">
                         </label>
-                        <input type="checkbox" name="meto_apli-mortero-medianos" id="meto_apli-mortero-medianos">
+                        <input type="radio" name="meto_apli-prueba_mortero" value="mortero_medianos" id="meto_apli-mortero-medianos">
 
                         
                         <label for="meto_apli-mortero-borilla">
                             <img src="imgs/morteros/mortero-boronilla.png" alt="Mortero Borilla (viruta)">
                         </label>
-                        <input type="checkbox" name="meto_apli-mortero-borilla" id="meto_apli-mortero-borilla">
+                        <input type="radio" name="meto_apli-prueba_mortero" value="mortero_borilla" id="meto_apli-mortero-borilla">
 
                         
                         <label for="meto_apli-mortero-polvo">
                             <img src="imgs/morteros/mortero-polvo.png" alt="Mortero Polvo">
                         </label>
-                        <input type="checkbox" name="meto_apli-mortero-polvo" id="meto_apli-mortero-polvo">
+                        <input type="radio" name="meto_apli-prueba_mortero" value="mortero_polvo" id="meto_apli-mortero-polvo">
 
                     </div>
                         
@@ -989,9 +1013,12 @@
 
                 <div class="form_sub_secction pg2_footer-leyenda">
                     <h3>NIVELES DE <br> CONTAMINACION</h3>
-                    <p>A: ALTO</p>
-                    <p>M: MEDIO</p>
-                    <p>B: BAJO</p>
+                    <label for="nivel_contaminacion-alto">A: ALTO </label>
+                    <input type="radio" name="nivel_contaminacion" value="alto" id="nivel_contaminacion-alto">
+                    <label for="nivel_contaminacion-medio">M: MEDIO </label>
+                    <input type="radio" name="nivel_contaminacion" value="medio" id="nivel_contaminacion-medio">
+                    <label for="nivel_contaminacion-bajo">B: BAJO </label>
+                    <input type="radio" name="nivel_contaminacion" value="bajo" id="nivel_contaminacion-bajo">
                 </div>
 
                 <div class="form_sub_secction org_parti">
@@ -1004,15 +1031,15 @@
 
                     <input type="text" name="org_parti-nom_ape_1" id="org_parti-nom_ape_1">
                     <input type="text" name="org_parti-insti_1" id="org_parti-insti_1">
-                    <input type="text" name="org_parti-tlf_1" id="org_parti-tlf_1">
+                    <input type="tel" name="org_parti-tlf_1" id="org_parti-tlf_1" placeholder="0000-000-0000"> 
 
                     <input type="text" name="org_parti-nom_ape_2" id="org_parti-nom_ape_2">
                     <input type="text" name="org_parti-insti_2" id="org_parti-insti_2">
-                    <input type="text" name="org_parti-tlf_2" id="org_parti-tlf_2">
+                    <input type="tel" name="org_parti-tlf_2" id="org_parti-tlf_2" placeholder="0000-000-0000"> 
 
                     <input type="text" name="org_parti-nom_ape_3" id="org_parti-nom_ape_3">
                     <input type="text" name="org_parti-insti_3" id="org_parti-insti_3">
-                    <input type="text" name="org_parti-tlf_3" id="org_parti-tlf_3">
+                    <input type="tel" name="org_parti-tlf_3" id="org_parti-tlf_3" placeholder="0000-000-0000"> 
                     
                 </div>
                 
