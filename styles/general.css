@@ -2,7 +2,8 @@
     font-size: 9px;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
-    --sub_color: rgb(8,178,240)
+    --sub_color: rgb(8,178,240);
+    --error_color: rgba(226,34,34,0.2);
 }
 
 *{
@@ -95,8 +96,8 @@
     resize: none;
 }
 input:invalid{
-    border-color: #e225;
-    background-color: #e225;
+    border-color: var(--error_color);
+    background-color: var(--error_color);
 }
 input, textarea{
     /* border-radius: 4px; */
