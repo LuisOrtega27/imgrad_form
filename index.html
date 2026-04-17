@@ -4,13 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMQOH</title>
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/pag1.css">
-    <link rel="stylesheet" href="styles/pag2.css">
+    
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="js/modalsHandler.js" defer></script>
 </head>
 <body>
 
-    <form action="./php/updateTxt.php" method="post" class="root">
+    <dialog class="modal" id="modal-new_Registry">
+
+        <form action="#"  class="modal-body">
+
+            <button type="button" class="modal-controls modal-close_btn">&times;</button>
+
+            <h2 class="modal-title">Registro</h2>
+
+            <p>¿Desea crear un nuevo registro?</p>
+
+            <div class="modal-buttons">
+                <button type="button" class="btn" id="modal-btn_new_Registry">Nuevo Registro</button>
+                <button type="button" class="btn" id="modal-btn_update_Registry">Actualizar Registro</button>
+            </div>
+
+        </form>
+
+    </dialog>
+
+    <dialog class="modal" id="modal-update_Registry">
+
+        <form action="#"  class="modal-body">
+
+            <!-- <button type="button" class="modal-close_btn">&times;</button> -->
+            <button type="button" class="modal-controls modal-return_btn">&lt;</button>
+
+            <h2 class="modal-title">Actualizar Registro</h2>
+
+            <p>Ingrese el número de ficha o código del registro que desea actualizar:</p>
+
+            <input type="text" name="search_registry" id="search_registry" placeholder="Número de ficha o código" pattern="^[0-9]{6}$" required title="Patron esperado: 123456" autofocus>
+
+            <div class="modal-buttons">
+                <button type="submit" class="btn">Buscar</button>
+            </div>
+
+        </form>
+
+    </dialog>
+
+    <form action="./php/updateTxt.php" method="post" class="main-form">
 
         <!--  ++++++++++++++++++++++++++++++++++++++++ PAGINA 1 ++++++++++++++++++++++++++++++++++++++++  -->
 
@@ -42,9 +82,9 @@
                         <span>COORDENADAS UTM</span>
                         <div>
                             <label for="coor_utm-e">E:</label>
-                            <input type="number" name="coor_utm-e" id="coor_utm-e">
+                            <input type="number" name="coor_utm-e" id="coor_utm-e" pattern="^\d{7},\d{2}" required placeholder="1234567,12" title="Patron esperado: 1234567,12">
                             <label for="coor_utm-n">N:</label>
-                            <input type="number" name="coor_utm-n" id="coor_utm-n" >
+                            <input type="number" name="coor_utm-n" id="coor_utm-n" pattern="^\d{6},\d{2}" required placeholder="123456,12" title="Patron esperado: 123456,12">
                         </div>
                     </div>
                 </div>
@@ -54,15 +94,15 @@
                     <input type="text" name="ficha_n" id="ficha_n">
 
                     <label for="cod_n" class="header_codigo-cod_n">CODIGO Nº:</label>
-                    <input type="text" name="cod_n" id="cod_n">
+                    <input type="text" name="cod_n" id="cod_n" disabled>
 
                     <div>
                         <label for="header_codigo-huso">HUSO:</label>
-                        <input type="text" name="header_codigo-huso" id="header_codigo-huso">
+                        <input type="number" name="header_codigo-huso" id="header_codigo-huso">
                         <span>N</span>
 
                         <label for="header_codigo-altura">ALTURA:</label>
-                        <input type="text" name="header_codigo-altura" id="header_codigo-altura">
+                        <input type="number" name="header_codigo-altura" id="header_codigo-altura">
                         <span>M.S.N.M</span>
                     </div>
                 </div>
@@ -77,13 +117,13 @@
                     <label for="id_tec-nom_ape_1">NOMBRE Y APELLIDO:</label>
                     <input type="text" name="id_tec-nom_ape_1" id="id_tec-nom_ape_1">
                     <label for="id_tec-tlf_1">TLF:</label>
-                    <input type="tel" name="id_tec-tlf_1" id="id_tec-tlf_1" placeholder="0000-0000000" pattern="^\d{4}-\d{7}$" required title="el patron es: 0000-0000000">
+                    <input type="tel" name="id_tec-tlf_1" id="id_tec-tlf_1" placeholder="1234-1234567" pattern="^\d{4}-\d{7}$" required title="el patron es: 1234-1234567">
                 </div>
                 <div>
                     <label for="id_tec-nom_ape_2">NOMBRE Y APELLIDO:</label>
                     <input type="text" name="id_tec-nom_ape_2" id="id_tec-nom_ape_2">
                     <label for="id_tec-tlf_2">TLF:</label>
-                    <input type="tel" name="id_tec-tlf_2" id="id_tec-tlf_2" placeholder="0000-0000000">
+                    <input type="tel" name="id_tec-tlf_2" id="id_tec-tlf_2" placeholder="1234-1234567">
                 </div>
             </article>
 
@@ -1012,11 +1052,15 @@
             <footer class="pg2_footer">
 
                 <div class="form_sub_secction pg2_footer-leyenda">
-                    <h3>NIVELES DE <br> CONTAMINACION</h3>
+                    
+                    <h3 class="pg2_footer-leyenda-sub_title">NIVELES DE <br> CONTAMINACION</h3>
+                    
                     <label for="nivel_contaminacion-alto">A: ALTO</label>
                     <input type="radio" name="nivel_contaminacion" value="alto" id="nivel_contaminacion-alto">
+                    
                     <label for="nivel_contaminacion-medio">M: MEDIO </label>
                     <input type="radio" name="nivel_contaminacion" value="medio" id="nivel_contaminacion-medio">
+                    
                     <label for="nivel_contaminacion-bajo">B: BAJO </label>
                     <input type="radio" name="nivel_contaminacion" value="bajo" id="nivel_contaminacion-bajo">
                 </div>
@@ -1056,7 +1100,6 @@
 
     </form>
     
-    <script src="./scripts.js"></script>
 </body>
 
 </html>

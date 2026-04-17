@@ -1,0 +1,54 @@
+/* Hide dialog by default. Ensure it's visible only when the <dialog> has the `open` attribute. */
+.modal {
+    display: none;
+}
+
+/* When the dialog is opened (has attribute open), display as an overlay */
+.modal[open] {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    border: none;
+    z-index: 1000;
+}
+.modal[open]::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-body {   
+    position: relative;
+    width: 90vw;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    padding-top: 32px;
+    font-size: 2em;
+}
+.modal-controls{
+    top: 0px;
+    position: absolute;
+    height: 40px;
+    aspect-ratio: 1/1;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.modal-close_btn {
+    right: 0px;
+}
+.modal-return_btn{
+    left: 0px;
+}
+
+.modal-title { /* modal title styling placeholder */ }
+.modal-buttons { /* modal buttons container */ }
+.btn { /* basic button reset (project-wide styles in general.css) */ }
