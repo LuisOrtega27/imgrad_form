@@ -4,6 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
     --sub_color: rgb(8,178,240);
     --error_color: rgba(255, 0, 0, 0.2);
+
 }
 
 *{
@@ -18,7 +19,7 @@
     */
 }
 
-.main-form{
+.main_form{
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -99,4 +100,13 @@ input, textarea{
 input:invalid{
     border: 1px solid red !important;
     background-color: var(--error_color) !important;
+}
+
+.input-disabled {
+    --text-color-disabled: #434343;
+    --background-color-disabled: #ccc;
+    pointer-events: none;
+    background-color: var(--background-color-disabled);
+    border: var(--background-color-disabled) solid 1px;
+    color: var(--text-color-disabled);
 }

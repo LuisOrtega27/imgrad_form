@@ -1,5 +1,7 @@
 'use strict'
 
+import getRegistry  from './getRegistry.js';
+
 window.addEventListener('DOMContentLoaded', () => {
 
     // NEW REGISTRY MODAL
@@ -7,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // MODAL CONTROLS
     const closeModalBtns = document.querySelectorAll('.modal-close_btn');
-    const ReturnModalBtn = document.querySelector('#modal-btn_return');
+    const ReturnModalBtn = document.querySelector('.modal-return_btn');
 
     // NEW REGISTRY FORM BUTTONS
     const newRegistryBtn = document.querySelector('#modal-btn_new_Registry');
@@ -40,16 +42,19 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Action: close current modal and open the previous one
+    ReturnModalBtn.addEventListener('click', () => {
+        modalUpdateRegistry.close();
+        
+        modalNewRegistry.showModal();
+    });
 
+    // Action: handle new registry form submission, request for last registry id
     newRegistryBtn.addEventListener('click', () => {
-        // fetch('http://localhost/imgrad_form/php/addRegistry.php')
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log(data);
-        //     })
-        //     .catch(error => {
-        //         console.error('Error:', error);
-        //     });
+
+        // Call the searchRegistry function without an ID to get the last registry
+        getRegistry();
+        modalNewRegistry.close();
     });
 
     updateRegistryBtn.addEventListener('click', () => {

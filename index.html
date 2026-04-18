@@ -6,7 +6,8 @@
     <title>CMQOH</title>
     
     <link rel="stylesheet" href="styles/index.css">
-    <script src="js/modalsHandler.js" defer></script>
+    <script type="module" src="js/modalsHandler.js" defer></script>
+    <script type="module" src="js/mainFormHandler.js" defer></script>
 </head>
 <body>
 
@@ -40,7 +41,7 @@
 
             <p>Ingrese el número de ficha o código del registro que desea actualizar:</p>
 
-            <input type="text" name="search_registry" id="search_registry" placeholder="Número de ficha o código" pattern="^[0-9]{6}$" required title="Patron esperado: 123456" autofocus>
+            <input type="text" name="search_registry" id="search_registry" placeholder="Número de ficha o código" pattern="^[0-9]{6}$"  title="Patron esperado: 123456" autofocus>
 
             <div class="modal-buttons">
                 <button type="submit" class="btn">Buscar</button>
@@ -50,7 +51,7 @@
 
     </dialog>
 
-    <form action="./php/updateTxt.php" method="post" class="main-form">
+    <form action="./php/updateTxt.php" method="post" class="main_form" id="main_form">
 
         <!--  ++++++++++++++++++++++++++++++++++++++++ PAGINA 1 ++++++++++++++++++++++++++++++++++++++++  -->
 
@@ -72,19 +73,19 @@
                 <div class="header_fecha">
                     <div>
                         <label for="header_fecha-fecha">FECHA</label>
-                        <input type="date"  name="header_fecha-fecha" id="header_fecha-fecha" required> 
+                        <input type="date"  name="header_fecha-fecha" id="header_fecha-fecha" > 
                     </div>
                     <div>
                         <label for="tiem_ins">TIEMPO DE INSPECCION</label>
-                        <input type="text" name="tiem_ins" id="tiem_ins" placeholder="05:00" pattern="^\d{2}:\d{2}$" required title="el patron es: 00:00">
+                        <input type="text" name="tiem_ins" id="tiem_ins" placeholder="05:00" pattern="^\d{2}:\d{2}$"  title="el patron es: 00:00" >
                     </div>
                     <div>
                         <span>COORDENADAS UTM</span>
                         <div>
                             <label for="coor_utm-e">E:</label>
-                            <input type="number" name="coor_utm-e" id="coor_utm-e" pattern="^\d{7},\d{2}" required placeholder="1234567,12" title="Patron esperado: 1234567,12">
+                            <input type="text" name="coor_utm-e" id="coor_utm-e" pattern="^\d{6},\d{2}$" placeholder="123456,12" title="Patron esperado: 123456,12" >
                             <label for="coor_utm-n">N:</label>
-                            <input type="number" name="coor_utm-n" id="coor_utm-n" pattern="^\d{6},\d{2}" required placeholder="123456,12" title="Patron esperado: 123456,12">
+                            <input type="text" name="coor_utm-n" id="coor_utm-n" pattern="^\d{7},\d{2}$" placeholder="1234567,12" title="Patron esperado: 1234567,12" >
                         </div>
                     </div>
                 </div>
@@ -94,7 +95,7 @@
                     <input type="text" name="ficha_n" id="ficha_n">
 
                     <label for="cod_n" class="header_codigo-cod_n">CODIGO Nº:</label>
-                    <input type="text" name="cod_n" id="cod_n" disabled>
+                    <input type="text" class="input-disabled" name="cod_n" id="cod_n">
 
                     <div>
                         <label for="header_codigo-huso">HUSO:</label>
@@ -117,7 +118,7 @@
                     <label for="id_tec-nom_ape_1">NOMBRE Y APELLIDO:</label>
                     <input type="text" name="id_tec-nom_ape_1" id="id_tec-nom_ape_1">
                     <label for="id_tec-tlf_1">TLF:</label>
-                    <input type="tel" name="id_tec-tlf_1" id="id_tec-tlf_1" placeholder="1234-1234567" pattern="^\d{4}-\d{7}$" required title="el patron es: 1234-1234567">
+                    <input type="tel" name="id_tec-tlf_1" id="id_tec-tlf_1" placeholder="1234-1234567" pattern="^\d{4}-\d{7}$"  title="el patron es: 1234-1234567" >
                 </div>
                 <div>
                     <label for="id_tec-nom_ape_2">NOMBRE Y APELLIDO:</label>
@@ -138,10 +139,10 @@
                     <input type="text" name="datos_cuenta-nombre" id="datos_cuenta-nombre" class="first_input">
                     
                     <label for="datos_cuenta-estado">ESTADO:</label>
-                    <input type="text" name="datos_cuenta-estado" id="datos_cuenta-estado" value="Distrito Capital" disabled>
+                    <input type="text" class="input-disabled" name="datos_cuenta-estado" id="datos_cuenta-estado" value="Distrito Capital">
                     
                     <label for="datos_cuenta-municipio">MUNICIPIO:</label>
-                    <input type="text" name="datos_cuenta-municipio" id="datos_cuenta-municipio" value="Libertador" disabled>
+                    <input type="text" class="input-disabled" name="datos_cuenta-municipio" id="datos_cuenta-municipio" value="Libertador">
                     
                     <label for="datos_cuenta-parroquia">PARROQUIA:</label>
                     <input type="text" name="datos_cuenta-parroquia" id="datos_cuenta-parroquia" list="parroquias">
@@ -1094,7 +1095,7 @@
         <!-- aca podria poner los botones del formulario -->
 
         <div class="form_buttons">
-            <button type="submit" class="btn_submit">ENVIAR</button>
+            <button type="submit" class="btn_submit" id="main_form-submit">ENVIAR</button>
             <button type="reset" class="btn_reset">REINICIAR</button>
         </div>
 

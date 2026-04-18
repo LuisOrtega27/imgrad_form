@@ -1,6 +1,8 @@
 <?php
 // INPUTS
 $formData = $_POST;
+
+
 $ID_ficha = $formData["cod_n"]; /* Revisar si el campo "cod_n" es el ID unico de cada registro, 
     si es asi, usarlo como ID en lugar de generar uno nuevo, para evitar problemas de duplicados 
     y mantener un historial de modificaciones. */ 
@@ -16,12 +18,10 @@ si es necesario, o para evitar que se duplique ya que es el ID unico. */
 $ficha_n = 0001; // Revisar el ultimo ID registrado en el archivo txt y sumarle 1 para generar el nuevo ID
     
 // MODIFY HANDLER
-$Modified = "false"; // Si se esta modificando un registro existente, cambiar a true y asignar el ID del registro
 $ModifyID = "00"; /* Si $Modify es true, buscar el registro con el mismo ID en el archivo txt 
 y cambiar el campo "modificacion" sumandole 1, luego sumar una nueva linea con el mismo ID 
 y los nuevos datos, sin eliminar el registro anterior, para mantener un historial de modificaciones. */ 
     
-array_splice($formData, 1, 0, $Modified); // revisar si en el txt se guarda el estado de modificacion, para saber si es un nuevo registro o una modificacion de uno existente
 array_splice($formData, 2, 0, $ModifyID); // revisar si en el txt el id de modificacion es distinto a 00, para saber si es un nuevo registro o una modificacion de uno existente
     
 
