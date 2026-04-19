@@ -74,7 +74,9 @@
     
     padding-left:  30px;
     padding-right:  30px;
-    
+}
+.div_3col > .sub_title{
+    grid-column: 1/4;
 }
 .pg2_footer-leyenda-sub_title{
     grid-column: 1/3;

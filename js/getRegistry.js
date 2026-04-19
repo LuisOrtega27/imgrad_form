@@ -7,7 +7,7 @@ const getRegistry = (id = null) => {
     // if id is null, get the last registry id from the database, otherwise get the registry with the given id    
     try{
 
-    const PATH = "php/getLastId.php";
+        const PATH = "php/getLastId.php";
         const FETCH_CONFIG = {
             headers: {
                 "Content-Type": "application/json"
@@ -41,4 +41,4 @@ const getRegistry = (id = null) => {
     }
 }
 
-export default getRegistry;
+export {getRegistry};
