@@ -28,18 +28,20 @@ mainForm.addEventListener('submit', async (e) => {
 
 const fillInputs = (data) => {
     
+    // console.log(data)
     
-    for (let [dayaKey, dataValue] of Object.entries(data)) {
+    for (let [dataKey, dataValue] of Object.entries(data)) {
         
-        dayaKey = dayaKey.trim()
+        dataKey = dataKey.trim()
         dataValue = dataValue.trim()
 
-        if(dayaKey === "modification") continue; // Skip the historic modification field
+        // if(dataKey === "modification") continue; // Skip the historic modification field
 
-        const input = document.getElementsByName(dayaKey);
+        const input = document.getElementsByName(dataKey);
 
+        console.log(input[0].name == "modification" ? input : '')
         // validar que sea type="checkbox/radio" y que coincida el "value", y usar "checked"
-        if(input[0].type == "hidden"){
+        if(input[0].type == "hidden" && input[0].name != "modification"){
 
             input.forEach((nodo)=>{
                 if(nodo.value === dataValue) nodo.checked = true

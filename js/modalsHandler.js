@@ -80,6 +80,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
             if(!result.success) return console.log(result)
 
+            // console.log(result)
+
             fillInputs(result.data);
             modalUpdateRegistry.close();
 

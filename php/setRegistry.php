@@ -12,15 +12,19 @@ $FICHA_N = $formData["ficha_n"];
 $COORD_E = $formData["coor_utm-e"]; 
 $COORD_N = $formData["coor_utm-n"]; 
 $COD_N = $formData["cod_n"]; 
+$MODIFICATION = $formData["modification"]; 
 
 // UNSET VARIABLES
 unset($formData["ficha_n"]);
 unset($formData["coor_utm-e"]);
 unset($formData["coor_utm-n"]);
 unset($formData["cod_n"]);
+unset($formData["modification"]);
 
 // RE-ORDERING DATA
-array_unshift($formData, "00"); /*
+// array_unshift($formData, "00"); /*
+array_unshift($formData, $MODIFICATION); 
+
 /*
     esto lleva el historial de actualizaciones, el valor "00" indica que es un nuevo registro, 
     si el valor es distinto a "00", indica que es una modificacion de un registro existente, 

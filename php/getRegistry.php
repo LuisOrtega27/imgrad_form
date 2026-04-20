@@ -1,5 +1,5 @@
 <?php
-$prueba = '{"targetId":"1", "last": true}';
+$prueba = '{"targetId":"2", "last": true}';
 
 $FILE_PATH = "../DATA_GIS/GDB.txt";
 $formData = file_get_contents("php://input") ?: $prueba;
@@ -42,7 +42,10 @@ if(empty($result)){
 if($formData["last"] == true){
     $result = end($result); // se guarda solo la ultima coincidencia
 }
-// var_dump($result);
+
+// actualizar la modificacion, para el historico
+$result["modification"] = str_pad((int)$result["modification"] +1, 2, "0", STR_PAD_LEFT);
+
 
 echo json_encode([
     "code" => 200,

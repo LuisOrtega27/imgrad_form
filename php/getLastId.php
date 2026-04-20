@@ -24,20 +24,20 @@ $line = '';
 $position = -2;
 
 
-while(fgetc($file) != "\n"){
+while(fgetc($file) != "\n"){   
     fseek($file, $position, SEEK_END);
     $position--;
 }
-
 $line = fgets($file);
-
 fclose($file);
+
 
 $titles = explode(', ', $titles_line);
 $ID_key = $titles[0]; // get the first title as the key for the ID
 
-$line_array = explode(', ', $line);
+// verificar si la linea tiene valor de modificacion 00, si no seguir buscando
 
+$line_array = explode(', ', $line);
 $ID = $line_array[0];
 
 $ID = (int)$ID +1; // increment the ID by 1 to get the next ID for the new registry
