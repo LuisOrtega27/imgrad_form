@@ -1,5 +1,5 @@
 <?php
-$prueba = '{"data":{"header_fecha-fecha":"","tiem_ins":"","coor_utm-e":"","coor_utm-n":"","ficha_n":"","cod_n":"00000","header_codigo-huso":"","header_codigo-altura":"","id_tec-nom_ape_1":"","id_tec-tlf_1":"","id_tec-nom_ape_2":"","id_tec-tlf_2":"","datos_cuenta-nombre":"","datos_cuenta-estado":"Distrito_Capital","datos_cuenta-municipio":"Libertador","datos_cuenta-parroquia":"","datos_cuenta-cent_pobl":"","ent_fisi-alt_pro":"","ent_fisi-obsevaciones":"","tipo_obra-nombre":"","tipo_obra-tiempo":"","tipo_obra-drp":"","tipo_obra-omc":"","tipo_obra-observaciones":"","carac_obra-observaciones":"","carac_obra-mechi":"","carac_obra-disp_ener":"","carac_obra-malla_cont":"","carac_obra-alivi":"","carac_obra-peine_debas":"","carac_obra-contradic":"","carac_obra-espigo":"","carac_obra-enroca":"","carac_obra-altura":"","carac_obra-base":"","carac_obra-ancho":"","carac_obra-longitud":"","carac_obra-diametro":"","carac_obra-area":"","carac_obra-volumen":"","meto_apli-observaciones":"","org_parti-nom_ape_1":"","org_parti-insti_1":"","org_parti-tlf_1":"","org_parti-nom_ape_2":"","org_parti-insti_2":"","org_parti-tlf_2":"","org_parti-nom_ape_3":"","org_parti-insti_3":"","org_parti-tlf_3":""}}';
+$prueba = '{"data":{"header_fecha-fecha":"lo, que, sea ","tiem_ins":"","coor_utm-e":"","coor_utm-n":"","ficha_n":"","cod_n":"00000","modification":"0","header_codigo-huso":"","header_codigo-altura":"","id_tec-nom_ape_1":"","id_tec-tlf_1":"","id_tec-nom_ape_2":"","id_tec-tlf_2":"","datos_cuenta-nombre":"","datos_cuenta-estado":"Distrito_Capital","datos_cuenta-municipio":"Libertador","datos_cuenta-parroquia":"","datos_cuenta-cent_pobl":"","ent_fisi-alt_pro":"","ent_fisi-obsevaciones":"","tipo_obra-nombre":"","tipo_obra-tiempo":"","tipo_obra-drp":"","tipo_obra-omc":"","tipo_obra-observaciones":"","carac_obra-observaciones":"","carac_obra-mechi":"","carac_obra-disp_ener":"","carac_obra-malla_cont":"","carac_obra-alivi":"","carac_obra-peine_debas":"","carac_obra-contradic":"","carac_obra-espigo":"","carac_obra-enroca":"","carac_obra-altura":"","carac_obra-base":"","carac_obra-ancho":"","carac_obra-longitud":"","carac_obra-diametro":"","carac_obra-area":"","carac_obra-volumen":"","meto_apli-observaciones":"","org_parti-nom_ape_1":"","org_parti-insti_1":"","org_parti-tlf_1":"","org_parti-nom_ape_2":"","org_parti-insti_2":"","org_parti-tlf_2":"","org_parti-nom_ape_3":"","org_parti-insti_3":"","org_parti-tlf_3":""}}';
 
 // INPUTS
 $formData = file_get_contents("php://input") ?: $prueba; // Obtener los datos enviados desde el formulario
@@ -43,11 +43,17 @@ $FILE_PATH = "../DATA_GIS/GDB.txt";
 // TRANSFORM FROM DATA TO STRING
 $data_array = [];
 
+// limpiar para CVS
+
 foreach($formData as $value){
+    $value = str_replace( ",", ";", $value);
     $data_array[] = $value == "" ? "----" : $value;
 }
 
+// var_dump($data_array);
+
 $newline =  PHP_EOL . implode(", ", $data_array);
+
 
 file_put_contents($FILE_PATH, $newline, FILE_APPEND | LOCK_EX);
 

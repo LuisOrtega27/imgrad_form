@@ -2,7 +2,10 @@
 
 import { fillInputs } from './mainFormHandler.js';
 
+
 const getRegistry = (id = null) => {
+
+
 
     // if id is null, get the last registry id from the database, otherwise get the registry with the given id    
     try{
@@ -16,6 +19,7 @@ const getRegistry = (id = null) => {
             body: JSON.stringify({ id })
         };
 
+        
         fetch(PATH, FETCH_CONFIG)
         .then(response=> {
             if(!response.ok) {
