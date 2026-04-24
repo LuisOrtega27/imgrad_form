@@ -2,6 +2,8 @@
 
 const setRegistry = (data)=>{
 
+    console.log(JSON.stringify({data}))
+
     const FILE_PATH = 'php/setRegistry.php';
     const FETCH_CONFIG = {
         method: 'POST',

@@ -51,7 +51,7 @@
     text-align: center;
     grid-column: 1/4;
 }
-.carac_obra-disenos > div input[type="checkbox"]{
+.carac_obra-disenos > div input[type="checkbox"], .carac_obra-disenos > div input[type="radio"]{
     display: none;
 }
 .carac_obra-disenos > div label{
@@ -59,7 +59,7 @@
     text-align: center;
     border: 2px solid #ccc;
 }
-.carac_obra-disenos > div input[type="checkbox"]:checked + label {
+.carac_obra-disenos > div input[type="checkbox"]:checked + label, .carac_obra-disenos > div input[type="radio"]:checked + label {
     border: 2px solid #28e;
 }
 
