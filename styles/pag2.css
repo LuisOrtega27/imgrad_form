@@ -34,13 +34,55 @@
     width: 40px;
 }
 
+.carac_obra-disenos{
+    display: grid;
+    gap: 5px;
+}
+
 .carac_obra >.carac_obra-disenos{
     grid-column: 2/4;
     grid-row: 4/6;
 }
-.carac_obra >.carac_obra-disenos >img{
-    width: 100%;
+
+.carac_obra-disenos > div{
+    max-width: 100%;
 }
+.carac_obra-disenos > div h2{
+    text-align: center;
+    grid-column: 1/4;
+}
+.carac_obra-disenos > div input[type="checkbox"]{
+    display: none;
+}
+.carac_obra-disenos > div label{
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #ccc;
+}
+.carac_obra-disenos > div input[type="checkbox"]:checked + label {
+    border: 2px solid #28e;
+}
+
+.carac_obra-otros_canales{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.carac_obra-otros_canales label{
+    border: none !important;
+    text-transform: uppercase;
+    white-space: pre;
+}
+.carac_obra-otros_canales input{
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 90%;
+}
+
+.carac_obra >.carac_obra-disenos img{
+    max-width: 100%;
+}
+
+
 
 .carac_obra >.carac_obra-medidas{
     grid-column: 4/6;
