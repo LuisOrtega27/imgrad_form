@@ -5,8 +5,6 @@ import { fillInputs } from './mainFormHandler.js';
 
 const getRegistry = (id = null) => {
 
-
-
     // if id is null, get the last registry id from the database, otherwise get the registry with the given id    
     try{
 
@@ -22,7 +20,9 @@ const getRegistry = (id = null) => {
         
         fetch(PATH, FETCH_CONFIG)
         .then(response=> {
+
             if(!response.ok) {
+                alert(response.statusText)
                 throw new Error(`Fetch error ${response.status} ${response.statusText} for ${response.url}`);
             }
             return response.json()

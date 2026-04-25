@@ -11,6 +11,39 @@
 </head>
 <body>
 
+    <nav class="main_nav">
+        <img src="./imgs/icons/redStar_icon.png" alt="Alcaldia de Caracas - Instituto Municipal de Gestion de Riesgos y Administracion de desastres" title="Alcaldia de Caracas - Instituto Municipal de Gestion de Riesgos y Administracion de desastres">
+
+        <ul class="main_menu">
+            <li><a href="#">Nuevo</a></li>
+            <li><a href="#">Actualizacion</a></li>
+            <li><a href="#">Historico</a></li>
+        </ul>
+
+        <ul class="menu_history">
+            <li> 
+                <span class="history-code">000007</span>
+                <span class="history-coords">
+                    <span class="history-coord-n">1234567,12</span>
+                    <span class="history-coord-e">123456,12</span>
+                </span> 
+                <span class="history-place">La Candelaria</span> 
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="dev_menu">
+        <ul>
+            <br>
+            <li><a href="http://127.0.0.1/imgrad_form/php/setRegistry.php" target="_blank">Set Registry.php</a></li>
+            <br>
+            <li><a href="http://127.0.0.1/imgrad_form/php/getRegistry.php" target="_blank">Get Registry.php</a></li>
+            <br>
+            <li><a href="http://127.0.0.1/imgrad_form/php/getLastId.php" target="_blank">Get Last ID.php</a></li>
+        </ul>
+    </nav>
+
+
     <dialog class="modal" id="modal-new_Registry">
 
         <form action="#"  class="modal-body">
@@ -861,7 +894,7 @@
                         </label>
 
 
-                        <input type="hidden" name="carac_obra-disenos-diques_cerrados"value="off">
+                        <!-- <input type="hidden" name="carac_obra-disenos-diques_cerrados"value="off"> -->
                         <input type="radio" name="carac_obra-disenos-diques_cerrados" id="carac_obra-disenos-diques_cerrados-trapezoidal" value="trapezoidal">
                         <label for="carac_obra-disenos-diques_cerrados-trapezoidal">
                             <img src="./imgs/diques-cerrados/diques_cerrados-trapezoidal.png" alt="Dique cerrado Trapezoidal">
@@ -869,7 +902,7 @@
                         </label>
 
 
-                        <input type="hidden" name="carac_obra-disenos-diques_cerrados"value="off">
+                        <!-- <input type="hidden" name="carac_obra-disenos-diques_cerrados"value="off"> -->
                         <input type="radio" name="carac_obra-disenos-diques_cerrados" id="carac_obra-disenos-diques_cerrados-circular" value="circular">
                         <label for="carac_obra-disenos-diques_cerrados-circular">
                             <img src="./imgs/diques-cerrados/diques_cerrados-circular.png" alt="Dique cerrado Circular">

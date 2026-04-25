@@ -1,0 +1,32 @@
+.main_nav{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    font-size: 2em;
+    padding: 10px;
+    background: #191919;
+}
+.main_nav img{
+    height: 100%;
+    max-height: 50px;
+}
+
+.main_nav .main_menu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    list-style: none;
+}
+.main_nav .main_menu li{
+    text-align: center;
+}
+.main_nav .main_menu li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu_history{
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+}

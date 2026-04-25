@@ -39,7 +39,6 @@ const fillInputs = (data) => {
 
         const input = document.getElementsByName(dataKey);
 
-        console.log(input[0].name == "modification" ? input : '')
         // validar que sea type="checkbox/radio" y que coincida el "value", y usar "checked"
         if(input[0].type == "hidden" && input[0].name != "modification"){
 

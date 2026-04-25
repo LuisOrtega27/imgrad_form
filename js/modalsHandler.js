@@ -78,9 +78,8 @@ window.addEventListener('DOMContentLoaded', () => {
             const targetId = formData.search_registry;
             let result = await updateRegistry(targetId);
 
-            if(!result.success) return console.log(result)
+            if(!result?.success) return alert(result.message)
 
-            // console.log(result)
 
             fillInputs(result.data);
             modalUpdateRegistry.close();
