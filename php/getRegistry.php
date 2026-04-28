@@ -1,5 +1,5 @@
 <?php
-$prueba = '{"targetId":"7", "last": true}';
+$prueba = '{"targetId":"1", "last": true}';
 
 $FILE_PATH = "../DATA_GIS/GDB.txt";
 $formData = file_get_contents("php://input") ?: $prueba;
@@ -9,12 +9,12 @@ $FILE = fopen($FILE_PATH, "r");
 
 $result = [];
 // se lee la primera linea del archivo para obtener los titulos de cada columna
-$titles = explode(", ", fgets($FILE)); 
+$titles = explode("; ", fgets($FILE)); 
 
 if($FILE){
     while(!feof($FILE)){
         $line = fgets($FILE);
-        $array_line = explode(", ", $line);
+        $array_line = explode("; ", $line);
         
         // se guardan todas las coincidencias
         if($array_line[0] == $formData["targetId"]){

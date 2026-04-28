@@ -56,13 +56,13 @@ $data_array = [];
 
 // limpiar para CVS
 foreach($formData as $value){
-    $value = str_replace( ",", ";", $value);
+    $value = str_replace( "off", "----", $value);
     $data_array[] = $value == "" ? "----" : $value;
 }
 
 // var_dump($data_array);
 
-$newline =  PHP_EOL . implode(", ", $data_array);
+$newline =  PHP_EOL . implode("; ", $data_array);
 
 
 file_put_contents($FILE_PATH, $newline, FILE_APPEND | LOCK_EX);

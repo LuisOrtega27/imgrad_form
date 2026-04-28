@@ -12,7 +12,7 @@ if(!file_exists($FILE_PATH)){
 $FILE = fopen($FILE_PATH, 'r') or die('Unable to open file!');
 
 $titles = fgets($FILE);
-$arrayKeys = explode(", ", $titles);
+$arrayKeys = explode("; ", $titles);
 
 
 function getNewLine($FILE, $pos){
@@ -37,7 +37,7 @@ while($arrayCombined["modification"] != "00"){ // 00 - resgistro sin actualizaci
     [$currentLine, $newPos] = getNewLine($FILE, $pos);
 
     if($currentLine){
-        $arrayValues = explode(", ", $currentLine);
+        $arrayValues = explode("; ", $currentLine);
         $arrayCombined = array_combine($arrayKeys, $arrayValues);
     }
 
