@@ -107,8 +107,8 @@
                 
                 <div class="header_fecha">
                     <div>
-                        <label for="header_fecha-fecha">FECHA</label>
-                        <input type="date"  name="header_fecha-fecha" id="header_fecha-fecha" > 
+                        <label for="header_fecha__fecha">FECHA</label>
+                        <input type="date"  name="header_fecha__fecha" id="header_fecha__fecha" > 
                     </div>
                     <div>
                         <label for="tiem_ins">TIEMPO DE INSPECCION</label>
@@ -117,10 +117,10 @@
                     <div>
                         <span>COORDENADAS UTM</span>
                         <div>
-                            <label for="coor_utm-e">E:</label>
-                            <input type="text" name="coor_utm-e" id="coor_utm-e" pattern="^\d{6},\d{2}$" placeholder="123456,12" title="Patron esperado: 123456,12" >
-                            <label for="coor_utm-n">N:</label>
-                            <input type="text" name="coor_utm-n" id="coor_utm-n" pattern="^\d{7},\d{2}$" placeholder="1234567,12" title="Patron esperado: 1234567,12" >
+                            <label for="coor_utm__e">E:</label>
+                            <input type="text" name="coor_utm__e" id="coor_utm__e" pattern="^\d{6},\d{2}$" placeholder="123456,12" title="Patron esperado: 123456,12" >
+                            <label for="coor_utm__n">N:</label>
+                            <input type="text" name="coor_utm__n" id="coor_utm__n" pattern="^\d{7},\d{2}$" placeholder="1234567,12" title="Patron esperado: 1234567,12" >
                         </div>
                     </div>
                 </div>
@@ -131,15 +131,15 @@
 
                     <input type="hidden" name="modification" value="00">
                     <label for="cod_n" class="header_codigo-cod_n">CODIGO Nº:</label>
-                    <input type="text" class="input-disabled" name="cod_n" id="cod_n">
+                    <input type="text" class="input-disabled" name="cod_n" id="cod_n" tabindex="-1">
 
                     <div>
-                        <label for="header_codigo-huso">HUSO:</label>
-                        <input type="number" name="header_codigo-huso" id="header_codigo-huso">
+                        <label for="header_codigo__huso">HUSO:</label>
+                        <input type="number" name="header_codigo__huso" id="header_codigo__huso">
                         <span>N</span>
 
-                        <label for="header_codigo-altura">ALTURA:</label>
-                        <input type="number" name="header_codigo-altura" id="header_codigo-altura">
+                        <label for="header_codigo__altura">ALTURA:</label>
+                        <input type="number" name="header_codigo__altura" id="header_codigo__altura">
                         <span>M.S.N.M</span>
                     </div>
                 </div>
@@ -151,16 +151,16 @@
             <article class="form_secction id_tec">
                 <h2 class="sub_title"> IDENTIFICACION DE LOS TECNICOS</h2>
                 <div>
-                    <label for="id_tec-nom_ape_1">NOMBRE Y APELLIDO:</label>
-                    <input type="text" name="id_tec-nom_ape_1" id="id_tec-nom_ape_1">
-                    <label for="id_tec-tlf_1">TLF:</label>
-                    <input type="tel" name="id_tec-tlf_1" id="id_tec-tlf_1" placeholder="1234-1234567" pattern="^\d{4}-\d{7}$"  title="el patron es: 1234-1234567" >
+                    <label for="id_tec__nom_ape_1">NOMBRE Y APELLIDO:</label>
+                    <input type="text" name="id_tec__nom_ape_1" id="id_tec__nom_ape_1">
+                    <label for="id_tec__tlf_1">TLF:</label>
+                    <input type="tel" name="id_tec__tlf_1" id="id_tec__tlf_1" placeholder="1234-1234567" pattern="^\d{4}-\d{7}$"  title="el patron es: 1234-1234567" >
                 </div>
                 <div>
-                    <label for="id_tec-nom_ape_2">NOMBRE Y APELLIDO:</label>
-                    <input type="text" name="id_tec-nom_ape_2" id="id_tec-nom_ape_2">
-                    <label for="id_tec-tlf_2">TLF:</label>
-                    <input type="tel" name="id_tec-tlf_2" id="id_tec-tlf_2" placeholder="1234-1234567">
+                    <label for="id_tec__nom_ape_2">NOMBRE Y APELLIDO:</label>
+                    <input type="text" name="id_tec__nom_ape_2" id="id_tec__nom_ape_2">
+                    <label for="id_tec__tlf_2">TLF:</label>
+                    <input type="tel" name="id_tec__tlf_2" id="id_tec__tlf_2" placeholder="1234-1234567">
                 </div>
             </article>
 
@@ -171,17 +171,17 @@
                 <h2 class="sub_title">DATOS DE LA CUENTA</h2>
 
                 <div>
-                    <label for="datos_cuenta-nombre">NOMBRE:</label>
-                    <input type="text" name="datos_cuenta-nombre" id="datos_cuenta-nombre" class="first_input">
+                    <label for="datos_cuenta__nombre">NOMBRE:</label>
+                    <input type="text" name="datos_cuenta__nombre" id="datos_cuenta__nombre" class="first_input">
                     
-                    <label for="datos_cuenta-estado">ESTADO:</label>
-                    <input type="text" class="input-disabled" name="datos_cuenta-estado" id="datos_cuenta-estado" value="Distrito_Capital">
+                    <label for="datos_cuenta__estado">ESTADO:</label>
+                    <input type="text" class="input-disabled" name="datos_cuenta__estado" id="datos_cuenta__estado" value="Distrito_Capital" tabindex="-1">
                     
-                    <label for="datos_cuenta-municipio">MUNICIPIO:</label>
-                    <input type="text" class="input-disabled" name="datos_cuenta-municipio" id="datos_cuenta-municipio" value="Libertador">
+                    <label for="datos_cuenta__municipio">MUNICIPIO:</label>
+                    <input type="text" class="input-disabled" name="datos_cuenta__municipio" id="datos_cuenta__municipio" value="Libertador" tabindex="-1">
                     
-                    <label for="datos_cuenta-parroquia">PARROQUIA:</label>
-                    <input type="text" name="datos_cuenta-parroquia" id="datos_cuenta-parroquia" list="parroquias">
+                    <label for="datos_cuenta__parroquia">PARROQUIA:</label>
+                    <input type="text" name="datos_cuenta__parroquia" id="datos_cuenta__parroquia" list="parroquias">
                     <datalist id="parroquias">
                         <option value="Altagracia">
                         <option value="Antímano">
@@ -207,8 +207,8 @@
                         <option value="23 de Enero">
                     </datalist>
                     
-                    <label for="datos_cuenta-cent_pobl">CENTRO POBLADO:</label>
-                    <input type="text" name="datos_cuenta-cent_pobl" id="datos_cuenta-cent_pobl" class="last_input">
+                    <label for="datos_cuenta__cent_pobl">CENTRO POBLADO:</label>
+                    <input type="text" name="datos_cuenta__cent_pobl" id="datos_cuenta__cent_pobl" class="last_input">
                 </div>
 
             </article>
@@ -225,44 +225,44 @@
                         <h2 class="sub_title">COBERTURA VEGETAL</h2>
 
                         <div>
-                            <label for="ent_fisi-arboreo">ARBOREO</label>
-                            <input type="hidden" name="ent_fisi-arboreo" value="off">
-                            <input type="checkbox" name="ent_fisi-arboreo" id="ent_fisi-arboreo" value="arboreo">
+                            <label for="ent_fisi__arboreo">ARBOREO</label>
+                            <input type="hidden" name="ent_fisi__arboreo" value="off">
+                            <input type="checkbox" name="ent_fisi__arboreo" id="ent_fisi__arboreo" value="arboreo">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-arbustivos">ARBUSTIVOS</label>
-                            <input type="hidden" name="ent_fisi-arbustivos" value="off">
-                            <input type="checkbox" name="ent_fisi-arbustivos" id="ent_fisi-arbustivos" value="arbustivos">
+                            <label for="ent_fisi__arbustivos">ARBUSTIVOS</label>
+                            <input type="hidden" name="ent_fisi__arbustivos" value="off">
+                            <input type="checkbox" name="ent_fisi__arbustivos" id="ent_fisi__arbustivos" value="arbustivos">
                         </div>
                         
                         <div>
-                            <label for="ent_fisi-herbaceos">HERBACEOS</label>
-                            <input type="hidden" name="ent_fisi-herbaceos" value="off">
-                            <input type="checkbox" name="ent_fisi-herbaceos" id="ent_fisi-herbaceos" value="herbaceos">
+                            <label for="ent_fisi__herbaceos">HERBACEOS</label>
+                            <input type="hidden" name="ent_fisi__herbaceos" value="off">
+                            <input type="checkbox" name="ent_fisi__herbaceos" id="ent_fisi__herbaceos" value="herbaceos">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-area_cult">AREA DE CULTIVO</label>
-                            <input type="hidden" name="ent_fisi-area_cult" value="off">
-                            <input type="checkbox" name="ent_fisi-area_cult" id="ent_fisi-area_cult" value="area de cultivo">
+                            <label for="ent_fisi__area_cult">AREA DE CULTIVO</label>
+                            <input type="hidden" name="ent_fisi__area_cult" value="off">
+                            <input type="checkbox" name="ent_fisi__area_cult" id="ent_fisi__area_cult" value="area de cultivo">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-sue_des">SUELOS DESNUDOS</label>
-                            <input type="hidden" name="ent_fisi-sue_des" value="off">
-                            <input type="checkbox" name="ent_fisi-sue_des" id="ent_fisi-sue_des" value="suelos desnudos">
+                            <label for="ent_fisi__sue_des">SUELOS DESNUDOS</label>
+                            <input type="hidden" name="ent_fisi__sue_des" value="off">
+                            <input type="checkbox" name="ent_fisi__sue_des" id="ent_fisi__sue_des" value="suelos desnudos">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-area_ocu">AREA OCUPADA</label>
-                            <input type="hidden" name="ent_fisi-area_ocu" value="off">
-                            <input type="checkbox" name="ent_fisi-area_ocu" id="ent_fisi-area_ocu" value="area ocupada">
+                            <label for="ent_fisi__area_ocu">AREA OCUPADA</label>
+                            <input type="hidden" name="ent_fisi__area_ocu" value="off">
+                            <input type="checkbox" name="ent_fisi__area_ocu" id="ent_fisi__area_ocu" value="area ocupada">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-alt_pro">ALTURA PROMEDIO</label>
-                            <input type="number" name="ent_fisi-alt_pro" id="ent_fisi-alt_pro" class="ent_fisi-altura_promedio">
+                            <label for="ent_fisi__alt_pro">ALTURA PROMEDIO</label>
+                            <input type="number" name="ent_fisi__alt_pro" id="ent_fisi__alt_pro" class="ent_fisi-altura_promedio">
                             <span>M</span>
                         </div>
                     </div>
@@ -272,33 +272,33 @@
                         <h2 class="sub_title">FACTORES CONTAMINANTES</h2>
 
                         <div>
-                            <label for="ent_fisi-agu_neg">AGUAS NEGRAS</label>
-                            <input type="hidden" name="ent_fisi-agu_neg" value="off">
-                            <input type="checkbox" name="ent_fisi-agu_neg" id="ent_fisi-agu_neg" value="aguas negras">
+                            <label for="ent_fisi__agu_neg">AGUAS NEGRAS</label>
+                            <input type="hidden" name="ent_fisi__agu_neg" value="off">
+                            <input type="checkbox" name="ent_fisi__agu_neg" id="ent_fisi__agu_neg" value="aguas negras">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-escom">ESCOMBROS</label>
-                            <input type="hidden" name="ent_fisi-escom" value="off">
-                            <input type="checkbox" name="ent_fisi-escom" id="ent_fisi-escom" value="escombros">
+                            <label for="ent_fisi__escom">ESCOMBROS</label>
+                            <input type="hidden" name="ent_fisi__escom" value="off">
+                            <input type="checkbox" name="ent_fisi__escom" id="ent_fisi__escom" value="escombros">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-basura">BASURA</label>
-                            <input type="hidden" name="ent_fisi-basura" value="off">
-                            <input type="checkbox" name="ent_fisi-basura" id="ent_fisi-basura" value="basura">
+                            <label for="ent_fisi__basura">BASURA</label>
+                            <input type="hidden" name="ent_fisi__basura" value="off">
+                            <input type="checkbox" name="ent_fisi__basura" id="ent_fisi__basura" value="basura">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-resi_fore">RESIDUOS FORESTALES</label>
-                            <input type="hidden" name="ent_fisi-resi_fore" value="off">
-                            <input type="checkbox" name="ent_fisi-resi_fore" id="ent_fisi-resi_fore" value="residuos forestales">
+                            <label for="ent_fisi__resi_fore">RESIDUOS FORESTALES</label>
+                            <input type="hidden" name="ent_fisi__resi_fore" value="off">
+                            <input type="checkbox" name="ent_fisi__resi_fore" id="ent_fisi__resi_fore" value="residuos forestales">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-prese_arbol_caido">PRESENCIA DE ARBOLES CAIDOS</label>
-                            <input type="hidden" name="ent_fisi-prese_arbol_caido" value="off">
-                            <input type="checkbox" name="ent_fisi-prese_arbol_caido" id="ent_fisi-prese_arbol_caido" value="presencia de arboles caidos">
+                            <label for="ent_fisi__prese_arbol_caido">PRESENCIA DE ARBOLES CAIDOS</label>
+                            <input type="hidden" name="ent_fisi__prese_arbol_caido" value="off">
+                            <input type="checkbox" name="ent_fisi__prese_arbol_caido" id="ent_fisi__prese_arbol_caido" value="presencia de arboles caidos">
                         </div>
 
                     </div>
@@ -308,27 +308,27 @@
                         <h2 class="sub_title">USOS DEL SUELO EN CERCANIAS DE LA OBRA</h2>
 
                         <div>
-                            <label for="ent_fisi-agri">AGRICOLA</label>
-                            <input type="hidden" name="ent_fisi-agri" value="off">
-                            <input type="checkbox" name="ent_fisi-agri" id="ent_fisi-agri" value="agricola">
+                            <label for="ent_fisi__agri">AGRICOLA</label>
+                            <input type="hidden" name="ent_fisi__agri" value="off">
+                            <input type="checkbox" name="ent_fisi__agri" id="ent_fisi__agri" value="agricola">
                         </div>
                         
                         <div>
-                            <label for="ent_fisi-indus">INDUSTRIAS</label>
-                            <input type="hidden" name="ent_fisi-indus" value="off">
-                            <input type="checkbox" name="ent_fisi-indus" id="ent_fisi-indus" value="industrias">
+                            <label for="ent_fisi__indus">INDUSTRIAS</label>
+                            <input type="hidden" name="ent_fisi__indus" value="off">
+                            <input type="checkbox" name="ent_fisi__indus" id="ent_fisi__indus" value="industrias">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-comer">COMERCIOS</label>
-                            <input type="hidden" name="ent_fisi-comer" value="off">
-                            <input type="checkbox" name="ent_fisi-comer" id="ent_fisi-comer" value="comercios">
+                            <label for="ent_fisi__comer">COMERCIOS</label>
+                            <input type="hidden" name="ent_fisi__comer" value="off">
+                            <input type="checkbox" name="ent_fisi__comer" id="ent_fisi__comer" value="comercios">
                         </div>
                         
                         <div>
-                            <label for="ent_fisi-urban">URBANA</label>
-                            <input type="hidden" name="ent_fisi-urban" value="off">
-                            <input type="checkbox" name="ent_fisi-urban" id="ent_fisi-urban" value="urbana">
+                            <label for="ent_fisi__urban">URBANA</label>
+                            <input type="hidden" name="ent_fisi__urban" value="off">
+                            <input type="checkbox" name="ent_fisi__urban" id="ent_fisi__urban" value="urbana">
                         </div>
 
                     </div>
@@ -338,21 +338,19 @@
                         <h2 class="sub_title">VARIACION</h2>
 
                         <div>
-                            <label for="ent_fisi-r_perma">R. PERMANENTE</label>    
-                            <input type="hidden" name="ent_fisi-variacion" value="off">
-                            <input type="radio" name="ent_fisi-variacion" value="permanente" id="ent_fisi-r_perma">
+                            <label for="ent_fisi__r_perma">R. PERMANENTE</label>    
+                            <input type="hidden" name="ent_fisi__variacion" value="off">
+                            <input type="radio" name="ent_fisi__variacion" value="permanente" id="ent_fisi__r_perma">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-r_inter">R. INTERMITENTE</label>    
-                            <!-- <input type="hidden" name="ent_fisi-variacion" value="off"> -->
-                            <input type="radio" name="ent_fisi-variacion" value="intermitente" id="ent_fisi-r_inter">
+                            <label for="ent_fisi__r_inter">R. INTERMITENTE</label>    
+                            <input type="radio" name="ent_fisi__variacion" value="intermitente" id="ent_fisi__r_inter">
                         </div>
                         
                         <div>
-                            <label for="ent_fisi-r_efi">R. EFIMERO</label>    
-                            <!-- <input type="hidden" name="ent_fisi-variacion" value="off"> -->
-                            <input type="radio" name="ent_fisi-variacion" value="efimero" id="ent_fisi-r_efi">
+                            <label for="ent_fisi__r_efi">R. EFIMERO</label>    
+                            <input type="radio" name="ent_fisi__variacion" value="efimero" id="ent_fisi__r_efi">
                         </div>
                         
                     </div>
@@ -361,27 +359,24 @@
                         <h2 class="sub_title">RETIRO DEL CUERPO DE AGUA</h2>
 
                         <div>
-                            <label for="ent_fisi-a_prote_ocu">A. PROTECCION OCUPADA</label>
-                            <input type="hidden" name="ent_fisi-retiro_cuerpo_agua" value="off">
-                            <input type="radio" name="ent_fisi-retiro_cuerpo_agua" value="proteccion ocupada" id="ent_fisi-a_prote_ocu">
+                            <label for="ent_fisi__a_prote_ocu">A. PROTECCION OCUPADA</label>
+                            <input type="hidden" name="ent_fisi__retiro_cuerpo_agua" value="off">
+                            <input type="radio" name="ent_fisi__retiro_cuerpo_agua" value="proteccion ocupada" id="ent_fisi__a_prote_ocu">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-a_prote_15">A. PROTECCION 15 M</label>
-                            <!-- <input type="hidden" name="ent_fisi-retiro_cuerpo_agua" value="off"> -->
-                            <input type="radio" name="ent_fisi-retiro_cuerpo_agua" value="proteccion 15M" id="ent_fisi-a_prote_15">
+                            <label for="ent_fisi__a_prote_15">A. PROTECCION 15 M</label>
+                            <input type="radio" name="ent_fisi__retiro_cuerpo_agua" value="proteccion 15M" id="ent_fisi__a_prote_15">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-a_prote_80">A. PROTECCION 80 M</label>
-                            <!-- <input type="hidden" name="ent_fisi-retiro_cuerpo_agua" value="off"> -->
-                            <input type="radio" name="ent_fisi-retiro_cuerpo_agua" value="proteccion 80M" id="ent_fisi-a_prote_80">
+                            <label for="ent_fisi__a_prote_80">A. PROTECCION 80 M</label>
+                            <input type="radio" name="ent_fisi__retiro_cuerpo_agua" value="proteccion 80M" id="ent_fisi__a_prote_80">
                         </div>
 
                         <div>
-                            <label for="ent_fisi-a_prote_100">A. PROTECCION 100 M</label>
-                            <!-- <input type="hidden" name="ent_fisi-retiro_cuerpo_agua" value="off"> -->
-                            <input type="radio" name="ent_fisi-retiro_cuerpo_agua" value="proteccion 100M" id="ent_fisi-a_prote_100">
+                            <label for="ent_fisi__a_prote_100">A. PROTECCION 100 M</label>
+                            <input type="radio" name="ent_fisi__retiro_cuerpo_agua" value="proteccion 100M" id="ent_fisi__a_prote_100">
                         </div>
 
                     </div>
@@ -392,27 +387,27 @@
                             <h2 class="sub_title">ALTERACIONES EN EL CAUSE</h2>
 
                             <div>
-                                <label for="ent_fisi-soca_marge">SOCAVACION DE LOS MARGENES</label>
-                                <input type="hidden" name="ent_fisi-soca_marge" value="off">
-                                <input type="checkbox" name="ent_fisi-soca_marge" id="ent_fisi-soca_marge" value="socavacion de los margenes">
+                                <label for="ent_fisi__soca_marge">SOCAVACION DE LOS MARGENES</label>
+                                <input type="hidden" name="ent_fisi__soca_marge" value="off">
+                                <input type="checkbox" name="ent_fisi__soca_marge" id="ent_fisi__soca_marge" value="socavacion de los margenes">
                             </div>
 
                             <div>
-                                <label for="ent_fisi-flujo_turbu">FLUJOS TURBULENTOS</label>
-                                <input type="hidden" name="ent_fisi-flujo_turbu" value="off">
-                                <input type="checkbox" name="ent_fisi-flujo_turbu" id="ent_fisi-flujo_turbu" value="flujos turbulentos">
+                                <label for="ent_fisi__flujo_turbu">FLUJOS TURBULENTOS</label>
+                                <input type="hidden" name="ent_fisi__flujo_turbu" value="off">
+                                <input type="checkbox" name="ent_fisi__flujo_turbu" id="ent_fisi__flujo_turbu" value="flujos turbulentos">
                             </div>
 
                             <div>
-                                <label for="ent_fisi-sedim">SEDIMENTOS</label>
-                                <input type="hidden" name="ent_fisi-sedim" value="off">
-                                <input type="checkbox" name="ent_fisi-sedim" id="ent_fisi-sedim" value="sedimentos">
+                                <label for="ent_fisi__sedim">SEDIMENTOS</label>
+                                <input type="hidden" name="ent_fisi__sedim" value="off">
+                                <input type="checkbox" name="ent_fisi__sedim" id="ent_fisi__sedim" value="sedimentos">
                             </div>
 
                             <div>
-                                <label for="ent_fisi-rocas">ROCAS</label>
-                                <input type="hidden" name="ent_fisi-rocas" value="off">
-                                <input type="checkbox" name="ent_fisi-rocas" id="ent_fisi-rocas" value="rocas">
+                                <label for="ent_fisi__rocas">ROCAS</label>
+                                <input type="hidden" name="ent_fisi__rocas" value="off">
+                                <input type="checkbox" name="ent_fisi__rocas" id="ent_fisi__rocas" value="rocas">
                             </div>
                             
                         </div>
@@ -421,15 +416,15 @@
                             <h2 class="sub_title">PRESENCIA DE VIVIENDAS</h2>
 
                             <div>
-                                <label for="ent_fisi-a_la_mar">A LAS MARGENES</label>
-                                <input type="hidden" name="ent_fisi-a_la_mar" value="off">
-                                <input type="checkbox" name="ent_fisi-a_la_mar" id="ent_fisi-a_la_mar" value="a las margenes">
+                                <label for="ent_fisi__a_la_mar">A LAS MARGENES</label>
+                                <input type="hidden" name="ent_fisi__a_la_mar" value="off">
+                                <input type="checkbox" name="ent_fisi__a_la_mar" id="ent_fisi__a_la_mar" value="a las margenes">
                             </div>
                             
                             <div>
-                                <label for="ent_fisi-dentro_cause">DENTRO DEL CAUSE</label>
-                                <input type="hidden" name="ent_fisi-dentro_cause" value="off">
-                                <input type="checkbox" name="ent_fisi-dentro_cause" id="ent_fisi-dentro_cause" value="dentro del cause">
+                                <label for="ent_fisi__dentro_cause">DENTRO DEL CAUSE</label>
+                                <input type="hidden" name="ent_fisi__dentro_cause" value="off">
+                                <input type="checkbox" name="ent_fisi__dentro_cause" id="ent_fisi__dentro_cause" value="dentro del cause">
                             </div>
                         </div>    
                         
@@ -438,7 +433,7 @@
                     <div class="form_sub_secction div_2col ent_fisi-obsevaciones" >
                         <h2 class="sub_title">OBSERVACIONES</h2>
 
-                        <textarea class="textarea_observaciones" name="ent_fisi-obsevaciones" id="ent_fisi-obsevaciones"></textarea>
+                        <textarea class="textarea_observaciones" name="ent_fisi__obsevaciones" id="ent_fisi__obsevaciones"></textarea>
                     </div>
 
                 </div>
@@ -452,11 +447,11 @@
 
                 <div class="tipo_obra-nombre_tiempo">
                     
-                    <label for="tipo_obra-nombre">NOMBRE:</label>
-                    <input type="text" name="tipo_obra-nombre" id="tipo_obra-nombre">
+                    <label for="tipo_obra__nombre">NOMBRE:</label>
+                    <input type="text" name="tipo_obra__nombre" id="tipo_obra__nombre">
 
-                    <label for="tipo_obra-tiempo">TIEMPO DE CONTRUCCION:</label>
-                    <input type="text" name="tipo_obra-tiempo" id="tipo_obra-tiempo">
+                    <label for="tipo_obra__tiempo">TIEMPO DE CONTRUCCION:</label>
+                    <input type="text" name="tipo_obra__tiempo" id="tipo_obra__tiempo">
                     
                 </div>
 
@@ -464,17 +459,17 @@
                     
                     <h2 class="sub_title">CONDICION ACTUAL DE LA ESTRUCTURA</h2>
 
-                    <label for="tipo_obra-opera">OPERATIVA</label>
-                    <input type="hidden" name="tipo_obra-opera" value="off">
-                    <input type="checkbox" name="tipo_obra-opera" id="tipo_obra-opera" value="operativa">
+                    <label for="tipo_obra__opera">OPERATIVA</label>
+                    <input type="hidden" name="tipo_obra__opera" value="off">
+                    <input type="checkbox" name="tipo_obra__opera" id="tipo_obra__opera" value="operativa">
 
-                    <label for="tipo_obra-inopera">INOPERATIVA</label>
-                    <input type="hidden" name="tipo_obra-inopera" value="off">
-                    <input type="checkbox" name="tipo_obra-inopera" id="tipo_obra-inopera" value="inoperativa">
+                    <label for="tipo_obra__inopera">INOPERATIVA</label>
+                    <input type="hidden" name="tipo_obra__inopera" value="off">
+                    <input type="checkbox" name="tipo_obra__inopera" id="tipo_obra__inopera" value="inoperativa">
 
-                    <label for="tipo_obra-limit">CON LIMITACIONES</label>
-                    <input type="hidden" name="tipo_obra-limit" value="off">
-                    <input type="checkbox" name="tipo_obra-limit" id="tipo_obra-limit" value="con limitaciones">
+                    <label for="tipo_obra__limit">CON LIMITACIONES</label>
+                    <input type="hidden" name="tipo_obra__limit" value="off">
+                    <input type="checkbox" name="tipo_obra__limit" id="tipo_obra__limit" value="con limitaciones">
 
                 </div>
 
@@ -482,57 +477,57 @@
                     <h2 class="sub_title">ELEMENTOS DE CONTRUCCION</h2>
 
                     <div>
-                        <label for="tipo_obra-con_arm">CONCRETO ARMADO</label>
-                        <input type="hidden" name="tipo_obra-con_arm" value="off">
-                        <input type="checkbox" name="tipo_obra-con_arm" id="tipo_obra-con_arm" value="concreto armado">
+                        <label for="tipo_obra__con_arm">CONCRETO ARMADO</label>
+                        <input type="hidden" name="tipo_obra__con_arm" value="off">
+                        <input type="checkbox" name="tipo_obra__con_arm" id="tipo_obra__con_arm" value="concreto armado">
                     </div>
                     
                     <div>
-                        <label for="tipo_obra-con_prefab">CONCRETO PREFABRICADO</label>
-                        <input type="hidden" name="tipo_obra-con_prefab" value="off">
-                        <input type="checkbox" name="tipo_obra-con_prefab" id="tipo_obra-con_prefab" value="concreto prefabricado">
+                        <label for="tipo_obra__con_prefab">CONCRETO PREFABRICADO</label>
+                        <input type="hidden" name="tipo_obra__con_prefab" value="off">
+                        <input type="checkbox" name="tipo_obra__con_prefab" id="tipo_obra__con_prefab" value="concreto prefabricado">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-con_cicl">CONCRETO CICLOPEO</label>
-                        <input type="hidden" name="tipo_obra-con_cicl" value="off">
-                        <input type="checkbox" name="tipo_obra-con_cicl" id="tipo_obra-con_cicl" value="contreto ciclopeo">
+                        <label for="tipo_obra__con_cicl">CONCRETO CICLOPEO</label>
+                        <input type="hidden" name="tipo_obra__con_cicl" value="off">
+                        <input type="checkbox" name="tipo_obra__con_cicl" id="tipo_obra__con_cicl" value="contreto ciclopeo">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-ace_estruc">ACERO ESTRUCTURAL</label>
-                        <input type="hidden" name="tipo_obra-ace_estruc" value="off">
-                        <input type="checkbox" name="tipo_obra-ace_estruc" id="tipo_obra-ace_estruc" value="acero estructural">
+                        <label for="tipo_obra__ace_estruc">ACERO ESTRUCTURAL</label>
+                        <input type="hidden" name="tipo_obra__ace_estruc" value="off">
+                        <input type="checkbox" name="tipo_obra__ace_estruc" id="tipo_obra__ace_estruc" value="acero estructural">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-mampos">MAMPOSTERIA</label>
-                        <input type="hidden" name="tipo_obra-mampos" value="off">
-                        <input type="checkbox" name="tipo_obra-mampos" id="tipo_obra-mampos" value="mamposteria">
+                        <label for="tipo_obra__mampos">MAMPOSTERIA</label>
+                        <input type="hidden" name="tipo_obra__mampos" value="off">
+                        <input type="checkbox" name="tipo_obra__mampos" id="tipo_obra__mampos" value="mamposteria">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-madera">MADERA</label>
-                        <input type="hidden" name="tipo_obra-madera" value="off">
-                        <input type="checkbox" name="tipo_obra-madera" id="tipo_obra-madera" value="madera">
+                        <label for="tipo_obra__madera">MADERA</label>
+                        <input type="hidden" name="tipo_obra__madera" value="off">
+                        <input type="checkbox" name="tipo_obra__madera" id="tipo_obra__madera" value="madera">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-piedra">PIEDRA</label>
-                        <input type="hidden" name="tipo_obra-piedra" value="off">
-                        <input type="checkbox" name="tipo_obra-piedra" id="tipo_obra-piedra" value="piedra">
+                        <label for="tipo_obra__piedra">PIEDRA</label>
+                        <input type="hidden" name="tipo_obra__piedra" value="off">
+                        <input type="checkbox" name="tipo_obra__piedra" id="tipo_obra__piedra" value="piedra">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-gavion">GAVION</label>
-                        <input type="hidden" name="tipo_obra-gavion" value="off">
-                        <input type="checkbox" name="tipo_obra-gavion" id="tipo_obra-gavion" value="gavion">
+                        <label for="tipo_obra__gavion">GAVION</label>
+                        <input type="hidden" name="tipo_obra__gavion" value="off">
+                        <input type="checkbox" name="tipo_obra__gavion" id="tipo_obra__gavion" value="gavion">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-tierra">TIERRA</label>
-                        <input type="hidden" name="tipo_obra-tierra" value="off">
-                        <input type="checkbox" name="tipo_obra-tierra" id="tipo_obra-tierra" value="tierra">
+                        <label for="tipo_obra__tierra">TIERRA</label>
+                        <input type="hidden" name="tipo_obra__tierra" value="off">
+                        <input type="checkbox" name="tipo_obra__tierra" id="tipo_obra__tierra" value="tierra">
                     </div>
 
                 </div>
@@ -541,51 +536,51 @@
                     <h2 class="sub_title">CLASIFICACION</h2>
 
                     <div>
-                        <label for="tipo_obra-capta">CAPTACION</label>
-                        <input type="hidden" name="tipo_obra-capta" value="off">
-                        <input type="checkbox" name="tipo_obra-capta" id="tipo_obra-capta" value="captacion">
+                        <label for="tipo_obra__capta">CAPTACION</label>
+                        <input type="hidden" name="tipo_obra__capta" value="off">
+                        <input type="checkbox" name="tipo_obra__capta" id="tipo_obra__capta" value="captacion">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-transp">TRANSPORTE</label>
-                        <input type="hidden" name="tipo_obra-transp" value="off">
-                        <input type="checkbox" name="tipo_obra-transp" id="tipo_obra-transp" value="transporte">
+                        <label for="tipo_obra__transp">TRANSPORTE</label>
+                        <input type="hidden" name="tipo_obra__transp" value="off">
+                        <input type="checkbox" name="tipo_obra__transp" id="tipo_obra__transp" value="transporte">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-con_regu">CONTROL Y REGULACION</label>
-                        <input type="hidden" name="tipo_obra-con_regu" value="off">
-                        <input type="checkbox" name="tipo_obra-con_regu" id="tipo_obra-con_regu" value="control y regulacion">
+                        <label for="tipo_obra__con_regu">CONTROL Y REGULACION</label>
+                        <input type="hidden" name="tipo_obra__con_regu" value="off">
+                        <input type="checkbox" name="tipo_obra__con_regu" id="tipo_obra__con_regu" value="control y regulacion">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-distri">DISTRIBUCION</label>
-                        <input type="hidden" name="tipo_obra-distri" value="off">
-                        <input type="checkbox" name="tipo_obra-distri" id="tipo_obra-distri" value="distribucion">
+                        <label for="tipo_obra__distri">DISTRIBUCION</label>
+                        <input type="hidden" name="tipo_obra__distri" value="off">
+                        <input type="checkbox" name="tipo_obra__distri" id="tipo_obra__distri" value="distribucion">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-reco">RECOLECCION</label>
-                        <input type="hidden" name="tipo_obra-reco" value="off">
-                        <input type="checkbox" name="tipo_obra-reco" id="tipo_obra-reco" value="recoleccion">
+                        <label for="tipo_obra__reco">RECOLECCION</label>
+                        <input type="hidden" name="tipo_obra__reco" value="off">
+                        <input type="checkbox" name="tipo_obra__reco" id="tipo_obra__reco" value="recoleccion">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-trata">TRATAMIENTO</label>
-                        <input type="hidden" name="tipo_obra-trata" value="off">
-                        <input type="checkbox" name="tipo_obra-trata" id="tipo_obra-trata" value="tratamiento">
+                        <label for="tipo_obra__trata">TRATAMIENTO</label>
+                        <input type="hidden" name="tipo_obra__trata" value="off">
+                        <input type="checkbox" name="tipo_obra__trata" id="tipo_obra__trata" value="tratamiento">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-pro_mejo">PROTECCION Y MEJORAS</label>
-                        <input type="hidden" name="tipo_obra-pro_mejo" value="off">
-                        <input type="checkbox" name="tipo_obra-pro_mejo" id="tipo_obra-pro_mejo" value="proteccion y mejoras">
+                        <label for="tipo_obra__pro_mejo">PROTECCION Y MEJORAS</label>
+                        <input type="hidden" name="tipo_obra__pro_mejo" value="off">
+                        <input type="checkbox" name="tipo_obra__pro_mejo" id="tipo_obra__pro_mejo" value="proteccion y mejoras">
                     </div>
 
                     <div>
-                        <label for="tipo_obra-trans_ene">TRANSFORMACION DE ENERGIA</label>
-                        <input type="hidden" name="tipo_obra-trans_ene" value="off">
-                        <input type="checkbox" name="tipo_obra-trans_ene" id="tipo_obra-trans_ene" value="transformacion de energia">
+                        <label for="tipo_obra__trans_ene">TRANSFORMACION DE ENERGIA</label>
+                        <input type="hidden" name="tipo_obra__trans_ene" value="off">
+                        <input type="checkbox" name="tipo_obra__trans_ene" id="tipo_obra__trans_ene" value="transformacion de energia">
                     </div>
                 </div>
                 
@@ -597,37 +592,37 @@
 
                         <div class="div_2col">
                             <div>
-                                <label for="tipo_obra-conten">CONTENCION</label>
-                                <input type="hidden" name="tipo_obra-conten" value="off">
-                                <input type="checkbox" name="tipo_obra-conten" id="tipo_obra-conten" value="contencion">
+                                <label for="tipo_obra__conten">CONTENCION</label>
+                                <input type="hidden" name="tipo_obra__conten" value="off">
+                                <input type="checkbox" name="tipo_obra__conten" id="tipo_obra__conten" value="contencion">
                             </div>
                             <div>
-                                <label for="tipo_obra-conduc">CONDUCCION</label>
-                                <input type="hidden" name="tipo_obra-conduc" value="off">
-                                <input type="checkbox" name="tipo_obra-conduc" id="tipo_obra-conduc" value="conduccion">
+                                <label for="tipo_obra__conduc">CONDUCCION</label>
+                                <input type="hidden" name="tipo_obra__conduc" value="off">
+                                <input type="checkbox" name="tipo_obra__conduc" id="tipo_obra__conduc" value="conduccion">
                             </div>
                             <div>
-                                <label for="tipo_obra-toma">TOMA</label>
-                                <input type="hidden" name="tipo_obra-toma" value="off">
-                                <input type="checkbox" name="tipo_obra-toma" id="tipo_obra-toma" value="toma">
+                                <label for="tipo_obra__toma">TOMA</label>
+                                <input type="hidden" name="tipo_obra__toma" value="off">
+                                <input type="checkbox" name="tipo_obra__toma" id="tipo_obra__toma" value="toma">
                             </div>
                         </div>
 
                         <div class="div_2col">
                             <div>
-                                <label for="tipo_obra-con_flu">CONTROL FLUVIAL</label>
-                                <input type="hidden" name="tipo_obra-con_flu" value="off">
-                                <input type="checkbox" name="tipo_obra-con_flu" id="tipo_obra-con_flu" value="control fluvial">
+                                <label for="tipo_obra__con_flu">CONTROL FLUVIAL</label>
+                                <input type="hidden" name="tipo_obra__con_flu" value="off">
+                                <input type="checkbox" name="tipo_obra__con_flu" id="tipo_obra__con_flu" value="control fluvial">
                             </div>
                             <div>
-                                <label for="tipo_obra-evacu">EVACUACION</label>
-                                <input type="hidden" name="tipo_obra-evacu" value="off">
-                                <input type="checkbox" name="tipo_obra-evacu" id="tipo_obra-evacu" value="evacuacion">
+                                <label for="tipo_obra__evacu">EVACUACION</label>
+                                <input type="hidden" name="tipo_obra__evacu" value="off">
+                                <input type="checkbox" name="tipo_obra__evacu" id="tipo_obra__evacu" value="evacuacion">
                             </div>
                             <div>
-                                <label for="tipo_obra-espe">ESPECIALES</label>
-                                <input type="hidden" name="tipo_obra-espe" value="off">
-                                <input type="checkbox" name="tipo_obra-espe" id="tipo_obra-espe" value="especiales">
+                                <label for="tipo_obra__espe">ESPECIALES</label>
+                                <input type="hidden" name="tipo_obra__espe" value="off">
+                                <input type="checkbox" name="tipo_obra__espe" id="tipo_obra__espe" value="especiales">
                             </div>
                         </div>
                         
@@ -636,13 +631,13 @@
                     <div class="form_sub_secction ">
                         <h2 class="sub_title">DIMENCIONES DE ROCAS DE PRESTAMO</h2>    
 
-                        <input type="text" class="lone_input" name="tipo_obra-drp" id="tipo_obra-drp">
+                        <input type="text" class="lone_input" name="tipo_obra__drp" id="tipo_obra__drp">
                     </div>
 
                     <div class="form_sub_secction ">
                         <h2 class="sub_title">OTROS MATERIALES CONTRUCTIVOS</h2>    
 
-                        <input type="text" class="lone_input" name="tipo_obra-omc" id="tipo_obra-omc">
+                        <input type="text" class="lone_input" name="tipo_obra__omc" id="tipo_obra__omc">
                     </div>
 
                 </div>
@@ -650,7 +645,7 @@
                 <div class="form_sub_secction tipo_obra-observaciones">
                     <h2 class="sub_title">OBSERVACIONES</h2>
 
-                    <textarea class="textarea_observaciones" name="tipo_obra-observaciones" id="tipo_obra-observaciones"></textarea>
+                    <textarea class="textarea_observaciones" name="tipo_obra__observaciones" id="tipo_obra__observaciones"></textarea>
                     
                 </div>
                 
@@ -673,27 +668,24 @@
                     <h2 class="sub_title">DISEÑO DE DIQUE</h2>
                     
                     <div>
-                        <label for="carac_obra-gravedad1">GRAVEDAD</label>
-                        <input type="hidden" name="carac_obra-diseno_obra" value="off">
-                        <input type="radio" name="carac_obra-diseno_obra" value="gravedad" id="carac_obra-gravedad1">
+                        <label for="carac_obra__gravedad1">GRAVEDAD</label>
+                        <input type="hidden" name="carac_obra__diseno_obra" value="off">
+                        <input type="radio" name="carac_obra__diseno_obra" value="gravedad" id="carac_obra__gravedad1">
                     </div> 
                     
                     <div>
-                        <label for="carac_obra-arco">ARCO</label>
-                        <!-- <input type="hidden" name="carac_obra-diseno_obra" value="off"> -->
-                        <input type="radio" name="carac_obra-diseno_obra" value="arco" id="carac_obra-arco">
+                        <label for="carac_obra__arco">ARCO</label>
+                        <input type="radio" name="carac_obra__diseno_obra" value="arco" id="carac_obra__arco">
                     </div> 
 
                     <div>
-                        <label for="carac_obra-contrafu">CONTRAFUERTE</label>
-                        <!-- <input type="hidden" name="carac_obra-diseno_obra" value="off"> -->
-                        <input type="radio" name="carac_obra-diseno_obra" value="contrafuente" id="carac_obra-contrafu">
+                        <label for="carac_obra__contrafu">CONTRAFUERTE</label>
+                        <input type="radio" name="carac_obra__diseno_obra" value="contrafuente" id="carac_obra__contrafu">
                     </div> 
                     
                     <div>
-                        <label for="carac_obra-mate_suel">MATERIALES SUELTOS</label>
-                        <!-- <input type="hidden" name="carac_obra-diseno_obra" value="off"> -->
-                        <input type="radio" name="carac_obra-diseno_obra" value="materiales sueltos" id="carac_obra-mate_suel">
+                        <label for="carac_obra__mate_suel">MATERIALES SUELTOS</label>
+                        <input type="radio" name="carac_obra__diseno_obra" value="materiales sueltos" id="carac_obra__mate_suel">
                     </div> 
                     
                 </div>
@@ -702,27 +694,24 @@
                     <h2 class="sub_title">TIPO DE DIQUE</h2>
 
                     <div>
-                        <label for="carac_obra-vent">VENTANA</label>
-                        <input type="hidden" name="carac_obra-tipo_dique" value="off">
-                        <input type="radio" name="carac_obra-tipo_dique" value="ventana" id="carac_obra-vent">
+                        <label for="carac_obra__vent">VENTANA</label>
+                        <input type="hidden" name="carac_obra__tipo_dique" value="off">
+                        <input type="radio" name="carac_obra__tipo_dique" value="ventana" id="carac_obra__vent">
                     </div> 
 
                     <div>
-                        <label for="carac_obra-ranu">RANURA</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_dique" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_dique" value="ranura" id="carac_obra-ranu">
+                        <label for="carac_obra__ranu">RANURA</label>
+                        <input type="radio" name="carac_obra__tipo_dique" value="ranura" id="carac_obra__ranu">
                     </div> 
 
                     <div>
-                        <label for="carac_obra-enrej">ENREJADO</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_dique" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_dique" value="enrejado" id="carac_obra-enrej">
+                        <label for="carac_obra__enrej">ENREJADO</label>
+                        <input type="radio" name="carac_obra__tipo_dique" value="enrejado" id="carac_obra__enrej">
                     </div> 
 
                     <div>
-                        <label for="carac_obra-rastri">RASTRILLO</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_dique" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_dique" value="rastrillo" id="carac_obra-rastri">
+                        <label for="carac_obra__rastri">RASTRILLO</label>
+                        <input type="radio" name="carac_obra__tipo_dique" value="rastrillo" id="carac_obra__rastri">
                     </div> 
                     
                 </div>
@@ -731,61 +720,55 @@
                     <h2 class="sub_title">TIPO DE MURO</h2>
 
                     <div>
-                        <label for="carac_obra-hinca">HINCADO</label>
-                        <input type="hidden" name="carac_obra-tipo_muro" value="off">
-                        <input type="radio" name="carac_obra-tipo_muro" value="hincado" id="carac_obra-hinca">
+                        <label for="carac_obra__hinca">HINCADO</label>
+                        <input type="hidden" name="carac_obra__tipo_muro" value="off">
+                        <input type="radio" name="carac_obra__tipo_muro" value="hincado" id="carac_obra__hinca">
                     </div> 
 
                     <div>
-                        <label for="carac_obra-anclado">ANCLADO</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_muro" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_muro" value="anclado" id="carac_obra-anclado">
+                        <label for="carac_obra__anclado">ANCLADO</label>
+                        <input type="radio" name="carac_obra__tipo_muro" value="anclado" id="carac_obra__anclado">
                     </div> 
                     
                     <div>
-                        <label for="carac_obra-cont_fuer">CONTRA FUERTE</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_muro" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_muro" value="contra fuerte" id="carac_obra-cont_fuer">
+                        <label for="carac_obra__cont_fuer">CONTRA FUERTE</label>
+                        <input type="radio" name="carac_obra__tipo_muro" value="contra fuerte" id="carac_obra__cont_fuer">
                     </div> 
                     
                     <div>
-                        <label for="carac_obra-grave_arma">GRAVEDAD ARMADO</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_muro" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_muro" value="gravedad armado" id="carac_obra-grave_arma">
+                        <label for="carac_obra__grave_arma">GRAVEDAD ARMADO</label>
+                        <input type="radio" name="carac_obra__tipo_muro" value="gravedad armado" id="carac_obra__grave_arma">
                     </div> 
                     
                     <div>
-                        <label for="carac_obra-gravedad2">GRAVEDAD</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_muro" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_muro" value="gravedad" id="carac_obra-gravedad2">
+                        <label for="carac_obra__gravedad2">GRAVEDAD</label>
+                        <input type="radio" name="carac_obra__tipo_muro" value="gravedad" id="carac_obra__gravedad2">
                     </div> 
                     
                 </div>
                 
                 <div class="form_sub_secction carac_obra-observaciones">
                     <h2 class="sub_title">OBSERVACIONES</h2>
-                    <textarea class="textarea_observaciones" name="carac_obra-observaciones" id="carac_obra-observaciones"></textarea>
+                    <textarea class="textarea_observaciones" name="carac_obra__observaciones" id="carac_obra__observaciones"></textarea>
                 </div>
 
                 <div class="form_sub_secction div_2col">
                     <h2 class="sub_title">TIPO DE DESCANSO</h2>    
 
                     <div>
-                        <label for="carac_obra-pie">PIE</label>
-                        <input type="hidden" name="carac_obra-tipo_descanso" value="off">
-                        <input type="radio" name="carac_obra-tipo_descanso" value="pie" id="carac_obra-pie">
+                        <label for="carac_obra__pie">PIE</label>
+                        <input type="hidden" name="carac_obra__tipo_descanso" value="off">
+                        <input type="radio" name="carac_obra__tipo_descanso" value="pie" id="carac_obra__pie">
                     </div>
                     
                     <div>
-                        <label for="carac_obra-corte_relle">CORTE Y RELLENO</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_descanso" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_descanso" value="corte y relleno" id="carac_obra-corte_relle">
+                        <label for="carac_obra__corte_relle">CORTE Y RELLENO</label>
+                        <input type="radio" name="carac_obra__tipo_descanso" value="corte y relleno" id="carac_obra__corte_relle">
                     </div>
                     
                     <div>
-                        <label for="carac_obra-corte_vanq">CORTE BANQUETA</label>
-                        <!-- <input type="hidden" name="carac_obra-tipo_descanso" value="off"> -->
-                        <input type="radio" name="carac_obra-tipo_descanso" value="corte vanqueta" id="carac_obra-corte_vanq">
+                        <label for="carac_obra__corte_vanq">CORTE BANQUETA</label>
+                        <input type="radio" name="carac_obra__tipo_descanso" value="corte vanqueta" id="carac_obra__corte_vanq">
                     </div>
                     
                 </div>
@@ -793,60 +776,58 @@
                 <div class="form_sub_secction div_2col carac_obra-vertederos">
                     <h2 class="sub_title">VERTEDEROS</h2>
 
-                    <label for="carac_obra-simple">SIMPLE</label>
-                    <input type="hidden" name="carac_obra-vertederos" value="off">
-                    <input type="radio" name="carac_obra-vertederos" value="simple" id="carac_obra-simple">
+                    <label for="carac_obra__simple">SIMPLE</label>
+                    <input type="hidden" name="carac_obra__vertederos" value="off">
+                    <input type="radio" name="carac_obra__vertederos" value="simple" id="carac_obra__simple">
 
-                    <label for="carac_obra-multi">MULTIPLE</label>
-                    <!-- <input type="hidden" name="carac_obra-vertederos" value="off"> -->
-                    <input type="radio" name="carac_obra-vertederos" value="multiple" id="carac_obra-multi">
+                    <label for="carac_obra__multi">MULTIPLE</label>
+                    <input type="radio" name="carac_obra__vertederos" value="multiple" id="carac_obra__multi">
 
-                    <label for="carac_obra-canti">CANTIDAD</label>
-                    <!-- <input type="hidden" name="carac_obra-vertederos" value="off"> -->
-                    <input type="radio" name="carac_obra-vertederos" value="cantidad" id="carac_obra-canti">
+                    <label for="carac_obra__canti">CANTIDAD</label>
+                    <input type="radio" name="carac_obra__vertederos" value="cantidad" id="carac_obra__canti">
                 </div>
 
                 <div class="form_sub_secction div_2col carac_obra-estruc_aux">
                     <h2 class="sub_title">ESTRUCTURAS AUXILIARES</h2>
 
                     <div>
-                        <label for="carac_obra-mechi">MECHINALES</label>
-                        <input type="text" name="carac_obra-mechi" id="carac_obra-mechi">
+                        <label for="carac_obra__mechi">MECHINALES</label>
+                        <input type="text" name="carac_obra__mechi" id="carac_obra__mechi">
                     </div>
 
                     <div>
-                        <label for="carac_obra-disp_ener">DISPARADOR DE ENERGIA</label>
-                        <input type="text" name="carac_obra-disp_ener" id="carac_obra-disp_ener">
+                        <label for="carac_obra__disp_ener">DISPARADOR DE ENERGIA</label>
+                        <input type="text" name="carac_obra__disp_ener" id="carac_obra__disp_ener">
                     </div>
                     
                     <div>
-                        <label for="carac_obra-malla_cont">MALLA DE CONTENCION</label>
-                        <input type="text" name="carac_obra-malla_cont" id="carac_obra-malla_cont">
+                        <label for="carac_obra__malla_cont">MALLA DE CONTENCION</label>
+                        <input type="text" name="carac_obra__malla_cont" id="carac_obra__malla_cont">
                     </div>
                     
                     <div>
-                        <label for="carac_obra-alivi">ALIVIADEROS</label>
-                        <input type="text" name="carac_obra-alivi" id="carac_obra-alivi">
+                        <label for="carac_obra__alivi">ALIVIADEROS</label>
+                        <input type="text" name="carac_obra__alivi" id="carac_obra__alivi">
                     </div>
                     
                     <div>
-                        <label for="carac_obra-peine_debas">PEINE DE DESBASTE</label>
-                        <input type="text" name="carac_obra-peine_debas" id="carac_obra-peine_debas">
+                        <label for="carac_obra__peine_debas">PEINE DE DESBASTE</label>
+                        <input type="text" name="carac_obra__peine_debas" id="carac_obra__peine_debas">
                     </div>
                     
                     <div>
-                        <label for="carac_obra-contradic">CONTRADIQUE</label>
-                        <input type="text" name="carac_obra-contradic" id="carac_obra-contradic">
+                        <label for="carac_obra__contradic">CONTRADIQUE</label>
+                        <input type="text" name="carac_obra__contradic" id="carac_obra__contradic">
                     </div>
                     
                     <div>
-                        <label for="carac_obra-espigo">ESPIGONES</label>
-                        <input type="text" name="carac_obra-espigo" id="carac_obra-espigo">
+                        <label for="carac_obra__espigo">ESPIGONES</label>
+                        <input type="text" name="carac_obra__espigo" id="carac_obra__espigo">
                     </div>
                     
                     <div>
-                        <label for="carac_obra-enroca">ENROCADO</label>
-                        <input type="text" name="carac_obra-enroca" id="carac_obra-enroca">
+                        <label for="carac_obra__enroca">ENROCADO</label>
+                        <input type="text" name="carac_obra__enroca" id="carac_obra__enroca">
                     </div>
                     
                 </div> 
@@ -856,23 +837,21 @@
                     <div class="carac_obra-disenos-canales div_3col">
                         <h2>Canales</h2>
 
-                        <input type="hidden" name="carac_obra-disenos-canales" value="off">
-                        <input type="radio" name="carac_obra-disenos-canales" id="carac_obra-disenos-canales-rectangular" value="rectangular">
-                        <label for="carac_obra-disenos-canales-rectangular">
+                        <input type="hidden" name="carac_obra__disenos__canales" value="off">
+                        <input type="radio" name="carac_obra__disenos__canales" id="carac_obra__disenos__canales__rectangular" value="rectangular">
+                        <label for="carac_obra__disenos__canales__rectangular">
                             <img src="./imgs/canales/canales-rectangular.png" alt="Canal Rectangular">
                             <h3>Rectangular</h3>
                         </label>
 
-                        <!-- <input type="hidden" name="carac_obra-disenos-canales-trapezoidal" value="off"> -->
-                        <input type="radio" name="carac_obra-disenos-canales" id="carac_obra-disenos-canales-trapezoidal" value="trapezoidal">
-                        <label for="carac_obra-disenos-canales-trapezoidal">
+                        <input type="radio" name="carac_obra__disenos__canales" id="carac_obra__disenos__canales__trapezoidal" value="trapezoidal">
+                        <label for="carac_obra__disenos__canales__trapezoidal">
                             <img src="./imgs/canales/canales-trapezoidal.png" alt="Canal Trapezoidal">
                             <h3>Trapezoidal</h3>
                         </label>
 
-                        <!-- <input type="hidden" name="carac_obra-disenos-canales-triangular" value="off"> -->
-                        <input type="radio" name="carac_obra-disenos-canales" id="carac_obra-disenos-canales-triangular" value="triangular">
-                        <label for="carac_obra-disenos-canales-triangular">
+                        <input type="radio" name="carac_obra__disenos__canales" id="carac_obra__disenos__canales__triangular" value="triangular">
+                        <label for="carac_obra__disenos__canales__triangular">
                             <img src="./imgs/canales/canales-triangular.png" alt="Canal Triangular">
                             <h3>Triangular</h3>
                         </label>
@@ -880,33 +859,31 @@
                     </div>
 
                     <div class="carac_obra-otros_canales">
-                        <label for="carac_obra-otros_canales">Otros diseños de canales:</label>
-                        <input type="text" name="carac_obra-otros_canales" id="carac_obra-otros_canales">
+                        <label for="carac_obra__otros_canales">Otros diseños de canales:</label>
+                        <input type="text" name="carac_obra__otros_canales" id="carac_obra__otros_canales">
                     </div>
 
                     <div class="carac_obra-disenos-diques_cerrados div_3col">
                         <h2>Diques Cerrados</h2>
 
 
-                        <input type="hidden" name="carac_obra-disenos-diques_cerrados"value="off">
-                        <input type="radio" name="carac_obra-disenos-diques_cerrados" id="carac_obra-disenos-diques_cerrados-rectangular" value="rectangular">
-                        <label for="carac_obra-disenos-diques_cerrados-rectangular">
+                        <input type="hidden" name="carac_obra__disenos__diques_cerrados"value="off">
+                        <input type="radio" name="carac_obra__disenos__diques_cerrados" id="carac_obra__disenos__diques_cerrados__rectangular" value="rectangular">
+                        <label for="carac_obra__disenos__diques_cerrados__rectangular">
                             <img src="./imgs/diques-cerrados/diques_cerrados-rectangular.png" alt="Dique cerrado Rectangular">
                             <h3>Rectangular</h3>
                         </label>
 
 
-                        <!-- <input type="hidden" name="carac_obra-disenos-diques_cerrados"value="off"> -->
-                        <input type="radio" name="carac_obra-disenos-diques_cerrados" id="carac_obra-disenos-diques_cerrados-trapezoidal" value="trapezoidal">
-                        <label for="carac_obra-disenos-diques_cerrados-trapezoidal">
+                        <input type="radio" name="carac_obra__disenos__diques_cerrados" id="carac_obra__disenos__diques_cerrados__trapezoidal" value="trapezoidal">
+                        <label for="carac_obra__disenos__diques_cerrados__trapezoidal">
                             <img src="./imgs/diques-cerrados/diques_cerrados-trapezoidal.png" alt="Dique cerrado Trapezoidal">
                             <h3>Trapezoidal</h3>
                         </label>
 
 
-                        <!-- <input type="hidden" name="carac_obra-disenos-diques_cerrados"value="off"> -->
-                        <input type="radio" name="carac_obra-disenos-diques_cerrados" id="carac_obra-disenos-diques_cerrados-circular" value="circular">
-                        <label for="carac_obra-disenos-diques_cerrados-circular">
+                        <input type="radio" name="carac_obra__disenos__diques_cerrados" id="carac_obra__disenos__diques_cerrados__circular" value="circular">
+                        <label for="carac_obra__disenos__diques_cerrados__circular">
                             <img src="./imgs/diques-cerrados/diques_cerrados-circular.png" alt="Dique cerrado Circular">
                             <h3>Triangular</h3>
                         </label>
@@ -917,57 +894,52 @@
                     <div class="carac_obra-disenos-diques_abiertos div_3col">
                         <h2>Diques Abiertos</h2>
 
-                        <input type="hidden" name="carac_obra-disenos-diques_abiertos" value="off">
-                        <input type="radio" name="carac_obra-disenos-diques_abiertos" id="carac_obra-disenos-diques_abiertos-ranura" value="ranura">
-                        <label for="carac_obra-disenos-diques_abiertos-ranura">
+                        <input type="hidden" name="carac_obra__disenos__diques_abiertos" value="off">
+                        <input type="radio" name="carac_obra__disenos__diques_abiertos" id="carac_obra__disenos__diques_abiertos__ranura" value="ranura">
+                        <label for="carac_obra__disenos__diques_abiertos__ranura">
                             <img src="./imgs/diques_abiertos/diques_abiertos-ranura.png" alt="Diques abiertos Ranura">
                             <h3>Ranura</h3>
                         </label>
 
-                        <!-- <input type="hidden" name="carac_obra-disenos-diques_abiertos" value="off"> -->
-                        <input type="radio" name="carac_obra-disenos-diques_abiertos" id="carac_obra-disenos-diques_abiertos-rastrillo" value="rastrillo">
-                        <label for="carac_obra-disenos-diques_abiertos-rastrillo">
+                        <input type="radio" name="carac_obra__disenos__diques_abiertos" id="carac_obra__disenos__diques_abiertos__rastrillo" value="rastrillo">
+                        <label for="carac_obra__disenos__diques_abiertos__rastrillo">
                             <img src="./imgs/diques_abiertos/diques_abiertos-rastrillo.png" alt="Diques abiertos Rastrillo">
                             <h3>Rastrillo</h3>
                         </label>
 
-                        <!-- <input type="hidden" name="carac_obra-disenos-diques_abiertos" value="off"> -->
-                        <input type="radio" name="carac_obra-disenos-diques_abiertos" id="carac_obra-disenos-diques_abiertos-enrejado" value="enrejado">
-                        <label for="carac_obra-disenos-diques_abiertos-enrejado">
+                        <input type="radio" name="carac_obra__disenos__diques_abiertos" id="carac_obra__disenos__diques_abiertos__enrejado" value="enrejado">
+                        <label for="carac_obra__disenos__diques_abiertos__enrejado">
                             <img src="./imgs/diques_abiertos/diques_abiertos-enrejado.png" alt="Diques abiertos Enrejado">
                             <h3>Enrejado</h3>
                         </label>
                         
                     </div>
-                    
-                    
 
-                    <!-- <img src="imgs/diseñosCanales.png" alt="diseños de canales"> -->
                 </div> 
 
                 <div class="form_sub_secction carac_obra-medidas">
                     <h2 class="sub_title">MEDIDAS</h2>
                     
-                        <label for="carac_obra-altura">ALTURA:</label>
-                        <input type="text" name="carac_obra-altura" id="carac_obra-altura">
+                        <label for="carac_obra__altura">ALTURA:</label>
+                        <input type="text" name="carac_obra__altura" id="carac_obra__altura">
                     
-                        <label for="carac_obra-base">BASE:</label>
-                        <input type="text" name="carac_obra-base" id="carac_obra-base">
+                        <label for="carac_obra__base">BASE:</label>
+                        <input type="text" name="carac_obra__base" id="carac_obra__base">
                     
-                        <label for="carac_obra-ancho">ANCHO:</label>
-                        <input type="text" name="carac_obra-ancho" id="carac_obra-ancho">
+                        <label for="carac_obra__ancho">ANCHO:</label>
+                        <input type="text" name="carac_obra__ancho" id="carac_obra__ancho">
                     
-                        <label for="carac_obra-longitud">LONGITUD:</label>
-                        <input type="text" name="carac_obra-longitud" id="carac_obra-longitud">
+                        <label for="carac_obra__longitud">LONGITUD:</label>
+                        <input type="text" name="carac_obra__longitud" id="carac_obra__longitud">
                     
-                        <label for="carac_obra-diametro">DIAMETRO:</label>
-                        <input type="text" name="carac_obra-diametro" id="carac_obra-diametro">
+                        <label for="carac_obra__diametro">DIAMETRO:</label>
+                        <input type="text" name="carac_obra__diametro" id="carac_obra__diametro">
                     
-                        <label for="carac_obra-area">AREA:</label>
-                        <input type="text" name="carac_obra-area" id="carac_obra-area">
+                        <label for="carac_obra__area">AREA:</label>
+                        <input type="text" name="carac_obra__area" id="carac_obra__area">
                     
-                        <label for="carac_obra-volumen">VOLUMEN:</label>
-                        <input type="text" name="carac_obra-volumen" id="carac_obra-volumen">
+                        <label for="carac_obra__volumen">VOLUMEN:</label>
+                        <input type="text" name="carac_obra__volumen" id="carac_obra__volumen">
                     
                 </div> 
 
@@ -981,27 +953,27 @@
                 <div class="div_2col">
                     
                     <div>
-                        <label for="danos_estruc-ex_ace_su">EXPOSICION DEL ACERO SUPERFICIAL</label>
-                        <input type="hidden" name="danos_estruc-ex_ace_su" value="off">
-                        <input type="checkbox" name="danos_estruc-ex_ace_su" value="exposicion del acero superficial" id="danos_estruc-ex_ace_su">
+                        <label for="danos_estruc__ex_ace_su">EXPOSICION DEL ACERO SUPERFICIAL</label>
+                        <input type="hidden" name="danos_estruc__ex_ace_su" value="off">
+                        <input type="checkbox" name="danos_estruc__ex_ace_su" value="exposicion del acero superficial" id="danos_estruc__ex_ace_su">
                     </div>
 
                     <div>
-                        <label for="danos_estruc-ero_estruc_inter">EROSION DE ESTRUCTURA INTERNA</label>
-                        <input type="hidden" name="danos_estruc-ero_estruc_inter" value="off">
-                        <input type="checkbox" name="danos_estruc-ero_estruc_inter" value="erocion de estructura interna" id="danos_estruc-ero_estruc_inter">
+                        <label for="danos_estruc__ero_estruc_inter">EROSION DE ESTRUCTURA INTERNA</label>
+                        <input type="hidden" name="danos_estruc__ero_estruc_inter" value="off">
+                        <input type="checkbox" name="danos_estruc__ero_estruc_inter" value="erocion de estructura interna" id="danos_estruc__ero_estruc_inter">
                     </div>
 
                     <div>
-                        <label for="danos_estruc-ero_cober_inter">EROSION DE COBERTURA INTERNO</label>
-                        <input type="hidden" name="danos_estruc-ero_cober_inter" value="off">
-                        <input type="checkbox" name="danos_estruc-ero_cober_inter" value="erocion de cobertura interno" id="danos_estruc-ero_cober_inter">
+                        <label for="danos_estruc__ero_cober_inter">EROSION DE COBERTURA INTERNO</label>
+                        <input type="hidden" name="danos_estruc__ero_cober_inter" value="off">
+                        <input type="checkbox" name="danos_estruc__ero_cober_inter" value="erocion de cobertura interno" id="danos_estruc__ero_cober_inter">
                     </div>
 
                     <div>
-                        <label for="danos_estruc-def_exce_alza">DEFORMACION EXCESIVA DEL ALZADO</label>
-                        <input type="hidden" name="danos_estruc-def_exce_alza" value="off">
-                        <input type="checkbox" name="danos_estruc-def_exce_alza" value="deformacion excesiva del alzado" id="danos_estruc-def_exce_alza">
+                        <label for="danos_estruc__def_exce_alza">DEFORMACION EXCESIVA DEL ALZADO</label>
+                        <input type="hidden" name="danos_estruc__def_exce_alza" value="off">
+                        <input type="checkbox" name="danos_estruc__def_exce_alza" value="deformacion excesiva del alzado" id="danos_estruc__def_exce_alza">
                     </div>
                     
                 </div>
@@ -1009,27 +981,27 @@
                 <div class="div_2col">
                                         
                     <div>
-                        <label for="danos_estruc-efec_sismi">EFECTO SISMICO</label>
-                        <input type="hidden" name="danos_estruc-efec_sismi" value="off">
-                        <input type="checkbox" name="danos_estruc-efec_sismi" value="efecto sismico" id="danos_estruc-efec_sismi">
+                        <label for="danos_estruc__efec_sismi">EFECTO SISMICO</label>
+                        <input type="hidden" name="danos_estruc__efec_sismi" value="off">
+                        <input type="checkbox" name="danos_estruc__efec_sismi" value="efecto sismico" id="danos_estruc__efec_sismi">
                     </div>
                     
                     <div>
-                        <label for="danos_estruc-desli_exter">DESLIZAMIENTO EXTERNO</label>
-                        <input type="hidden" name="danos_estruc-desli_exter" value="off">
-                        <input type="checkbox" name="danos_estruc-desli_exter" value="deslizamiento externo" id="danos_estruc-desli_exter">
+                        <label for="danos_estruc__desli_exter">DESLIZAMIENTO EXTERNO</label>
+                        <input type="hidden" name="danos_estruc__desli_exter" value="off">
+                        <input type="checkbox" name="danos_estruc__desli_exter" value="deslizamiento externo" id="danos_estruc__desli_exter">
                     </div>
                     
                     <div>
-                        <label for="danos_estruc-ruptu_fricc">RUPTURA POR FRICCION</label>
-                        <input type="hidden" name="danos_estruc-ruptu_fricc" value="off">
-                        <input type="checkbox" name="danos_estruc-ruptu_fricc" value="ruptura por friccion" id="danos_estruc-ruptu_fricc">
+                        <label for="danos_estruc__ruptu_fricc">RUPTURA POR FRICCION</label>
+                        <input type="hidden" name="danos_estruc__ruptu_fricc" value="off">
+                        <input type="checkbox" name="danos_estruc__ruptu_fricc" value="ruptura por friccion" id="danos_estruc__ruptu_fricc">
                     </div>
                     
                     <div>
-                        <label for="danos_estruc-despla_profu">DESPLAZAMIENTO PROFUNDO</label>
-                        <input type="hidden" name="danos_estruc-despla_profu" value="off">
-                        <input type="checkbox" name="danos_estruc-despla_profu" value="desplazamiento profundo" id="danos_estruc-despla_profu">
+                        <label for="danos_estruc__despla_profu">DESPLAZAMIENTO PROFUNDO</label>
+                        <input type="hidden" name="danos_estruc__despla_profu" value="off">
+                        <input type="checkbox" name="danos_estruc__despla_profu" value="desplazamiento profundo" id="danos_estruc__despla_profu">
                     </div>
 
                     
@@ -1038,27 +1010,27 @@
                 <div class="div_2col">
 
                     <div>
-                        <label for="danos_estruc-desliza">DESLIZAMIENTO</label>
-                        <input type="hidden" name="danos_estruc-desliza" value="off">
-                        <input type="checkbox" name="danos_estruc-desliza" value="deslizamiento" id="danos_estruc-desliza">
+                        <label for="danos_estruc__desliza">DESLIZAMIENTO</label>
+                        <input type="hidden" name="danos_estruc__desliza" value="off">
+                        <input type="checkbox" name="danos_estruc__desliza" value="deslizamiento" id="danos_estruc__desliza">
                     </div>
                     
                     <div>
-                        <label for="danos_estruc-desplaza">DESPLAZAMIENTO</label>
-                        <input type="hidden" name="danos_estruc-desplaza" value="off">
-                        <input type="checkbox" name="danos_estruc-desplaza" value="desplazamiento" id="danos_estruc-desplaza">
+                        <label for="danos_estruc__desplaza">DESPLAZAMIENTO</label>
+                        <input type="hidden" name="danos_estruc__desplaza" value="off">
+                        <input type="checkbox" name="danos_estruc__desplaza" value="desplazamiento" id="danos_estruc__desplaza">
                     </div>
                     
                     <div>
-                        <label for="danos_estruc-sobre_paso">SOBRE PASO</label>
-                        <input type="hidden" name="danos_estruc-sobre_paso" value="off">
-                        <input type="checkbox" name="danos_estruc-sobre_paso" value="sobre paso" id="danos_estruc-sobre_paso">
+                        <label for="danos_estruc__sobre_paso">SOBRE PASO</label>
+                        <input type="hidden" name="danos_estruc__sobre_paso" value="off">
+                        <input type="checkbox" name="danos_estruc__sobre_paso" value="sobre paso" id="danos_estruc__sobre_paso">
                     </div>
                     
                     <div>
-                        <label for="danos_estruc-vuelco">VUELCO</label>
-                        <input type="hidden" name="danos_estruc-vuelco" value="off">
-                        <input type="checkbox" name="danos_estruc-vuelco" value="vuelco" id="danos_estruc-vuelco">
+                        <label for="danos_estruc__vuelco">VUELCO</label>
+                        <input type="hidden" name="danos_estruc__vuelco" value="off">
+                        <input type="checkbox" name="danos_estruc__vuelco" value="vuelco" id="danos_estruc__vuelco">
                     </div>
                     
 
@@ -1074,27 +1046,27 @@
                 <div class="div_2col">
 
                     <div>
-                        <label for="danos_visivles-rup_es_cort">RUPTURA POR ESFUERZO CORTANTE</label>
-                        <input type="hidden" name="danos_visivles-rup_es_cort" value="off">
-                        <input type="checkbox" name="danos_visivles-rup_es_cort" value="ruptura por esfuerzo cortante" id="danos_visivles-rup_es_cort">
+                        <label for="danos_visivles__rup_es_cort">RUPTURA POR ESFUERZO CORTANTE</label>
+                        <input type="hidden" name="danos_visivles__rup_es_cort" value="off">
+                        <input type="checkbox" name="danos_visivles__rup_es_cort" value="ruptura por esfuerzo cortante" id="danos_visivles__rup_es_cort">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-rup_falla_cort">RUPTURA POR FALLA DE SOLAPE</label>
-                        <input type="hidden" name="danos_visivles-rup_falla_cort" value="off">
-                        <input type="checkbox" name="danos_visivles-rup_falla_cort" value="ruptura por falla de solape" id="danos_visivles-rup_falla_cort">
+                        <label for="danos_visivles__rup_falla_cort">RUPTURA POR FALLA DE SOLAPE</label>
+                        <input type="hidden" name="danos_visivles__rup_falla_cort" value="off">
+                        <input type="checkbox" name="danos_visivles__rup_falla_cort" value="ruptura por falla de solape" id="danos_visivles__rup_falla_cort">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-rup_esfu_raspan">RUPTURA POR ESFUERZO RASPANTE</label>
-                        <input type="hidden" name="danos_visivles-rup_esfu_raspan" value="off">
-                        <input type="checkbox" name="danos_visivles-rup_esfu_raspan" value="ruptura por esfuerzo raspante" id="danos_visivles-rup_esfu_raspan">
+                        <label for="danos_visivles__rup_esfu_raspan">RUPTURA POR ESFUERZO RASPANTE</label>
+                        <input type="hidden" name="danos_visivles__rup_esfu_raspan" value="off">
+                        <input type="checkbox" name="danos_visivles__rup_esfu_raspan" value="ruptura por esfuerzo raspante" id="danos_visivles__rup_esfu_raspan">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-fisu_capa_concre">FISURA EN LA CAPA DE CONCRETO</label>
-                        <input type="hidden" name="danos_visivles-fisu_capa_concre" value="off">
-                        <input type="checkbox" name="danos_visivles-fisu_capa_concre" value="fisura en la capa de concreto" id="danos_visivles-fisu_capa_concre">
+                        <label for="danos_visivles__fisu_capa_concre">FISURA EN LA CAPA DE CONCRETO</label>
+                        <input type="hidden" name="danos_visivles__fisu_capa_concre" value="off">
+                        <input type="checkbox" name="danos_visivles__fisu_capa_concre" value="fisura en la capa de concreto" id="danos_visivles__fisu_capa_concre">
                     </div>
 
                 </div>
@@ -1102,27 +1074,27 @@
                 <div class="div_2col">
 
                     <div>
-                        <label for="danos_visivles-super_giro_exce">SUPERFICIAL GIRO EXCESIVO</label>
-                        <input type="hidden" name="danos_visivles-super_giro_exce" value="off">
-                        <input type="checkbox" name="danos_visivles-super_giro_exce" value="superficial giro excesivo" id="danos_visivles-super_giro_exce">
+                        <label for="danos_visivles__super_giro_exce">SUPERFICIAL GIRO EXCESIVO</label>
+                        <input type="hidden" name="danos_visivles__super_giro_exce" value="off">
+                        <input type="checkbox" name="danos_visivles__super_giro_exce" value="superficial giro excesivo" id="danos_visivles__super_giro_exce">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-eroci_superfi">EROCION DE SUPERFICIE</label>
-                        <input type="hidden" name="danos_visivles-eroci_superfi" value="off">
-                        <input type="checkbox" name="danos_visivles-eroci_superfi" value="erocion de superficie" id="danos_visivles-eroci_superfi">
+                        <label for="danos_visivles__eroci_superfi">EROCION DE SUPERFICIE</label>
+                        <input type="hidden" name="danos_visivles__eroci_superfi" value="off">
+                        <input type="checkbox" name="danos_visivles__eroci_superfi" value="erocion de superficie" id="danos_visivles__eroci_superfi">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-socava_base">SOCAVACION DE LA BASE</label>
-                        <input type="hidden" name="danos_visivles-socava_base" value="off">
-                        <input type="checkbox" name="danos_visivles-socava_base" value="socavacion de la base" id="danos_visivles-socava_base">
+                        <label for="danos_visivles__socava_base">SOCAVACION DE LA BASE</label>
+                        <input type="hidden" name="danos_visivles__socava_base" value="off">
+                        <input type="checkbox" name="danos_visivles__socava_base" value="socavacion de la base" id="danos_visivles__socava_base">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-discon_concre">DISCONTINUIDAD DEL CONCRETO</label>
-                        <input type="hidden" name="danos_visivles-discon_concre" value="off">
-                        <input type="checkbox" name="danos_visivles-discon_concre" value="discontinuidad del concreto" id="danos_visivles-discon_concre">
+                        <label for="danos_visivles__discon_concre">DISCONTINUIDAD DEL CONCRETO</label>
+                        <input type="hidden" name="danos_visivles__discon_concre" value="off">
+                        <input type="checkbox" name="danos_visivles__discon_concre" value="discontinuidad del concreto" id="danos_visivles__discon_concre">
                     </div>
                     
                 </div>
@@ -1130,27 +1102,27 @@
                 <div class="div_2col">
 
                     <div>
-                        <label for="danos_visivles-figu_exce">FIGURACION EXCESIVA</label>
-                        <input type="hidden" name="danos_visivles-figu_exce" value="off">
-                        <input type="checkbox" name="danos_visivles-figu_exce" value="figuracion excesiva" id="danos_visivles-figu_exce">
+                        <label for="danos_visivles__figu_exce">FIGURACION EXCESIVA</label>
+                        <input type="hidden" name="danos_visivles__figu_exce" value="off">
+                        <input type="checkbox" name="danos_visivles__figu_exce" value="figuracion excesiva" id="danos_visivles__figu_exce">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-colma">COLMATADA</label>
-                        <input type="hidden" name="danos_visivles-colma" value="off">
-                        <input type="checkbox" name="danos_visivles-colma" value="colmatada" id="danos_visivles-colma">
+                        <label for="danos_visivles__colma">COLMATADA</label>
+                        <input type="hidden" name="danos_visivles__colma" value="off">
+                        <input type="checkbox" name="danos_visivles__colma" value="colmatada" id="danos_visivles__colma">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-carca">CARCAVAS</label>
-                        <input type="hidden" name="danos_visivles-carca" value="off">
-                        <input type="checkbox" name="danos_visivles-carca" value="carcavas" id="danos_visivles-carca">
+                        <label for="danos_visivles__carca">CARCAVAS</label>
+                        <input type="hidden" name="danos_visivles__carca" value="off">
+                        <input type="checkbox" name="danos_visivles__carca" value="carcavas" id="danos_visivles__carca">
                     </div>
                     
                     <div>
-                        <label for="danos_visivles-asenta">ASENTAMIENTO</label>
-                        <input type="hidden" name="danos_visivles-asenta" value="off">
-                        <input type="checkbox" name="danos_visivles-asenta" value="asentamiento" id="danos_visivles-asenta">
+                        <label for="danos_visivles__asenta">ASENTAMIENTO</label>
+                        <input type="hidden" name="danos_visivles__asenta" value="off">
+                        <input type="checkbox" name="danos_visivles__asenta" value="asentamiento" id="danos_visivles__asenta">
                     </div>
                     
                 </div>
@@ -1165,15 +1137,15 @@
                 <div class="div_2col">
 
                     <div>
-                        <label for="danos_funci-gene_duct">GENERACION DE DUCTOS</label>
-                        <input type="hidden" name="danos_funci-gene_duct" value="off">
-                        <input type="checkbox" name="danos_funci-gene_duct" value="generacion de ductos" id="danos_funci-gene_duct">
+                        <label for="danos_funci__gene_duct">GENERACION DE DUCTOS</label>
+                        <input type="hidden" name="danos_funci__gene_duct" value="off">
+                        <input type="checkbox" name="danos_funci__gene_duct" value="generacion de ductos" id="danos_funci__gene_duct">
                     </div>
 
                     <div>
-                        <label for="danos_funci-frac_comp">FRACTURAS DE COMPUERTAS</label>
-                        <input type="hidden" name="danos_funci-frac_comp" value="off">
-                        <input type="checkbox" name="danos_funci-frac_comp" value="fracturas de compuertas" id="danos_funci-frac_comp">
+                        <label for="danos_funci__frac_comp">FRACTURAS DE COMPUERTAS</label>
+                        <input type="hidden" name="danos_funci__frac_comp" value="off">
+                        <input type="checkbox" name="danos_funci__frac_comp" value="fracturas de compuertas" id="danos_funci__frac_comp">
                     </div>
                     
                 </div>
@@ -1181,15 +1153,15 @@
                 <div class="div_2col">
 
                     <div>
-                        <label for="danos_funci-obst_alivi">OBSTRUCCION DE ALIVIADEROS</label>
-                        <input type="hidden" name="danos_funci-obst_alivi" value="off">
-                        <input type="checkbox" name="danos_funci-obst_alivi" value="obstruccion de aliviaderos" id="danos_funci-obst_alivi">
+                        <label for="danos_funci__obst_alivi">OBSTRUCCION DE ALIVIADEROS</label>
+                        <input type="hidden" name="danos_funci__obst_alivi" value="off">
+                        <input type="checkbox" name="danos_funci__obst_alivi" value="obstruccion de aliviaderos" id="danos_funci__obst_alivi">
                     </div>
 
                     <div>
-                        <label for="danos_funci-perme_cober_inter">PERMEABILIDAD DE COBERTURA INTERNA</label>
-                        <input type="hidden" name="danos_funci-perme_cober_inter" value="off">
-                        <input type="checkbox" name="danos_funci-perme_cober_inter" value="permeabilidad de cobertura interna" id="danos_funci-perme_cober_inter">
+                        <label for="danos_funci__perme_cober_inter">PERMEABILIDAD DE COBERTURA INTERNA</label>
+                        <input type="hidden" name="danos_funci__perme_cober_inter" value="off">
+                        <input type="checkbox" name="danos_funci__perme_cober_inter" value="permeabilidad de cobertura interna" id="danos_funci__perme_cober_inter">
                     </div>
                     
                 </div>
@@ -1197,15 +1169,15 @@
                 <div class="div_2col">
 
                     <div>
-                        <label for="danos_funci-sedi_alt_max_obra">SEDIMIENTO A LA ALTURA MAXIMA DE LA OBRA</label>
-                        <input type="hidden" name="danos_funci-sedi_alt_max_obra" value="off">
-                        <input type="checkbox" name="danos_funci-sedi_alt_max_obra" value="sedimiento a la altura maxima de la obra" id="danos_funci-sedi_alt_max_obra">
+                        <label for="danos_funci__sedi_alt_max_obra">SEDIMIENTO A LA ALTURA MAXIMA DE LA OBRA</label>
+                        <input type="hidden" name="danos_funci__sedi_alt_max_obra" value="off">
+                        <input type="checkbox" name="danos_funci__sedi_alt_max_obra" value="sedimiento a la altura maxima de la obra" id="danos_funci__sedi_alt_max_obra">
                     </div>
 
                     <div>
-                        <label for="danos_funci-infil">INFILTRACION</label>
-                        <input type="hidden" name="danos_funci-infil" value="off">
-                        <input type="checkbox" name="danos_funci-infil" value="infiltracion" id="danos_funci-infil">
+                        <label for="danos_funci__infil">INFILTRACION</label>
+                        <input type="hidden" name="danos_funci__infil" value="off">
+                        <input type="checkbox" name="danos_funci__infil" value="infiltracion" id="danos_funci__infil">
                     </div>
                     
                 </div>
@@ -1243,31 +1215,28 @@
 
                     <div class="form_sub_secction meto_apli-mortero">
                         
-                        <label for="meto_apli-mortero-grandes">
+                        <label for="meto_apli__mortero__grandes">
                             <img src="imgs/morteros/mortero-grandes.png" alt="Mortero Grande">
                         </label>
-                        <input type="hidden" name="meto_apli-prueba_mortero" value="off">
-                        <input type="radio" name="meto_apli-prueba_mortero" value="mortero grandes" id="meto_apli-mortero-grandes">
+                        <input type="hidden" name="meto_apli__prueba_mortero" value="off">
+                        <input type="radio" name="meto_apli__prueba_mortero" value="mortero grandes" id="meto_apli__mortero__grandes">
                         
-                        <label for="meto_apli-mortero-medianos">
+                        <label for="meto_apli__mortero__medianos">
                             <img src="imgs/morteros/mortero-medianos.png" alt="Mortero Mediano">
                         </label>
-                        <!-- <input type="hidden" name="meto_apli-prueba_mortero" value="off"> -->
-                        <input type="radio" name="meto_apli-prueba_mortero" value="mortero medianos" id="meto_apli-mortero-medianos">
+                        <input type="radio" name="meto_apli__prueba_mortero" value="mortero medianos" id="meto_apli__mortero__medianos">
 
                         
-                        <label for="meto_apli-mortero-borilla">
+                        <label for="meto_apli__mortero__borilla">
                             <img src="imgs/morteros/mortero-boronilla.png" alt="Mortero Borilla (viruta)">
                         </label>
-                        <!-- <input type="hidden" name="meto_apli-prueba_mortero" value="off"> -->
-                        <input type="radio" name="meto_apli-prueba_mortero" value="mortero borilla" id="meto_apli-mortero-borilla">
+                        <input type="radio" name="meto_apli__prueba_mortero" value="mortero borilla" id="meto_apli__mortero__borilla">
 
                         
-                        <label for="meto_apli-mortero-polvo">
+                        <label for="meto_apli__mortero__polvo">
                             <img src="imgs/morteros/mortero-polvo.png" alt="Mortero Polvo">
                         </label>
-                        <!-- <input type="hidden" name="meto_apli-prueba_mortero" value="off"> -->
-                        <input type="radio" name="meto_apli-prueba_mortero" value="mortero polvo" id="meto_apli-mortero-polvo">
+                        <input type="radio" name="meto_apli__prueba_mortero" value="mortero polvo" id="meto_apli__mortero__polvo">
 
                     </div>
                         
@@ -1277,7 +1246,7 @@
                 <article class="form_secction  meto_apli-observaciones">
                     <h2 class="sub_title">OBSERVACIONES</h2>
 
-                    <textarea class="textarea_observaciones" name="meto_apli-observaciones" id="meto_apli-observaciones"></textarea>
+                    <textarea class="textarea_observaciones" name="meto_apli__observaciones" id="meto_apli__observaciones"></textarea>
                     
                 </article>
                 
@@ -1289,17 +1258,15 @@
                     
                     <h3 class="pg2_footer-leyenda-sub_title">NIVELES DE <br> CONTAMINACION</h3>
                     
-                    <label for="nivel_contaminacion-alto">A: ALTO</label>
+                    <label for="nivel_contaminacion__alto">A: ALTO</label>
                     <input type="hidden" name="nivel_contaminacion" value="off">
-                    <input type="radio" name="nivel_contaminacion" value="alto" id="nivel_contaminacion-alto">
+                    <input type="radio" name="nivel_contaminacion" value="alto" id="nivel_contaminacion__alto">
                     
-                    <label for="nivel_contaminacion-medio">M: MEDIO </label>
-                    <!-- <input type="hidden" name="nivel_contaminacion" value="off"> -->
-                    <input type="radio" name="nivel_contaminacion" value="medio" id="nivel_contaminacion-medio">
+                    <label for="nivel_contaminacion__medio">M: MEDIO </label>
+                    <input type="radio" name="nivel_contaminacion" value="medio" id="nivel_contaminacion__medio">
                     
-                    <label for="nivel_contaminacion-bajo">B: BAJO </label>
-                    <!-- <input type="hidden" name="nivel_contaminacion" value="off"> -->
-                    <input type="radio" name="nivel_contaminacion" value="bajo" id="nivel_contaminacion-bajo">
+                    <label for="nivel_contaminacion__bajo">B: BAJO </label>
+                    <input type="radio" name="nivel_contaminacion" value="bajo" id="nivel_contaminacion__bajo">
                 </div>
 
                 <div class="form_sub_secction org_parti">
@@ -1310,17 +1277,17 @@
                     <h3>INSTITUCION:</h3>
                     <h3>TELEFONO:</h3>
 
-                    <input type="text" name="org_parti-nom_ape_1" id="org_parti-nom_ape_1">
-                    <input type="text" name="org_parti-insti_1" id="org_parti-insti_1">
-                    <input type="tel" name="org_parti-tlf_1" id="org_parti-tlf_1" placeholder="0000-0000000"> 
+                    <input type="text" name="org_parti__nom_ape_1" id="org_parti__nom_ape_1">
+                    <input type="text" name="org_parti__insti_1" id="org_parti__insti_1">
+                    <input type="tel" name="org_parti__tlf_1" id="org_parti__tlf_1" placeholder="0000-0000000"> 
 
-                    <input type="text" name="org_parti-nom_ape_2" id="org_parti-nom_ape_2">
-                    <input type="text" name="org_parti-insti_2" id="org_parti-insti_2">
-                    <input type="tel" name="org_parti-tlf_2" id="org_parti-tlf_2" placeholder="0000-0000000"> 
+                    <input type="text" name="org_parti__nom_ape_2" id="org_parti__nom_ape_2">
+                    <input type="text" name="org_parti__insti_2" id="org_parti__insti_2">
+                    <input type="tel" name="org_parti__tlf_2" id="org_parti__tlf_2" placeholder="0000-0000000"> 
 
-                    <input type="text" name="org_parti-nom_ape_3" id="org_parti-nom_ape_3">
-                    <input type="text" name="org_parti-insti_3" id="org_parti-insti_3">
-                    <input type="tel" name="org_parti-tlf_3" id="org_parti-tlf_3" placeholder="0000-0000000"> 
+                    <input type="text" name="org_parti__nom_ape_3" id="org_parti__nom_ape_3">
+                    <input type="text" name="org_parti__insti_3" id="org_parti__insti_3">
+                    <input type="tel" name="org_parti__tlf_3" id="org_parti__tlf_3" placeholder="0000-0000000"> 
                     
                 </div>
                 
@@ -1328,8 +1295,6 @@
 
         </section>
         
-        <!-- aca podria poner los botones del formulario -->
-
         <div class="form_buttons">
             <button type="submit" class="btn_submit" id="main_form-submit">ENVIAR</button>
             <button type="reset" class="btn_reset">REINICIAR</button>
