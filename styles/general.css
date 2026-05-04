@@ -18,6 +18,9 @@
         height: 27.9cm = 1054px
     */
 }
+body{
+    padding-top: 100px;
+}
 
 .main_form{
     display: flex;

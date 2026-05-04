@@ -1,0 +1,41 @@
+.nav_history{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    translate: 0% 100%;
+    overflow-x: clip;
+    padding-left: 10px;
+}
+
+
+.menu_history{
+    height: 90dvh;
+    padding: 40px;
+    background: #fff;
+    box-shadow: #0005 -5px 5px 10px;
+    transform: translateX(110%);
+    transition: transform 0.3s ease;
+}
+.showHistory{
+    transform: translateX(0);
+}
+
+.menu_history li{
+    list-style: none;
+}
+
+.menu_history__code{
+
+}
+
+.menu_history__coords{
+
+}
+
+.menu_history__coord__n{}
+.menu_history__coord__e{}
+
+.menu_history__place{
+
+}

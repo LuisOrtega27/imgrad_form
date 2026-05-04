@@ -17,6 +17,8 @@ mainForm.addEventListener('submit', async (e) => {
     const formData = new FormData(mainForm);
     const data = Object.fromEntries(formData.entries());
 
+    if(data["cod_n"] === "") return console.log("El campo 'cod_n' no puede estar vacio."); 
+
     const result = await setRegistry(data);
     
     if(result.success){

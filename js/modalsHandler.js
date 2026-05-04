@@ -1,8 +1,9 @@
 'use strict'
 
-import {getRegistry}  from './getRegistry.js';
-import { fillInputs } from './mainFormHandler.js';
-import {updateRegistry} from './updateRegistry.js';
+import { getRegistry }  from './getRegistry.js';
+// import { fillInputs } from './mainFormHandler.js';
+// import { updateRegistry } from './updateRegistry.js';
+import { handleUpdate } from './formActions.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -10,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const modalNewRegistry = document.querySelector('#modal-new_Registry');
 
     // MODAL CONTROLS
-    const closeModalBtns = document.querySelectorAll('.modal-close_btn');
+    // const closeModalBtns = document.querySelectorAll('.modal-close_btn');
     const ReturnModalBtn = document.querySelector('.modal-return_btn');
 
     // NEW REGISTRY FORM BUTTONS
@@ -24,25 +25,26 @@ window.addEventListener('DOMContentLoaded', () => {
     modalNewRegistry.showModal();
 
     // ACTION: Close modal when clicking on close buttons
-    closeModalBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            modalNewRegistry.close();
-        });
-    });
+    // closeModalBtns.forEach(btn => {
+    //     btn.addEventListener('click', () => {
+    //         modalNewRegistry.close();
+    //     });
+    // });
 
     // ACTION: Close modal when pressing Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modalNewRegistry.open) {
-            modalNewRegistry.close();
+            e.preventDefault(); // for now disabled 
+            // modalNewRegistry.close();
         }
     });
 
     // ACTION: close modal when clicking outside of it
-    modalNewRegistry.addEventListener('click', (e) => {
-        if (e.target === modalNewRegistry) {
-            modalNewRegistry.close();
-        }
-    });
+    // modalNewRegistry.addEventListener('click', (e) => {
+    //     if (e.target === modalNewRegistry) {
+    //         modalNewRegistry.close();
+    //     }
+    // });
 
     // Action: close current modal and open the previous one
     ReturnModalBtn.addEventListener('click', () => {
@@ -59,33 +61,36 @@ window.addEventListener('DOMContentLoaded', () => {
         modalNewRegistry.close();
     });
 
+    // const handleUpdate = ()=>{
+    //      // cerrar modal actual y abrir modal con formulario para buscar registro a actualizar
+    //     modalNewRegistry.close();
+
+    //     // Open the update registry modal
+    //     const modalUpdateRegistry = document.querySelector('#modal-update_Registry');
+    //     modalUpdateRegistry.showModal();
+
+    //     const form__update_Registry = document.querySelector(".form-update_Registry");
+
+    //     form__update_Registry.addEventListener("submit", async(e)=>{
+    //         e.preventDefault();
+
+    //         let formData = new FormData(form__update_Registry);
+    //         formData = Object.fromEntries(formData.entries());
+
+    //         const targetId = formData.search_registry;
+    //         let result = await updateRegistry(targetId);
+
+    //         if(!result?.success) return alert(result.message)
+
+
+    //         fillInputs(result.data);
+    //         modalUpdateRegistry.close();
+
+    //     });
+    // }
+    
     updateRegistryBtn.addEventListener('click', () => {
-        // cerrar modal actual y abrir modal con formulario para buscar registro a actualizar
-        modalNewRegistry.close();
-
-        // Open the update registry modal
-        const modalUpdateRegistry = document.querySelector('#modal-update_Registry');
-        modalUpdateRegistry.showModal();
-
-        const form__update_Registry = document.querySelector(".form-update_Registry");
-
-        form__update_Registry.addEventListener("submit", async(e)=>{
-            e.preventDefault();
-
-            let formData = new FormData(form__update_Registry);
-            formData = Object.fromEntries(formData.entries());
-
-            const targetId = formData.search_registry;
-            let result = await updateRegistry(targetId);
-
-            if(!result?.success) return alert(result.message)
-
-
-            fillInputs(result.data);
-            modalUpdateRegistry.close();
-
-        });
-        
+        handleUpdate()
     });
 
 })
