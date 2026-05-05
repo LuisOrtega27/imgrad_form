@@ -37,8 +37,6 @@ const fillInputs = (data) => {
         dataKey = dataKey.trim()
         dataValue = dataValue.trim()
 
-        // if(dataKey === "modification") continue; // Skip the historic modification field
-
         const input = document.getElementsByName(dataKey);
 
         // validar que sea type="checkbox/radio" y que coincida el "value", y usar "checked"
