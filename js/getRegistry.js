@@ -7,7 +7,6 @@ const getRegistry = (id = null) => {
 
     // if id is null, get the last registry id from the database, otherwise get the registry with the given id    
     try{
-
         const PATH = "php/getLastId.php";
         const FETCH_CONFIG = {
             headers: {
@@ -17,7 +16,7 @@ const getRegistry = (id = null) => {
             body: JSON.stringify({ id })
         };
 
-        
+
         fetch(PATH, FETCH_CONFIG)
         .then(response=> {
 
@@ -29,10 +28,6 @@ const getRegistry = (id = null) => {
         })
         .then(data=>{
             // show modal whit spinner while processing the request
-            // const spinner = document.querySelector('#modal-spinner');
-            // spinner.style.display = 'block';
-            
-            // console.log(data);
 
             fillInputs(data);
             

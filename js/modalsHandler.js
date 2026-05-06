@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const modalUpdateRegistry = document.querySelector('#modal-update_Registry');
 
     // NEW REGISTRY MODAL: Always Open the modal when the page loads
-    modalNewRegistry.showModal();
+    // modalNewRegistry.showModal();
 
     // ACTION: Close modal when clicking on close buttons
     // closeModalBtns.forEach(btn => {

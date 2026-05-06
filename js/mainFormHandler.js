@@ -8,7 +8,7 @@ const mainForm = document.getElementById('main_form');
 const resetForm = () => {
     mainForm.reset();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    getRegistry();
+    // getRegistry();
 }
 
 mainForm.addEventListener('submit', async (e) => {
@@ -22,7 +22,7 @@ mainForm.addEventListener('submit', async (e) => {
     const result = await setRegistry(data);
     
     if(result.success){
-        alert('Registro guardado exitosamente');
+        // alert('Registro guardado exitosamente');
         resetForm();
     }
 

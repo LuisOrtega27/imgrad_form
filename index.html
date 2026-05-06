@@ -135,11 +135,11 @@
 
                 <div class="header_codigo">
                     <label for="ficha_n" class="header_codigo-ficha_n">FICHA Nº:</label>
-                    <input type="text" name="ficha_n" id="ficha_n">
+                    <input type="text" name="ficha_n" id="ficha_n" pattern="\d{2}-\d{2}-\d{2}-\D{3}-\d{2}" placeholder="00-00-00-ABC-00" required>
 
                     <input type="hidden" name="modification" value="00">
                     <label for="cod_n" class="header_codigo-cod_n">CODIGO Nº:</label>
-                    <input type="text" class="input-disabled" name="cod_n" id="cod_n" tabindex="-1">
+                    <input type="text" class="input-disabled" name="cod_n" id="cod_n" tabindex="-1" pattern="\d{6}" required>
 
                     <div>
                         <label for="header_codigo__huso">HUSO:</label>

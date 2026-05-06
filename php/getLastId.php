@@ -33,8 +33,13 @@ while( ($arrayValues[4] ?? NULL) != "00" ){ // 00 - resgistro sin actualizacione
     
     [$currentLine, $newPos] = getNewLine($FILE, $pos);
 
-    if(count($arrayValues) == 1){ // si el array tiene solo 1 elemento (el codigo), detener el while
+    if(count($arrayValues) === 1){ // si el array tiene solo 1 elemento (el codigo), detener el while
         break;
+    }
+
+    if($currentLine === null){ // si la linea esta vacia, saltala
+        $pos = (int)$newPos-3;
+        continue;
     }
 
     $arrayValues = explode("; ", $currentLine);
@@ -48,7 +53,7 @@ $ID = $arrayValues[0];
 $ID = (int)$ID +1; // incrementa el ID en +1 para obtener el nuevo ID para la ficha
 $ID = str_pad($ID, 6, '0', STR_PAD_LEFT); // rellenar el ID con ceros para formato de 6 digitos
 
-file_put_contents($FILE_PATH, "\n{$ID}", FILE_APPEND);
+file_put_contents($FILE_PATH, PHP_EOL . $ID, FILE_APPEND);
 
 echo json_encode(["cod_n" => $ID]);
 

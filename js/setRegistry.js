@@ -18,6 +18,7 @@ const setRegistry = (data)=>{
             return response.json();
         })
         .then(data => {
+
             return data;
         })
         .catch(error => {
