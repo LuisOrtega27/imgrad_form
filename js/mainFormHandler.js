@@ -14,6 +14,13 @@ const resetForm = () => {
 mainForm.addEventListener('submit', async (e) => {
 
     e.preventDefault();
+    
+    const new_btn = document.querySelector("#main_menu__createRegistry")
+    const update_btn = document.querySelector("#main_menu__updateRegistry")
+    new_btn.classList.remove("input-disabled")
+    update_btn.classList.remove("input-disabled");
+
+
     const formData = new FormData(mainForm);
     const data = Object.fromEntries(formData.entries());
 

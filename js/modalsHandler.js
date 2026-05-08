@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const modalNewRegistry = document.querySelector('#modal-new_Registry');
 
     // MODAL CONTROLS
-    // const closeModalBtns = document.querySelectorAll('.modal-close_btn');
+    const closeModalBtns = document.querySelectorAll('.modal-close_btn');
     const ReturnModalBtn = document.querySelector('.modal-return_btn');
 
     // NEW REGISTRY FORM BUTTONS
@@ -25,11 +25,11 @@ window.addEventListener('DOMContentLoaded', () => {
     // modalNewRegistry.showModal();
 
     // ACTION: Close modal when clicking on close buttons
-    // closeModalBtns.forEach(btn => {
-    //     btn.addEventListener('click', () => {
-    //         modalNewRegistry.close();
-    //     });
-    // });
+    closeModalBtns.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+            event.target.parentNode.parentNode.close()
+        });
+    });
 
     // ACTION: Close modal when pressing Escape key
     document.addEventListener('keydown', (e) => {
@@ -47,11 +47,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // });
 
     // Action: close current modal and open the previous one
-    ReturnModalBtn.addEventListener('click', () => {
-        modalUpdateRegistry.close();
-        
-        modalNewRegistry.showModal();
-    });
+    // ReturnModalBtn.addEventListener('click', () => {
+    //     modalUpdateRegistry.close();
+    //     modalNewRegistry.showModal();
+    // });
 
     // Action: handle new registry form submission, request for last registry id
     newRegistryBtn.addEventListener('click', () => {

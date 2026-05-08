@@ -29,7 +29,7 @@ $arrayValues = [];
 
 $pos = -1; // SEEK_END solo acepta valores negativos
 
-while( ($arrayValues[4] ?? NULL) != "00" ){ // 00 - resgistro sin actualizaciones para ultimo ID de la ficha 
+while( ($arrayValues[4] ?? NULL) != "00"){ // 00 - resgistro sin actualizaciones para ultimo ID de la ficha 
     
     [$currentLine, $newPos] = getNewLine($FILE, $pos);
 

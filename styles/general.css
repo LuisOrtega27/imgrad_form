@@ -113,5 +113,5 @@ input:invalid{
     pointer-events: none;
     background-color: var(--background-color-disabled);
     border: var(--background-color-disabled) solid 1px;
-    color: var(--text-color-disabled);
+    color: var(--text-color-disabled) !important;
 }

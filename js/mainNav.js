@@ -12,10 +12,13 @@ history_btn.addEventListener("click", ()=>{
 })
 
 update_btn.addEventListener("click", ()=>{
+    new_btn.classList.remove("input-disabled");
     handleUpdate()
 })
 
 new_btn.addEventListener("click", ()=>{
+    new_btn.classList.add("input-disabled");
+    update_btn.classList.add("input-disabled");
     alert("Nuevo ID reservado")
     getRegistry()
 })
