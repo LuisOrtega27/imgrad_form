@@ -52,3 +52,10 @@
 .modal-title { /* modal title styling placeholder */ }
 .modal-buttons { /* modal buttons container */ }
 .btn { /* basic button reset (project-wide styles in general.css) */ }
+
+
+#map{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: solid 2px #000;
+}

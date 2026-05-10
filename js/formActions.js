@@ -8,8 +8,6 @@ const modalNewRegistry = document.querySelector('#modal-new_Registry');
 
 // ACTION: update
 const handleUpdate = ()=>{
-        // cerrar modal actual y abrir modal con formulario para buscar registro a actualizar
-    modalNewRegistry.close();
 
     // Open the update registry modal
     const modalUpdateRegistry = document.querySelector('#modal-update_Registry');
