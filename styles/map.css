@@ -1,0 +1,19 @@
+.map_searchBlock{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 150px;
+    height: 80%;
+    /* background: #0002; */
+}
+#place-autocomplete{
+    width: 100%;
+    height: 20px;
+}
+gmpx-place-autocomplete {
+  display: block; /* Asegura que se comporte como un bloque */
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 0;
+  padding: 10px;
+}
