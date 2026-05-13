@@ -65,4 +65,6 @@ function getUtmLetter(lat) {
 }
 
 // Ejemplo de uso:
-console.log(decimalToUTM(40.4168, -3.7038)); // Madrid
+// console.log(decimalToUTM(40.4168, -3.7038)); // Madrid
+
+export { decimalToUTM }

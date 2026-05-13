@@ -143,9 +143,9 @@
                         <span>COORDENADAS UTM</span>
                         <div class="coor_utm_container">
                             <label for="coor_utm__e">E:</label>
-                            <input type="text" name="coor_utm__e" id="coor_utm__e" pattern="^\d{6},\d{2}$" placeholder="123456,12" title="Patron esperado: 123456,12" required>
+                            <input type="text" name="coor_utm__e" id="coor_utm__e" pattern="^\d{6}.\d{2}$" placeholder="123456,12" title="Patron esperado: 123456,12" required>
                             <label for="coor_utm__n">N:</label>
-                            <input type="text" name="coor_utm__n" id="coor_utm__n" pattern="^\d{7},\d{2}$" placeholder="1234567,12" title="Patron esperado: 1234567,12" required>
+                            <input type="text" name="coor_utm__n" id="coor_utm__n" pattern="^\d{7}.\d{2}$" placeholder="1234567,12" title="Patron esperado: 1234567,12" required>
 
                             <button id="modal-map-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -169,7 +169,7 @@
 
                     <div>
                         <label for="header_codigo__huso">HUSO:</label>
-                        <input type="number" name="header_codigo__huso" id="header_codigo__huso" required>
+                        <input type="number" name="header_codigo__huso" id="header_codigo__huso" value="19" class="input-disabled" required tabindex="-1">
                         <span>N</span>
 
                         <label for="header_codigo__altura">ALTURA:</label>

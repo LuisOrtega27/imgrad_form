@@ -1,5 +1,7 @@
 "use strict"
 
+import { decimalToUTM } from "./convert_coord_deci_utm.js"
+
 const API_KEY = "AIzaSyAPA21v1E06YuptbIYOjUp9Fd2VtOZ9BIA"
 
 // MAP MODAL
@@ -72,7 +74,7 @@ window.initMap = async ()=>{
     // searchGoogleMap(map)
 }
 
-const placeMarker = (latLng, marker)=>{
+const placeMarker = async (latLng, marker)=>{
     // change coordinates
     coords.lat = latLng.lat();
     coords.lng = latLng.lng();
@@ -81,8 +83,12 @@ const placeMarker = (latLng, marker)=>{
     marker.position = coords;
     
     // update inputs
-    coord_e.value = coords.lat
-    coord_n.value = coords.lng
+    let coordsUTM = await decimalToUTM(coords.lat, coords.lng)
+
+    // console.log(decimalToUTM)
+    
+    coord_e.value = coordsUTM.easting
+    coord_n.value = coordsUTM.northing
 }
 
 const searchGoogleMap = (map)=>{
