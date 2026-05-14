@@ -2,10 +2,6 @@ import { fillInputs } from './mainFormHandler.js';
 import { updateRegistry } from './updateRegistry.js';
 
 
-// NEW REGISTRY MODAL
-const modalNewRegistry = document.querySelector('#modal-new_Registry');
-
-
 // ACTION: update
 const handleUpdate = ()=>{
 
@@ -20,11 +16,12 @@ const handleUpdate = ()=>{
 
         let formData = new FormData(form__update_Registry);
         formData = Object.fromEntries(formData.entries());
-
+        
         const targetId = formData.search_registry;
+        
         let result = await updateRegistry(targetId);
 
-        if(!result?.success) return alert(result.message)
+        if(!result?.success) return alert(result?.message)
 
 
         fillInputs(result.data);

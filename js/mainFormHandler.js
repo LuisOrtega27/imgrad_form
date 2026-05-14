@@ -2,6 +2,7 @@
 
 import { setRegistry } from "./setRegistry.js";
 import { getRegistry } from "./getRegistry.js";
+import { updateJustAddRegistry } from "./updateJustAddRegistry.js"
 
 const mainForm = document.getElementById('main_form');
 
@@ -15,20 +16,29 @@ mainForm.addEventListener('submit', async (e) => {
 
     e.preventDefault();
     
-    const new_btn = document.querySelector("#main_menu__createRegistry")
-    const update_btn = document.querySelector("#main_menu__updateRegistry")
-    new_btn.classList.remove("input-disabled")
-    update_btn.classList.remove("input-disabled");
-
-
+    document.querySelector("#main_menu__createRegistry").classList.remove("input-disabled")
+    document.querySelector("#main_menu__updateRegistry").classList.remove("input-disabled");
+    
+    
     const formData = new FormData(mainForm);
     const data = Object.fromEntries(formData.entries());
 
-    if(data["cod_n"] === "") return console.log("El campo 'cod_n' no puede estar vacio."); 
-
-    const result = await setRegistry(data);
+    // console.log(data)
     
-    if(result.success){
+    let result;
+
+    if(document.querySelector("#main_form-submit").getAttribute("data-update")){
+        // si es una actualizacion
+        result = await updateJustAddRegistry(data)
+    }else{
+        //si es nuevo
+        result = await setRegistry(data);
+
+    }
+
+    
+    if(result?.success){
+        console.log(result)
         // alert('Registro guardado exitosamente');
         resetForm();
     }

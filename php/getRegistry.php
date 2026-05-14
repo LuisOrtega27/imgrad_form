@@ -1,5 +1,5 @@
 <?php
-$prueba = '{"targetId":"10", "last": true}';
+$prueba = '{"targetId":"1", "last": true}';
 
 $FILE_PATH = "../DATA_GIS/GDB.txt";
 $formData = file_get_contents("php://input") ?: $prueba;
@@ -44,10 +44,10 @@ if(empty($result)){
 // IF $result length === 1 (registro reservado, alguien lo esta trabajando) 
 if( count($result) === 1 ){
     echo json_encode([
-        "code" => 200,
+        "code" => 409,
         "success" => true,
         "status" => "success",
-        "message" => "Este registro se encuentra reservado",
+        "message" => "Codigo: 409 Este registro se encuentra reservado",
         "data" => $result[0]
     ]);
     exit;

@@ -1,12 +1,14 @@
 "use strict";
 
-const updateRegistry = (targetId)=>{
+const updateJustAddRegistry = (formData)=>{
 
-    const FILE_PATH = "php/getRegistry.php";
+    // console.log(formData)
+
+    const FILE_PATH = "php/updateRegistry.php";
     const FETCH_OPTIONS = {
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({targetId, last: true})
+        body: JSON.stringify(formData)
     };
 
     return fetch(FILE_PATH, FETCH_OPTIONS)
@@ -16,7 +18,7 @@ const updateRegistry = (targetId)=>{
             return response.json();
         })
         .then(data => {
-            
+            console.log(data)
             return data;
         })
         .catch(error => {
@@ -24,4 +26,4 @@ const updateRegistry = (targetId)=>{
         });
 }
 
-export { updateRegistry };
+export { updateJustAddRegistry };

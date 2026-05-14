@@ -47,7 +47,6 @@ $data_array = [];
 
 // CLEAN FOR CVS FORMAT
 foreach($formData as $value){
-    $value = str_replace( "off", "-----", $value);
     $data_array[] = $value == "" ? "----" : $value;
 }
 

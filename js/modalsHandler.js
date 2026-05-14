@@ -37,6 +37,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     
     updateRegistryBtn.addEventListener('click', () => {
+        const submitBtn = document.querySelector("#main_form-submit")
+        submitBtn.setAttribute("data-update", "true")
         handleUpdate()
     });
 
