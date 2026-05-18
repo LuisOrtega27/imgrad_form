@@ -14,6 +14,7 @@
     <script type="module" src="js/modalsHandler.js" defer></script>
     <script type="module" src="js/mainFormHandler.js" defer></script>
     <script type="module" src="js/mainNav.js" defer></script>
+    <script src="./js/inputRules.js" defer></script>
 
 
 </head>
@@ -146,7 +147,17 @@
 
                 <div class="header_codigo">
                     <label for="ficha_n" class="header_codigo-ficha_n">FICHA Nº:</label>
-                    <input type="text" name="ficha_n" id="ficha_n" pattern="\d{2}-\d{2}-\d{2}-\D{3}-\d{2}" placeholder="00-00-00-ABC-00" required>
+                    <input 
+                        type="text" 
+                        name="ficha_n" 
+                        id="ficha_n" 
+                        pattern="\d{2}-\d{2}-\d{2}-\w{3}-\d{2}" 
+                        placeholder="00-00-00-ABC-00" 
+                        title="Patron esperado: '00-00-00-ABC-00'" 
+                        required 
+                        autofocus 
+                        maxlength="15"
+                    >
 
                     <input type="hidden" name="modification" value="00">
                     <label for="cod_n" class="header_codigo-cod_n">CODIGO Nº:</label>
@@ -173,13 +184,13 @@
                     <label for="id_tec__nom_ape_1">NOMBRE Y APELLIDO:</label>
                     <input type="text" name="id_tec__nom_ape_1" id="id_tec__nom_ape_1" required>
                     <label for="id_tec__tlf_1">TLF:</label>
-                    <input type="tel" name="id_tec__tlf_1" id="id_tec__tlf_1" placeholder="0000-0000000" pattern="^\d{4}-\d{7}$"  title="el patron es: 0000-0000000" required>
+                    <input type="tel" name="id_tec__tlf_1" id="id_tec__tlf_1" placeholder="0000-0000000" pattern="^\d{4}-\d{7}$"  title="el patron es: 0000-0000000" required maxlength="12">
                 </div>
                 <div>
                     <label for="id_tec__nom_ape_2">NOMBRE Y APELLIDO:</label>
                     <input type="text" name="id_tec__nom_ape_2" id="id_tec__nom_ape_2">
                     <label for="id_tec__tlf_2">TLF:</label>
-                    <input type="tel" name="id_tec__tlf_2" id="id_tec__tlf_2" placeholder="0000-0000000">
+                    <input type="tel" name="id_tec__tlf_2" id="id_tec__tlf_2" placeholder="0000-0000000" maxlength="12">
                 </div>
             </article>
 
@@ -1296,15 +1307,15 @@
 
                     <input type="text" name="org_parti__nom_ape_1" id="org_parti__nom_ape_1" required>
                     <input type="text" name="org_parti__insti_1" id="org_parti__insti_1" required>
-                    <input type="tel" name="org_parti__tlf_1" id="org_parti__tlf_1" placeholder="0000-0000000" required> 
+                    <input type="tel" name="org_parti__tlf_1" id="org_parti__tlf_1" placeholder="0000-0000000" required maxlength="12"> 
 
                     <input type="text" name="org_parti__nom_ape_2" id="org_parti__nom_ape_2">
                     <input type="text" name="org_parti__insti_2" id="org_parti__insti_2">
-                    <input type="tel" name="org_parti__tlf_2" id="org_parti__tlf_2" placeholder="0000-0000000"> 
+                    <input type="tel" name="org_parti__tlf_2" id="org_parti__tlf_2" placeholder="0000-0000000" maxlength="12"> 
 
                     <input type="text" name="org_parti__nom_ape_3" id="org_parti__nom_ape_3">
                     <input type="text" name="org_parti__insti_3" id="org_parti__insti_3">
-                    <input type="tel" name="org_parti__tlf_3" id="org_parti__tlf_3" placeholder="0000-0000000"> 
+                    <input type="tel" name="org_parti__tlf_3" id="org_parti__tlf_3" placeholder="0000-0000000" maxlength="12"> 
                     
                 </div>
                 
