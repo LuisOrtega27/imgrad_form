@@ -5,9 +5,12 @@ import { getRegistry } from "./getRegistry.js";
 import { updateJustAddRegistry } from "./updateJustAddRegistry.js"
 
 const mainForm = document.getElementById('main_form');
+const modifiedInput = document.getElementById("modification")
 
 const resetForm = () => {
     mainForm.reset();
+    modifiedInput.value = "00"
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
     // getRegistry();
 }
@@ -16,7 +19,7 @@ mainForm.addEventListener('submit', async (e) => {
 
     e.preventDefault();
     
-    document.querySelector("#main_menu__createRegistry").classList.remove("input-disabled")
+    document.querySelector("#main_menu__createRegistry").classList.remove("input-disabled");
     document.querySelector("#main_menu__updateRegistry").classList.remove("input-disabled");
     
     

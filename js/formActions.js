@@ -1,7 +1,6 @@
 import { fillInputs } from './mainFormHandler.js';
 import { updateRegistry } from './updateRegistry.js';
 
-
 // ACTION: update
 const handleUpdate = ()=>{
 
