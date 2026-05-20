@@ -47,7 +47,7 @@ mainForm.addEventListener('submit', async (e) => {
 
 const fillInputs = (data) => {
     
-    // console.log(data)
+    console.log(data)
     
     for (let [dataKey, dataValue] of Object.entries(data)) {
         
@@ -65,7 +65,7 @@ const fillInputs = (data) => {
             
         }else{
 
-            input[0].value = dataValue;
+            input[0].value = dataValue === "----" ? "" : dataValue;
         }
 
         

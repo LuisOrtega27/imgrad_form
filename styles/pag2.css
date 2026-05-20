@@ -32,6 +32,7 @@
 }
 .carac_obra >.carac_obra-estruc_aux >div>input{
     width: 40px;
+    padding: 4px;
 }
 
 .carac_obra-disenos{

@@ -129,9 +129,9 @@
                         <span>COORDENADAS UTM</span>
                         <div class="coor_utm_container">
                             <label for="coor_utm__e">E:</label>
-                            <input type="text" name="coor_utm__e" id="coor_utm__e" pattern="^\d{6}.\d{2}$" placeholder="000006.12" title="Patron esperado: 123456.12" required>
+                            <input type="text" name="coor_utm__e" id="coor_utm__e" pattern="^\d{6}.\d{2}$" placeholder="000006.12" title="Patron esperado: 123456.12" maxlength="9" required>
                             <label for="coor_utm__n">N:</label>
-                            <input type="text" name="coor_utm__n" id="coor_utm__n" pattern="^\d{7}.\d{2}$" placeholder="0000007.12" title="Patron esperado: 1234567.12" required>
+                            <input type="text" name="coor_utm__n" id="coor_utm__n" pattern="^\d{7}.\d{2}$" placeholder="0000007.12" title="Patron esperado: 1234567.12" maxlength="10" required>
 
                             <button id="modal-map-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -169,7 +169,7 @@
                         <span>N</span>
 
                         <label for="header_codigo__altura">ALTURA:</label>
-                        <input type="number" name="header_codigo__altura" id="header_codigo__altura" required>
+                        <input type="number" name="header_codigo__altura" id="header_codigo__altura" maxlength="8" required>
                         <span>M.S.N.M</span>
                     </div>
                 </div>
@@ -292,7 +292,7 @@
 
                         <div>
                             <label for="ent_fisi__alt_pro">ALTURA PROMEDIO</label>
-                            <input type="number" name="ent_fisi__alt_pro" id="ent_fisi__alt_pro" class="ent_fisi-altura_promedio">
+                            <input type="number" name="ent_fisi__alt_pro" id="ent_fisi__alt_pro" class="ent_fisi-altura_promedio" max="2">
                             <span>M</span>
                         </div>
                     </div>
@@ -480,8 +480,15 @@
                     <label for="tipo_obra__nombre">NOMBRE:</label>
                     <input type="text" name="tipo_obra__nombre" id="tipo_obra__nombre">
 
-                    <label for="tipo_obra__tiempo">TIEMPO DE CONTRUCCION:</label>
-                    <input type="text" name="tipo_obra__tiempo" id="tipo_obra__tiempo">
+                    <div class="tipo_obra__sub_div">
+                        <label for="tipo_obra__tiempo">TIEMPO DE CONTRUCCION:</label>
+                        <input type="text" name="tipo_obra__tiempo" id="tipo_obra__tiempo" maxlength="2">
+
+                        <select name="tipo_obra__tiempo_formato" id="tipo_obra__tiempo_formato">
+                            <option value="Años" selected>Años</option>
+                            <option value="Meses">Meses</option>
+                        </select>
+                    </div>
                     
                 </div>
 
@@ -659,7 +666,7 @@
                     <div class="form_sub_secction ">
                         <h2 class="sub_title">DIMENCIONES DE ROCAS DE PRESTAMO</h2>    
 
-                        <input type="text" class="lone_input" name="tipo_obra__drp" id="tipo_obra__drp">
+                        <input type="text" class="lone_input" name="tipo_obra__drp" id="tipo_obra__drp" maxlength="5" placeholder="00,00">
                     </div>
 
                     <div class="form_sub_secction ">
@@ -820,42 +827,42 @@
 
                     <div>
                         <label for="carac_obra__mechi">MECHINALES</label>
-                        <input type="text" name="carac_obra__mechi" id="carac_obra__mechi">
+                        <input type="text" name="carac_obra__mechi" id="carac_obra__mechi" maxlength="2" pattern="[0-9]*" inputmode="numeric">
                     </div>
 
                     <div>
                         <label for="carac_obra__disp_ener">DISPARADOR DE ENERGIA</label>
-                        <input type="text" name="carac_obra__disp_ener" id="carac_obra__disp_ener">
+                        <input type="text" name="carac_obra__disp_ener" id="carac_obra__disp_ener" maxlength="2" pattern="[0-9]*" inputmode="numeric">
                     </div>
                     
                     <div>
                         <label for="carac_obra__malla_cont">MALLA DE CONTENCION</label>
-                        <input type="text" name="carac_obra__malla_cont" id="carac_obra__malla_cont">
+                        <input type="text" name="carac_obra__malla_cont" id="carac_obra__malla_cont" maxlength="2" pattern="[0-9]*" inputmode="numeric">
                     </div>
                     
                     <div>
                         <label for="carac_obra__alivi">ALIVIADEROS</label>
-                        <input type="text" name="carac_obra__alivi" id="carac_obra__alivi">
+                        <input type="text" name="carac_obra__alivi" id="carac_obra__alivi" maxlength="2" pattern="[0-9]*" inputmode="numeric">
                     </div>
                     
                     <div>
                         <label for="carac_obra__peine_debas">PEINE DE DESBASTE</label>
-                        <input type="text" name="carac_obra__peine_debas" id="carac_obra__peine_debas">
+                        <input type="text" name="carac_obra__peine_debas" id="carac_obra__peine_debas" maxlength="2" pattern="[0-9]*" inputmode="numeric">
                     </div>
                     
                     <div>
                         <label for="carac_obra__contradic">CONTRADIQUE</label>
-                        <input type="text" name="carac_obra__contradic" id="carac_obra__contradic">
+                        <input type="text" name="carac_obra__contradic" id="carac_obra__contradic" maxlength="2" pattern="[0-9]*" inputmode="numeric">
                     </div>
                     
                     <div>
                         <label for="carac_obra__espigo">ESPIGONES</label>
-                        <input type="text" name="carac_obra__espigo" id="carac_obra__espigo">
+                        <input type="text" name="carac_obra__espigo" id="carac_obra__espigo" maxlength="2" pattern="[0-9]*" inputmode="numeric">
                     </div>
                     
                     <div>
                         <label for="carac_obra__enroca">ENROCADO</label>
-                        <input type="text" name="carac_obra__enroca" id="carac_obra__enroca">
+                        <input type="text" name="carac_obra__enroca" id="carac_obra__enroca" maxlength="2" pattern="[0-9]*" inputmode="numeric">
                     </div>
                     
                 </div> 
@@ -949,25 +956,25 @@
                     <h2 class="sub_title">MEDIDAS</h2>
                     
                         <label for="carac_obra__altura">ALTURA:</label>
-                        <input type="text" name="carac_obra__altura" id="carac_obra__altura">
+                        <input type="text" name="carac_obra__altura" id="carac_obra__altura" inputmode="numeric" pattern="\d{3},\d{2}" maxlength="6" placeholder="000,00">
                     
                         <label for="carac_obra__base">BASE:</label>
-                        <input type="text" name="carac_obra__base" id="carac_obra__base">
+                        <input type="text" name="carac_obra__base" id="carac_obra__base" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
                     
                         <label for="carac_obra__ancho">ANCHO:</label>
-                        <input type="text" name="carac_obra__ancho" id="carac_obra__ancho">
+                        <input type="text" name="carac_obra__ancho" id="carac_obra__ancho" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
                     
                         <label for="carac_obra__longitud">LONGITUD:</label>
-                        <input type="text" name="carac_obra__longitud" id="carac_obra__longitud">
+                        <input type="text" name="carac_obra__longitud" id="carac_obra__longitud" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
                     
                         <label for="carac_obra__diametro">DIAMETRO:</label>
-                        <input type="text" name="carac_obra__diametro" id="carac_obra__diametro">
+                        <input type="text" name="carac_obra__diametro" id="carac_obra__diametro" inputmode="numeric" pattern="\d{4},\d{2}" maxlength="7" placeholder="0000,00">
                     
                         <label for="carac_obra__area">AREA:</label>
-                        <input type="text" name="carac_obra__area" id="carac_obra__area">
+                        <input type="text" name="carac_obra__area" id="carac_obra__area" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
                     
                         <label for="carac_obra__volumen">VOLUMEN:</label>
-                        <input type="text" name="carac_obra__volumen" id="carac_obra__volumen">
+                        <input type="text" name="carac_obra__volumen" id="carac_obra__volumen" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
                     
                 </div> 
 
