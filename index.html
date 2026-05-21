@@ -157,33 +157,33 @@
                         required 
                         autofocus 
                         maxlength="15"
-                        list="short-code"
+                        list=""
                     >
                     <datalist id="short-code">
-                        <option value="CAT"><span class="code-frag"></span> CAT</option>
-                        <option value="ANA"><span class="code-frag"></span> ANA</option>
-                        <option value="MAR"><span class="code-frag"></span> MAR</option>
-                        <option value="FLO"><span class="code-frag"></span> FLO</option>
-                        <option value="CHA"><span class="code-frag"></span> CHA</option>
-                        <option value="VAL"><span class="code-frag"></span> VAL</option>
-                        <option value="JUA"><span class="code-frag"></span> JUA</option>
-                        <option value="HAC"><span class="code-frag"></span> HAC</option>
-                        <option value="GUA"><span class="code-frag"></span> GUA</option>
-                        <option value="MAC"><span class="code-frag"></span> MAC</option>
-                        <option value="ADE"><span class="code-frag"></span> ADE</option>
-                        <option value="SAB"><span class="code-frag"></span> SAB</option>
-                        <option value="PEO"><span class="code-frag"></span> PEO</option>
-                        <option value="MAM"><span class="code-frag"></span> MAM</option>
-                        <option value="PED"><span class="code-frag"></span> PED</option>
-                        <option value="TOR"><span class="code-frag"></span> TOR</option>
-                        <option value="ALG"><span class="code-frag"></span> ALG</option>
-                        <option value="SAN"><span class="code-frag"></span> SAN</option>
-                        <option value="CAR"><span class="code-frag"></span> CAR</option>
-                        <option value="TRI"><span class="code-frag"></span> TRI</option>
-                        <option value="LIM"><span class="code-frag"></span> LIM</option>
-                        <option value="ASN"><span class="code-frag"></span> ASN</option>
-                        <option value="TAC"><span class="code-frag"></span> TAC</option>
-                        <option value="TOP"><span class="code-frag"></span> TOP</option>
+                        <option value="CAT"></option>
+                        <option value="ANA"></option>
+                        <option value="MAR"></option>
+                        <option value="FLO"></option>
+                        <option value="CHA"></option>
+                        <option value="VAL"></option>
+                        <option value="JUA"></option>
+                        <option value="HAC"></option>
+                        <option value="GUA"></option>
+                        <option value="MAC"></option>
+                        <option value="ADE"></option>
+                        <option value="SAB"></option>
+                        <option value="PEO"></option>
+                        <option value="MAM"></option>
+                        <option value="PED"></option>
+                        <option value="TOR"></option>
+                        <option value="ALG"></option>
+                        <option value="SAN"></option>
+                        <option value="CAR"></option>
+                        <option value="TRI"></option>
+                        <option value="LIM"></option>
+                        <option value="ASN"></option>
+                        <option value="TAC"></option>
+                        <option value="TOP"></option>
                     </datalist>
 
                     <input type="hidden" name="modification" id="modification" value="00">
@@ -899,20 +899,22 @@
                     <div class="carac_obra-disenos-canales div_3col">
                         <h2>Canales</h2>
 
-                        <input type="hidden" name="carac_obra__disenos__canales" value="----">
-                        <input type="radio" name="carac_obra__disenos__canales" id="carac_obra__disenos__canales__rectangular" value="rectangular">
+                        <input type="hidden" name="carac_obra__disenos__canales__rectangular" value="----">
+                        <input type="checkbox" name="carac_obra__disenos__canales__rectangular" id="carac_obra__disenos__canales__rectangular" value="rectangular">
                         <label for="carac_obra__disenos__canales__rectangular">
                             <img src="./imgs/canales/canales-rectangular.png" alt="Canal Rectangular">
                             <h3>Rectangular</h3>
                         </label>
 
-                        <input type="radio" name="carac_obra__disenos__canales" id="carac_obra__disenos__canales__trapezoidal" value="trapezoidal">
+                        <input type="hidden" name="carac_obra__disenos__canales__trapezoidal" value="----">
+                        <input type="checkbox" name="carac_obra__disenos__canales__trapezoidal" id="carac_obra__disenos__canales__trapezoidal" value="trapezoidal">
                         <label for="carac_obra__disenos__canales__trapezoidal">
                             <img src="./imgs/canales/canales-trapezoidal.png" alt="Canal Trapezoidal">
                             <h3>Trapezoidal</h3>
                         </label>
-
-                        <input type="radio" name="carac_obra__disenos__canales" id="carac_obra__disenos__canales__triangular" value="triangular">
+                        
+                        <input type="hidden" name="carac_obra__disenos__canales__triangular" value="----">
+                        <input type="checkbox" name="carac_obra__disenos__canales__triangular" id="carac_obra__disenos__canales__triangular" value="triangular">
                         <label for="carac_obra__disenos__canales__triangular">
                             <img src="./imgs/canales/canales-triangular.png" alt="Canal Triangular">
                             <h3>Triangular</h3>
@@ -929,22 +931,22 @@
                         <h2>Diques Cerrados</h2>
 
 
-                        <input type="hidden" name="carac_obra__disenos__diques_cerrados"value="----">
-                        <input type="radio" name="carac_obra__disenos__diques_cerrados" id="carac_obra__disenos__diques_cerrados__rectangular" value="rectangular">
+                        <input type="hidden" name="carac_obra__disenos__diques_cerrados__rectangular"value="----">
+                        <input type="checkbox" name="carac_obra__disenos__diques_cerrados__rectangular" id="carac_obra__disenos__diques_cerrados__rectangular" value="rectangular">
                         <label for="carac_obra__disenos__diques_cerrados__rectangular">
                             <img src="./imgs/diques-cerrados/diques_cerrados-rectangular.png" alt="Dique cerrado Rectangular">
                             <h3>Rectangular</h3>
                         </label>
 
-
-                        <input type="radio" name="carac_obra__disenos__diques_cerrados" id="carac_obra__disenos__diques_cerrados__trapezoidal" value="trapezoidal">
+                        <input type="hidden" name="carac_obra__disenos__diques_cerrados__trapezoidal"value="----">
+                        <input type="checkbox" name="carac_obra__disenos__diques_cerrados__trapezoidal" id="carac_obra__disenos__diques_cerrados__trapezoidal" value="trapezoidal">
                         <label for="carac_obra__disenos__diques_cerrados__trapezoidal">
                             <img src="./imgs/diques-cerrados/diques_cerrados-trapezoidal.png" alt="Dique cerrado Trapezoidal">
                             <h3>Trapezoidal</h3>
                         </label>
 
-
-                        <input type="radio" name="carac_obra__disenos__diques_cerrados" id="carac_obra__disenos__diques_cerrados__circular" value="circular">
+                        <input type="hidden" name="carac_obra__disenos__diques_cerrados__circular"value="----">
+                        <input type="checkbox" name="carac_obra__disenos__diques_cerrados__circular" id="carac_obra__disenos__diques_cerrados__circular" value="circular">
                         <label for="carac_obra__disenos__diques_cerrados__circular">
                             <img src="./imgs/diques-cerrados/diques_cerrados-circular.png" alt="Dique cerrado Circular">
                             <h3>Triangular</h3>
@@ -956,20 +958,22 @@
                     <div class="carac_obra-disenos-diques_abiertos div_3col">
                         <h2>Diques Abiertos</h2>
 
-                        <input type="hidden" name="carac_obra__disenos__diques_abiertos" value="----">
-                        <input type="radio" name="carac_obra__disenos__diques_abiertos" id="carac_obra__disenos__diques_abiertos__ranura" value="ranura">
+                        <input type="hidden" name="carac_obra__disenos__diques_abiertos__ranura" value="----">
+                        <input type="checkbox" name="carac_obra__disenos__diques_abiertos__ranura" id="carac_obra__disenos__diques_abiertos__ranura" value="ranura">
                         <label for="carac_obra__disenos__diques_abiertos__ranura">
                             <img src="./imgs/diques_abiertos/diques_abiertos-ranura.png" alt="Diques abiertos Ranura">
                             <h3>Ranura</h3>
                         </label>
 
-                        <input type="radio" name="carac_obra__disenos__diques_abiertos" id="carac_obra__disenos__diques_abiertos__rastrillo" value="rastrillo">
+                        <input type="hidden" name="carac_obra__disenos__diques_abiertos__rastrillo" value="----">
+                        <input type="checkbox" name="carac_obra__disenos__diques_abiertos__rastrillo" id="carac_obra__disenos__diques_abiertos__rastrillo" value="rastrillo">
                         <label for="carac_obra__disenos__diques_abiertos__rastrillo">
                             <img src="./imgs/diques_abiertos/diques_abiertos-rastrillo.png" alt="Diques abiertos Rastrillo">
                             <h3>Rastrillo</h3>
                         </label>
 
-                        <input type="radio" name="carac_obra__disenos__diques_abiertos" id="carac_obra__disenos__diques_abiertos__enrejado" value="enrejado">
+                        <input type="hidden" name="carac_obra__disenos__diques_abiertos__enrejado" value="----">
+                        <input type="checkbox" name="carac_obra__disenos__diques_abiertos__enrejado" id="carac_obra__disenos__diques_abiertos__enrejado" value="enrejado">
                         <label for="carac_obra__disenos__diques_abiertos__enrejado">
                             <img src="./imgs/diques_abiertos/diques_abiertos-enrejado.png" alt="Diques abiertos Enrejado">
                             <h3>Enrejado</h3>
@@ -1258,19 +1262,19 @@
                         <div>
                             <label for="danos_concr__desag">DESAGREGACIÓN</label>
                             <input type="hidden" name="danos_concr__desag" value="----">
-                            <input type="checkbox" name="danos_concr__desag" value="desagregacion">
+                            <input type="checkbox" id="danos_concr__desag" name="danos_concr__desag" value="desagregacion">
                         </div>
 
                         <div>
                             <label for="danos_concr__disgr">DISGREGACIÓN</label>
                             <input type="hidden" name="danos_concr__disgr" value="----">
-                            <input type="checkbox" name="danos_concr__disgr" value="disgregacion">
+                            <input type="checkbox" id="danos_concr__disgr" name="danos_concr__disgr" value="disgregacion">
                         </div>
 
                         <div>
                             <label for="danos_concr__cavit">CAVITACIÓN</label>
                             <input type="hidden" name="danos_concr__cavit" value="----">
-                            <input type="checkbox" name="danos_concr__cavit" value="cavitacion">
+                            <input type="checkbox" id="danos_concr__cavit" name="danos_concr__cavit" value="cavitacion">
                         </div>
 
                     </section>
@@ -1279,21 +1283,21 @@
                         <h2 class="sub_title">DAÑOS EN EL ACERO</h2>
 
                         <div>
-                            <label for="danos_concr__oxida">OXIDACIÓN</label>
-                            <input type="hidden" name="danos_concr__oxida" value="----">
-                            <input type="checkbox" name="danos_concr__oxida" value="oxidación">
+                            <label for="danos_acero__oxida">OXIDACIÓN</label>
+                            <input type="hidden" name="danos_acero__oxida" value="----">
+                            <input type="checkbox" id="danos_acero__oxida" name="danos_acero__oxida" value="oxidación">
                         </div>
 
                         <div>
-                            <label for="danos_concr__corro">CORROCIÓN</label>
-                            <input type="hidden" name="danos_concr__corro" value="----">
-                            <input type="checkbox" name="danos_concr__corro" value="corroción">
+                            <label for="danos_acero__corro">CORROCIÓN</label>
+                            <input type="hidden" name="danos_acero__corro" value="----">
+                            <input type="checkbox" id="danos_acero__corro" name="danos_acero__corro" value="corroción">
                         </div>
 
                         <div>
-                            <label for="danos_concr__defor">DEFORMACIÓN</label>
-                            <input type="hidden" name="danos_concr__defor" value="----">
-                            <input type="checkbox" name="danos_concr__defor" value="deformación">
+                            <label for="danos_acero__defor">DEFORMACIÓN</label>
+                            <input type="hidden" name="danos_acero__defor" value="----">
+                            <input type="checkbox" id="danos_acero__defor" name="danos_acero__defor" value="deformación">
                         </div>
 
                     </section>

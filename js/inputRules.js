@@ -7,8 +7,9 @@ const codelimits = ()=>{
 }
 
 document.querySelector("#ficha_n").addEventListener("input", (event)=>{
-    
-    if(event.inputType === "deleteContentBackward") return
+
+    // evitar formatear al borrar o al seleccionar del datalist
+    if(event.inputType === "deleteContentBackward" || event.type === "input" && event.data === undefined) return
 
     let input = event.target;
     
@@ -26,6 +27,7 @@ document.querySelector("#ficha_n").addEventListener("input", (event)=>{
         0, 1, 2, 3, 4, 
         5, 6, 7, 8, 9
     ];
+
 
     if(aceptedValues.find(item => item == event.data) === undefined)
         return input.value = stringValue.slice(0,-1);
@@ -88,8 +90,32 @@ document.querySelector("#ficha_n").addEventListener("input", (event)=>{
         arrayValues[4] = arrayValues[4].slice(arrayValues.length-1, arrayValues.length)
     }
 
+    // TOGGLE DATALIST
+    const datalist_options = [
+        "CAT", "ANA", "MAR", "FLO", "CHA",
+        "VAL", "JUA", "HAC", "GUA", "MAC",
+        "ADE", "SAB", "PEO", "MAM", "PED", 
+        "TOR", "ALG", "SAN", "CAR", "TRI", 
+        "LIM", "ASN", "TAC", "TOP"
+    ];
 
+    if( arrayValues[3]?.length > 0 && arrayValues[3]?.length < 3 && arrayValues[3] !== undefined){
+
+        document.querySelectorAll("#short-code > option").forEach( (option, index) =>{
+            option.value = arrayValues.join("-").slice(0,9) + datalist_options[index];
+            // console.log(option)
+        })
+        
+        input.setAttribute("list", "short-code")
+    } 
+    else{ 
+        input.removeAttribute("list")
+    }
+
+    
     event.target.value = arrayValues.join("-")
+
+    // console.log(input.value)
 })
 
 
