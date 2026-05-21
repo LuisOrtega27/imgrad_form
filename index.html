@@ -197,7 +197,7 @@
                         <span>N</span>
 
                         <label for="header_codigo__altura">ALTURA:</label>
-                        <input type="number" name="header_codigo__altura" id="header_codigo__altura" maxlength="8" required>
+                        <input type="text" name="header_codigo__altura" id="header_codigo__altura" pattern="\d{1,4}(,\d{2})?" maxlength="7>" required>
                         <span>M.S.N.M</span>
                     </div>
                 </div>
@@ -1425,6 +1425,8 @@
 
     </form>
     
+    <label for="miCheckbox">haz click</label>
+    <input type="checkbox" id="miCheckbox">
     
     <!-- GOOGLE MAPS (COMPONENTES) -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js" defer></script>

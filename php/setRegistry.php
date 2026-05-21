@@ -35,8 +35,9 @@ $formData = array_merge($newTempArr, $formData);
     y al valor ID del registro se aumenta en +1, para mantener un historial de modificaciones.
 */ 
 //Agregar el ID unico al inicio del array de datos para mantener un formato consistente en el txt
+// var_dump($formData);
 
-
+file_put_contents("../DATA_GIS/ouput.txt", json_encode($formData));
 
 // DB FILE PATH
 $FILE_PATH = "../DATA_GIS/GDB.txt";

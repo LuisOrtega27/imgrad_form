@@ -1,10 +1,25 @@
 "use strict"
 
-// (FORMATO) CODIGO DE FICHA
 
-const codelimits = ()=>{
+// tiempo de inspeccion
+
+document.querySelector("#tiem_ins").addEventListener("input",(event)=>{
+
+    let text = event.target.value 
+
+    if(text.length == 3){
+        let lastChar = text.slice( text.length -1 , text.length )
+        text = text.slice(  0, text.length -1)
+        text += ":" + lastChar;
+        event.target.value = text
+    }
     
-}
+})
+
+
+
+
+// (FORMATO) CODIGO DE FICHA
 
 document.querySelector("#ficha_n").addEventListener("input", (event)=>{
 
