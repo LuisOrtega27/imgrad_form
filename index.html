@@ -319,7 +319,7 @@
 
                         <div>
                             <label for="ent_fisi__alt_pro">ALTURA PROMEDIO</label>
-                            <input type="number" name="ent_fisi__alt_pro" id="ent_fisi__alt_pro" class="ent_fisi-altura_promedio" max="2">
+                            <input type="text" name="ent_fisi__alt_pro" id="ent_fisi__alt_pro" class="ent_fisi-altura_promedio" maxlength="2" pattern="[0-9]{1,2}" inputmode="numeric">
                             <span>M</span>
                         </div>
                     </div>
@@ -983,25 +983,25 @@
                     <h2 class="sub_title">MEDIDAS</h2>
                     
                         <label for="carac_obra__altura">ALTURA:</label>
-                        <input type="text" name="carac_obra__altura" id="carac_obra__altura" inputmode="numeric" pattern="\d{3},\d{2}" maxlength="6" placeholder="000,00">
+                        <input type="text" name="carac_obra__altura" id="carac_obra__altura" inputmode="numeric" pattern="\d{1,3}(,\d{2})?" maxlength="6" placeholder="000,00">
                     
                         <label for="carac_obra__base">BASE:</label>
-                        <input type="text" name="carac_obra__base" id="carac_obra__base" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
+                        <input type="text" name="carac_obra__base" id="carac_obra__base" inputmode="numeric" pattern="\d{1,5}(,\d{2})?" maxlength="8" placeholder="00000,00">
                     
                         <label for="carac_obra__ancho">ANCHO:</label>
-                        <input type="text" name="carac_obra__ancho" id="carac_obra__ancho" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
+                        <input type="text" name="carac_obra__ancho" id="carac_obra__ancho" inputmode="numeric" pattern="\d{1,5}(,\d{2})?" maxlength="8" placeholder="00000,00">
                     
                         <label for="carac_obra__longitud">LONGITUD:</label>
-                        <input type="text" name="carac_obra__longitud" id="carac_obra__longitud" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
+                        <input type="text" name="carac_obra__longitud" id="carac_obra__longitud" inputmode="numeric" pattern="\d{1,5}(,\d{2})?" maxlength="8" placeholder="00000,00">
                     
                         <label for="carac_obra__diametro">DIAMETRO:</label>
-                        <input type="text" name="carac_obra__diametro" id="carac_obra__diametro" inputmode="numeric" pattern="\d{4},\d{2}" maxlength="7" placeholder="0000,00">
+                        <input type="text" name="carac_obra__diametro" id="carac_obra__diametro" inputmode="numeric" pattern="\d{1,4}(,\d{2})?" maxlength="7" placeholder="0000,00">
                     
                         <label for="carac_obra__area">AREA:</label>
-                        <input type="text" name="carac_obra__area" id="carac_obra__area" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
+                        <input type="text" name="carac_obra__area" id="carac_obra__area" inputmode="numeric" pattern="\d{1,5}(,\d{2})?" maxlength="8" placeholder="00000,00">
                     
                         <label for="carac_obra__volumen">VOLUMEN:</label>
-                        <input type="text" name="carac_obra__volumen" id="carac_obra__volumen" inputmode="numeric" pattern="\d{5},\d{2}" maxlength="8" placeholder="00000,00">
+                        <input type="text" name="carac_obra__volumen" id="carac_obra__volumen" inputmode="numeric" pattern="\d{1,5}(,\d{2})?" maxlength="8" placeholder="00000,00">
                     
                 </div> 
 
