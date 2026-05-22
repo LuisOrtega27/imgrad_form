@@ -1,6 +1,6 @@
 <?php
 
-$FILE_PATH = '../DATA_GIS/GDB.txt';
+$FILE_PATH = '../DATA_GIS/GDB.csv';
 
 $TARGET_ID = file_get_contents('php://input'); 
 

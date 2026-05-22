@@ -27,7 +27,7 @@ unset($formData["coor_utm__n"]);
 unset($formData["cod_n"]);
 
 // RE-ORDERING DATA
-$newTempArr = ["cod_n" => $COD_N, "coor_utm__n" => $COORD_N, "coor_utm__e" => $COORD_E, "ficha_n" => $FICHA_N, "modification" => $MODIFICATION];
+$newTempArr = ["cod_n" => $COD_N, "coor_utm__n" => (float)$COORD_N, "coor_utm__e" => (float)$COORD_E, "ficha_n" => $FICHA_N, "modification" => $MODIFICATION];
 $formData = array_merge($newTempArr, $formData);
 /*
     esto lleva el historial de actualizaciones, el valor "00" indica que es un nuevo registro, 
@@ -37,10 +37,9 @@ $formData = array_merge($newTempArr, $formData);
 //Agregar el ID unico al inicio del array de datos para mantener un formato consistente en el txt
 // var_dump($formData);
 
-file_put_contents("../DATA_GIS/ouput.txt", json_encode($formData));
 
 // DB FILE PATH
-$FILE_PATH = "../DATA_GIS/GDB.txt";
+$FILE_PATH = "../DATA_GIS/GDB.csv";
 $position = -1;
 
 // TRANSFORM FROM DATA TO STRING
@@ -48,7 +47,7 @@ $data_array = [];
 
 // CLEAN FOR CVS FORMAT
 foreach($formData as $value){
-    $data_array[] = $value == "" ? "----" : $value;
+    $data_array[] = $value;
 }
 
 // var_dump($data_array);

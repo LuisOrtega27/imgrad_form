@@ -1,26 +1,21 @@
 "use strict"
 
 
-// tiempo de inspeccion
-
+// FORMATO tiempo de inspeccion
 document.querySelector("#tiem_ins").addEventListener("input",(event)=>{
 
     let text = event.target.value 
 
-    if(text.length == 3){
+    if(text.length === 3 && !text.includes(":")){
         let lastChar = text.slice( text.length -1 , text.length )
         text = text.slice(  0, text.length -1)
-        text += ":" + lastChar;
-        event.target.value = text
+        event.target.value = text + ":" + lastChar;
     }
     
 })
 
 
-
-
 // (FORMATO) CODIGO DE FICHA
-
 document.querySelector("#ficha_n").addEventListener("input", (event)=>{
 
     // evitar formatear al borrar o al seleccionar del datalist
@@ -138,6 +133,8 @@ document.querySelector("#ficha_n").addEventListener("input", (event)=>{
 document.querySelectorAll("input[type=tel]").forEach(currentInput =>{
 
     currentInput.addEventListener("input", (event)=>{
+
+        if(event.data === undefined && event.type === "input") return // no formatear cuando autocomplete
 
         // no formatear el texto cuando se borra un caracter (genera problemas)
         if(event.inputType === "deleteContentBackward") return

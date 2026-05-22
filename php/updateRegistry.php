@@ -27,7 +27,7 @@ $formData = array_merge($newTempArr, $formData);
 
 
 // DB FILE PATH
-$FILE_PATH = "../DATA_GIS/GDB.txt";
+$FILE_PATH = "../DATA_GIS/GDB.csv";
 
 
 // TRANSFORM FROM DATA TO STRING

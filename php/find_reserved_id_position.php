@@ -2,8 +2,8 @@
 
 function find_reserved_id_position($id_a_buscar, $nueva_linea){
 
-    $origen = '../DATA_GIS/GDB.txt';
-    $destino = '../DATA_GIS/GDB_temp.txt';
+    $origen = '../DATA_GIS/GDB.csv';
+    $destino = '../DATA_GIS/GDB_temp.csv';
 
     $lectura = fopen($origen, 'r');
     $escritura = fopen($destino, 'w');

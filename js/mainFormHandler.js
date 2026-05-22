@@ -1,7 +1,6 @@
 "use strict";
 
 import { setRegistry } from "./setRegistry.js";
-import { getRegistry } from "./getRegistry.js";
 import { updateJustAddRegistry } from "./updateJustAddRegistry.js"
 
 const mainForm = document.getElementById('main_form');
@@ -12,7 +11,6 @@ const resetForm = () => {
     modifiedInput.value = "00"
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // getRegistry();
 }
 
 mainForm.addEventListener('submit', async (e) => {
@@ -26,7 +24,10 @@ mainForm.addEventListener('submit', async (e) => {
     const formData = new FormData(mainForm);
     const data = Object.fromEntries(formData.entries());
 
-    // console.log(data)
+    // evitar los saltos de linea \n
+    Object.keys(data).forEach(key=>{
+        data[key] = data[key].replaceAll("\n","<br>")
+    })
     
     let result;
 
@@ -50,7 +51,7 @@ mainForm.addEventListener('submit', async (e) => {
 
 const fillInputs = (data) => {
     
-    console.log(data)
+    // console.log(data)
     
     for (let [dataKey, dataValue] of Object.entries(data)) {
         

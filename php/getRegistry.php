@@ -1,7 +1,7 @@
 <?php
-$prueba = '{"targetId":"1", "last": true}';
+$prueba = '{"targetId":"33", "last": true}';
 
-$FILE_PATH = "../DATA_GIS/GDB.txt";
+$FILE_PATH = "../DATA_GIS/GDB.csv";
 $formData = file_get_contents("php://input") ?: $prueba;
 $formData = json_decode($formData, true);
     
@@ -34,6 +34,7 @@ if(empty($result)){
     echo json_encode([
         "code" => 404,
         "success" => false,
+        "target"=> $formData,
         "status" => "error",
         "message" => "Registro no encontrado",
         "data" => $result
@@ -46,6 +47,7 @@ if( count($result) === 1 ){
     echo json_encode([
         "code" => 409,
         "success" => true,
+        "target"=> $formData,
         "status" => "success",
         "message" => "Codigo: 409 Este registro se encuentra reservado",
         "data" => $result[0]
@@ -58,7 +60,7 @@ if( count($result) === 1 ){
 for($i = 0; $i < count($result); $i++){
     // limpiar el formato guardado en el txt (hay que modificar esto para limpiar varios para el historico)
     foreach($result[$i] as $key => $value){
-        $result[$i][$key] = $result[$i][$key] === "----" ? "" : $result[$i][$key]; 
+        $result[$i][$key] = $result[$i][$key] === "<br>" ? "\n" : $result[$i][$key]; 
         // $result[$i][$key] = str_replace(";", ",", $result[$i][$key]); 
     }
 }
@@ -74,6 +76,7 @@ echo json_encode([
     "code" => 200,
     "success" => true,
     "status" => "success",
+    "target"=> $formData,
     "message" => "Registro encontrado",
     "data" => $result
 ]);
