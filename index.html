@@ -11,10 +11,15 @@
 
 
     <link rel="stylesheet" href="styles/index.css">
+
     <script type="module" src="js/modalsHandler.js" defer></script>
     <script type="module" src="js/mainFormHandler.js" defer></script>
     <script type="module" src="js/mainNav.js" defer></script>
+
     <script src="./js/inputRules.js" defer></script>
+
+    <script type="module" src="./js/helpers/google_maps_api/map.js" defer></script>
+
 
 
 </head>
@@ -108,7 +113,7 @@
             <header class="form_secction header_secction">
 
                 <div class="header_logo">
-                    <img src="imgs/IMGRAD-icon.png" alt="LOGO IMGRAD">
+                    <img src="imgs/logos/IMGRAD_logo.png" alt="Logo del Instituto Municipal de Gestion de Riesgos y Administracion de Desastres">
                 </div>
                 
                 <div class="header_title">
@@ -513,7 +518,8 @@
                         <input type="text" name="tipo_obra__tiempo" id="tipo_obra__tiempo" maxlength="2">
 
                         <select name="tipo_obra__tiempo_formato" id="tipo_obra__tiempo_formato">
-                            <option value="Años" selected>Años</option>
+                            <option value="NULL" selected>Formato</option>
+                            <option value="Años">Años</option>
                             <option value="Meses">Meses</option>
                         </select>
                     </div>
@@ -1426,14 +1432,14 @@
     </form>
     
     
+    
     <!-- GOOGLE MAPS (COMPONENTES) -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js" defer></script>
     <!-- Este es el importante para los componentes de Maps -->
     <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library" defer></script>
-    
-    <!-- GOOGLE MAPS -->
-    <script type="module" src="./js/map/map.js" defer></script>
-    <script>
+
+    <!-- GOOGLE MAPS API -->
+    <script id="gp_api">
         (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b[q]||(b[q]={}),f=d.libraries||(d.libraries={}),e=a=Symbol();k=new Promise((f,r)=>{h={key: "AIzaSyAPA21v1E06YuptbIYOjUp9Fd2VtOZ9BIA", v: "weekly", libraries: ["places", "marker"]};a=c=>{f(h);};m.head.append(a=m.createElement("script"));a.src=`https://maps.googleapis.com/maps/api/js?v=beta&key=${h.key}&callback=initMap&libraries=${h.libraries.join(",")}&loading=async`;});d[l]=c=>f[c]||(f[c]=k.then(()=>f[c]||(f[c]=new Promise((p,r)=>b[l](c,p,r)))));})
         ({});
     </script>

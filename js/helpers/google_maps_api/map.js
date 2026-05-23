@@ -2,7 +2,7 @@
 
 import { decimalToUTM } from "./convert_coord_deci_utm.js"
 
-const API_KEY = "AIzaSyAPA21v1E06YuptbIYOjUp9Fd2VtOZ9BIA"
+// const API_KEY = "AIzaSyAPA21v1E06YuptbIYOjUp9Fd2VtOZ9BIA"
 
 // MAP MODAL
 const modal_map = document.querySelector("#modal-map")
