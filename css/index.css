@@ -1,3 +1,10 @@
+@import "./main_nav.css";
+@import "./map.css";
+@import "./menu_history.css";
+@import "./modals.css";
+@import "./pag1.css";
+@import "./pag2.css";
+
 :root{
     font-size: 9px;
     font-weight: 900;
