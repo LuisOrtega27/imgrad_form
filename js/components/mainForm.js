@@ -1,5 +1,9 @@
 "use strict";
 
+import { setRegistry } from "../services/ficha_eoh.js"
+import mainNav from "./mainNav.js";
+import toast from "./toast.js";
+
 class MainForm{
 
     constructor(){
@@ -17,10 +21,13 @@ class MainForm{
             const formData = new FormData(event.target)
             const dataObj = Object.fromEntries(formData)
 
-            const result = await api__set(dataObj);
+            const result = await setRegistry(dataObj);
 
-            console.log(result)
-
+            if(result.status === "success"){
+                console.log(result)
+                toast.newToast("success", "Nuevo registro agregado!");
+                this.resetForm();
+            }
         })
     }
 
@@ -35,6 +42,12 @@ class MainForm{
 
     resetForm(){
         this.html.reset()
+        window.scrollTo({
+            top: 0,
+            left: 0,  
+            behavior: 'smooth'
+        });
+        mainNav.enableBtns()
     }
 
     disableRequired(){

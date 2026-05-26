@@ -14,6 +14,7 @@
 
     <script type="module" src="./js/components/mainNav.js" defer></script>
     <script type="module" src="./js/components/mainForm.js" defer></script>
+    <script type="module" src="./js/components/toast.js" defer></script>
 
     
     <script src="./js/helpers/inputRules.js" defer></script>
@@ -56,7 +57,7 @@
     </nav>
     <nav class="dev_menu">
         <ul>
-            <li><a href="http://127.0.0.1/imgrad_form/php/setRegistry.php" target="_blank">Set Registry.php</a></li>
+            <li><a href="http://127.0.0.1/imgrad_form/php/api/ficha_eoh.php" target="_blank">Set new Registry.php</a></li>
             <li><a href="http://127.0.0.1/imgrad_form/php/getRegistry.php" target="_blank">Get Registry.php</a></li>
             <li><a href="http://127.0.0.1/imgrad_form/php/api/api__reserve_id.php" target="_blank">Get Last ID.php</a></li>
         </ul>
@@ -100,6 +101,8 @@
         </form>
 
     </dialog>
+
+    <div class="toast-container" id="toast-container"></div>
 
     <form action="#" method="post" class="main_form" id="main_form">
 
@@ -265,7 +268,7 @@
                         <option value="San Pedro">
                         <option value="Santa Rosalía">
                         <option value="Santa Teresa">
-                        <option value="Sucre (Catia)">
+                        <option value="Sucre">
                         <option value="23 de Enero">
                     </datalist>
                     

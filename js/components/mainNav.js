@@ -1,8 +1,9 @@
 "use strict"
 
+import  {reserveID} from "../services/ficha_eoh.js"
 
 import form from "./mainForm.js"
-import  reserveID from "../services/reserveID.js"
+import toast from "./toast.js"
 
 class MainNav{
     constructor(createBtnId, updateBtnId){
@@ -17,11 +18,12 @@ class MainNav{
 
                     reserveID().then(ID =>{
 
+                        // alert("Nuevo ID reservado")
+                        toast.newToast("success", `ID: ${ID} reservado!`)
                         form.set_Id(ID)
                         // console.log(ID)
                     })
 
-                    alert("Nuevo ID reservado")
                 }
             })
         }
@@ -38,23 +40,6 @@ class MainNav{
 
 }
 
-const main_nav = new MainNav("main_menu__createRegistry", "main_menu__updateRegistry")
+const mainNav = new MainNav("main_menu__createRegistry", "main_menu__updateRegistry")
 
-// const new_btn = document.querySelector("#main_menu__createRegistry")
-// const update_btn = document.querySelector("#main_menu__updateRegistry")
-
-
-
-
-
-// update_btn.addEventListener("click", ()=>{
-//     new_btn.classList.remove("input-disabled");
-//     handleUpdate()
-// })
-
-// new_btn.addEventListener("click", ()=>{
-//     new_btn.classList.add("input-disabled");
-//     update_btn.classList.add("input-disabled");
-//     alert("Nuevo ID reservado")
-//     getRegistry()
-// })
+export default mainNav;
