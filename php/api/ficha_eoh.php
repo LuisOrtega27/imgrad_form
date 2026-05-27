@@ -4,7 +4,7 @@ header("Content-Type: application/json; charset=utf-8");
 header("Access-Control-Allow-Origin: *"); // Permite peticiones desde cualquier frontend
     
 $host = 'localhost';
-$db   = 'ficha_b';
+$db   = 'siroh';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
